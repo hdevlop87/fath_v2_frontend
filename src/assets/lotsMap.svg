@@ -1,0 +1,661 @@
+<svg  width="1550" height="800" fill="none" xmlns="http://www.w3.org/2000/svg" >
+    <g id="LotMap" >
+        <path id="frame" d="M760.415 211.364L291.735 1.70538L252.395 123.238L118.478 277.027L2.27332 459.758L450.246 630.394L518.933 645.082L786.334 679.209L927.595 684.393L1114.21 671.433L1492.64 700.376L1519.97 408.217L1538.43 89.5431L1151.81 226.279L1087 239.011L760.415 211.364Z" fill="#D9D9D9" stroke="black" stroke-width="2"/>
+        <g id="lot-1">
+        <path id="1" d="M604.026 184.315L612.153 143.791L567.176 123.863L547.819 167.23L586.268 185.109L604.026 184.315Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="1" fill="black"><tspan x="577.174" y="162.315">1</tspan></text>
+        </g>
+        <g id="lot-2">
+        <path id="2" d="M567.398 123.61L532.945 108.586L513.642 151.803L547.74 167.072L567.398 123.61Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="2" fill="black"><tspan x="532.917" y="145.394">2</tspan></text>
+        </g>
+        <g id="lot-3">
+        <path id="3" d="M532.917 108.501L498.463 93.4767L479.824 136.064L513.713 151.539L532.917 108.501Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="3" fill="black"><tspan x="498.435" y="132.078">3</tspan></text>
+        </g>
+        <g id="lot-4">
+        <path id="4" d="M498.435 93.4227L465.327 78.7895L446.349 121.164L479.755 136.112L498.435 93.4227Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="4" fill="black"     ><tspan x="463.936" y="116.349">4</tspan></text>
+        </g>
+        <g id="lot-5">
+        <path id="5" d="M465.289 78.7345L432.181 64.1013L413.204 106.476L446.609 121.424L465.289 78.7345Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="5" fill="black"     ><tspan x="432.013" y="101.349">5</tspan></text>
+        </g>
+        <g id="lot-6">
+        <path id="6" d="M432.013 64.1331L397.736 48.3733L378.498 90.748L413.334 106.606L432.013 64.1331Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="6" fill="black"     ><tspan x="397.567" y="86.974">6</tspan></text>
+        </g>
+        <g id="lot-7">
+        <path id="7" d="M397.567 48.5351L363.29 32.7753L344.052 75.15L378.888 91.008L397.567 48.5351Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="7" fill="black"     ><tspan x="363.305" y="71.974">7</tspan></text>
+        </g>
+        <g id="lot-8">
+        <path id="8" d="M363.305 32.7834L329.498 18.0576L310.985 60.2886L343.917 75.1335L363.305 32.7834Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="8" fill="black"     ><tspan x="329.47" y="56.137">8</tspan></text>
+        </g>
+        <g id="lot-9">
+        <path id="9" d="M329.47 17.8339L291.517 1.28296L277.405 45.8932L310.943 60.431L329.47 17.8339Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="9" fill="black"     ><tspan x="295.561" y="41.0281">9</tspan></text>
+        </g>
+        <g id="lot-10">
+        <path id="10" d="M179.803 246.781L143.82 248.119L120.178 275.627L101.655 304.262L181.509 301.893L179.803 246.781Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="10" fill="black"     ><tspan x="146.484" y="281.371">10</tspan></text>
+        </g>
+        <g id="lot-11">
+        <path id="11" d="M215.192 244.848L179.506 246.186L181.587 301.649L216.53 300.608L215.192 244.848Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="11" fill="black"     ><tspan x="191.268" y="281.371">11</tspan></text>
+        </g>
+        <g id="lot-12">
+        <path id="12" d="M250.283 243.51L214.597 244.848L216.679 300.31L251.622 299.269L250.283 243.51Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="12" fill="black"     ><tspan x="224.109" y="280.018">12</tspan></text>
+        </g>
+        <g id="lot-13">
+        <path id="13" d="M285.375 242.172L249.689 243.51L251.77 298.972L286.713 297.931L285.375 242.172Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="13" fill="black"     ><tspan x="258.701" y="278.695">13</tspan></text>
+        </g>
+        <g id="lot-14">
+        <path id="14" d="M320.466 240.833L284.78 242.172L286.862 297.634L321.804 296.593L320.466 240.833Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="14" fill="black"     ><tspan x="296.542" y="277.357">14</tspan></text>
+        </g>
+        <g id="lot-15">
+        <path id="15" d="M355.557 239.495L319.871 240.833L321.953 296.296L356.896 295.255L355.557 239.495Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="15" fill="black"     ><tspan x="331.634" y="276.018">15</tspan></text>
+        </g>
+        <g id="lot-16">
+        <path id="16" d="M390.649 238.157L354.963 239.495L357.044 294.957L391.987 293.916L390.649 238.157Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="16" fill="black"     ><tspan x="366.725" y="274.68">16</tspan></text>
+        </g>
+        <g id="lot-17">
+        <path id="17" d="M425.74 236.819L390.054 238.157L392.136 293.619L427.078 292.578L425.74 236.819Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="17" fill="black"     ><tspan x="399.566" y="273.195">17</tspan></text>
+        </g>
+        <g id="lot-18">
+        <path id="18" d="M460.832 235.48L425.145 236.819L427.227 292.281L462.17 291.24L460.832 235.48Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="18" fill="black"     ><tspan x="433.866" y="270.518">18</tspan></text>
+        </g>
+        <g id="lot-19">
+        <path id="19" d="M495.923 234.142L460.237 235.48L462.318 290.942L497.261 289.902L495.923 234.142Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="19" fill="black"     ><tspan x="469.249" y="269.203">19</tspan></text>
+        </g>
+        <g id="lot-20">
+        <path id="20" d="M531.014 232.804L495.328 234.144L497.41 289.693L532.353 288.651L531.014 232.804Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="20" fill="black"     ><tspan x="504.615" y="267.974">20</tspan></text>
+        </g>
+        <g id="lot-21">
+        <path id="21" d="M592.97 231.313L531.646 233.738V288.263L581.751 286.681L592.97 231.313Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="21" fill="black"     ><tspan x="551.688" y="265.203">21</tspan></text>
+        </g>
+        <g id="lot-22">
+        <path id="22" d="M581.894 286.537L531.541 288.263L533.415 355.388H537.284L564.126 338.219L576.943 312.344L581.894 286.537Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="22" fill="black"     ><tspan x="542.433" y="322.456">22</tspan></text>
+        </g>
+        <g id="lot-23">
+        <path id="23" d="M531.322 288.55L489.572 290.448L492.522 356.678L533.631 354.743L531.322 288.55Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="23" fill="black"     ><tspan x="504.615" y="329.004">23</tspan></text>
+        </g>
+        <g id="lot-24">
+        <path id="24" d="M489.848 290.329L448.497 292.038L451.261 358.648L492.419 356.988L489.848 290.329Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="24" fill="black"     ><tspan x="463.492" y="329.859">24</tspan></text>
+        </g>
+        <g id="lot-25">
+        <path id="25" d="M448.279 291.936L407.061 293.574L410.273 359.63L451.382 357.695L448.279 291.936Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="25" fill="black"     ><tspan x="422.366" y="331.956">25</tspan></text>
+        </g>
+        <g id="lot-26">
+        <path id="26" d="M407.198 293.438L367.482 294.802L370.167 360.603L410.018 359.528L407.198 293.438Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="26" fill="black"     ><tspan x="382.26" y="332.929">26</tspan></text>
+        </g>
+        <g id="lot-43">
+        <path id="43" d="M532.125 516.776L463.638 519.713L465.184 556.971L523.467 555.116L532.125 516.776Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="43" fill="black"     ><tspan x="481.885" y="541.758">43</tspan></text>
+        </g>
+        <g id="lot-27">
+        <path id="27" d="M367.482 294.802L326.265 296.167L329.23 362.178L370.34 360.243L367.482 294.802Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="27" fill="black"     ><tspan x="341.323" y="334.504">27</tspan></text>
+        </g>
+        <g id="lot-28">
+        <path id="28" d="M326.131 296.296L284.78 297.988L287.682 363.28L328.698 362.461L326.131 296.296Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="28" fill="black"     ><tspan x="299.775" y="335.606">28</tspan></text>
+        </g>
+        <g id="lot-29">
+        <path id="29" d="M284.672 298.035L244.494 299.412L247.261 365.13L287.669 363.486L284.672 298.035Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="29" fill="black"     ><tspan x="259.354" y="337.456">29</tspan></text>
+        </g>
+        <g id="lot-30">
+        <path id="30" d="M244.332 299.412L203.277 300.991L205.871 366.521L246.701 365.28L244.332 299.412Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="30" fill="black"     ><tspan x="217.699" y="338.282">30</tspan></text>
+        </g>
+        <g id="lot-31">
+        <path id="31" d="M203.39 300.991L161.884 302.57L164.704 367.987L205.646 366.183L203.39 300.991Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="31" fill="black"     ><tspan x="176.935" y="339.621">31</tspan></text>
+        </g>
+        <g id="lot-32">
+        <path id="32" d="M161.98 302.429L121.619 303.811L123.531 369.413L164.641 367.479L161.98 302.429Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="32" fill="black"     ><tspan x="135.624" y="341.74">32</tspan></text>
+        </g>
+        <g id="lot-33">
+        <path id="33" d="M121.597 303.88H102.009L60.4164 371.106L123.531 369.172L121.597 303.88Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="33" fill="black"     ><tspan x="93.8109" y="343.311">33</tspan></text>
+        </g>
+        <g id="lot-34">
+        <path id="34" d="M290.098 487.656L292.797 570.954L198.508 534.897L196.58 490.741L290.098 487.656Z" fill="#E7F4F3" stroke="black" stroke-width="1.5"/>
+        <text id="34" fill="black"     ><tspan x="236.792" y="528.351">34</tspan></text>
+        </g>
+        <g id="lot-35">
+        <path id="35" d="M329.895 485.918L289.788 487.538L292.759 571.264L333.271 586.658L329.895 485.918Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="35" fill="black"     ><tspan x="302.679" y="543.431">35</tspan></text>
+        </g>
+        <g id="lot-36">
+        <path id="36" d="M376.387 484.373L329.635 486.142L331.152 524.806L377.65 523.29L376.387 484.373Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="36" fill="black"     ><tspan x="343.143" y="511.609">36</tspan></text>
+        </g>
+        <g id="lot-37">
+        <path id="37" d="M377.612 523.322L331.274 524.857L332.325 559.737L379.052 558.134L377.612 523.322Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="37" fill="black"     ><tspan x="344.594" y="550.132">37</tspan></text>
+        </g>
+        <g id="lot-38">
+        <path id="36_3" d="M379.003 558.214L332.243 559.888L333.136 586.448L380.9 603.969L379.003 558.214Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="38" fill="black"     ><tspan x="346.072" y="582.977">38</tspan></text>
+        </g>
+        <g id="lot-39">
+        <path id="39" d="M471.865 479.908L423.355 482.084L424.191 521.08L473.434 519.094L471.865 479.908Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="39" fill="black"     ><tspan x="438.653" y="505.375">39</tspan></text>
+        </g>
+        <g id="lot-40">
+        <path id="40" d="M463.606 519.721L424.114 521.29L425.655 571.159L465.697 569.695L463.606 519.721Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="40" fill="black"     ><tspan x="435.23" y="550.436">40</tspan></text>
+        </g>
+        <g id="lot-41">
+        <path id="41" d="M465.593 569.695L425.864 571.054L428.269 621.342L468.102 632.842L465.593 569.695Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="41" fill="black"     ><tspan x="437.138" y="603.86">41</tspan></text>
+        </g>
+        <g id="lot-42">
+        <path id="42" d="M473.316 518.573L531.791 516.98L534.749 504.694L529.515 487.402L511.541 478.073L471.951 480.121L473.316 518.573Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="42" fill="black"     ><tspan x="487.26" y="501.375">42</tspan></text>
+        </g>
+        <g id="lot-44">
+        <path id="44" d="M522.385 554.807L465.184 556.817L466.421 594.538L513.264 593.302L522.385 554.807Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="44" fill="black"     ><tspan x="479.566" y="583.514">44</tspan></text>
+        </g>
+        <g id="lot-45">
+        <path id="45" d="M513.109 593.147L466.885 594.538L468.102 632.724L503.06 639.989L513.109 593.147Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="45" fill="black"     ><tspan x="476.971" y="623.138">45</tspan></text>
+        </g>
+        <g id="lot-46">
+        <path id="46" d="M621.988 628.544L616.027 656.266L678.326 664.91V628.544H621.988Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="46" fill="black"     ><tspan x="640.029" y="652.545">46</tspan></text>
+        </g>
+        <g id="lot-47">
+        <path id="47" d="M677.929 628.604L678.421 665.113L717.98 669.935L717.291 627.719L677.929 628.604Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="47" fill="black"     ><tspan x="686.62" y="653.295">47</tspan></text>
+        </g>
+        <g id="lot-48">
+        <path id="48" d="M716.926 627.535L717.632 671.012L753.544 674.341L751.829 626.425L716.926 627.535Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="48" fill="black"     ><tspan x="724.735" y="655.285">48</tspan></text>
+        </g>
+        <g id="lot-49">
+        <path id="49" d="M751.728 625.921L753.342 674.542L788.648 678.476L787.539 624.912L751.728 625.921Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="49" fill="black"     ><tspan x="759.746" y="656.284">49</tspan></text>
+        </g>
+        <g id="lot-50">
+        <path id="50" d="M787.539 624.912L788.85 678.678L823.669 680.393L822.24 624.105L787.539 624.912Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="50" fill="black"     ><tspan x="792.265" y="656.284">50</tspan></text>
+        </g>
+        <g id="lot-51">
+        <path id="51" d="M822.24 623.802L823.652 680.595L859.16 681.402L857.546 622.794L822.24 623.802Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="51" fill="black"     ><tspan x="830.843" y="658.973">51</tspan></text>
+        </g>
+        <g id="lot-52">
+        <path id="52" d="M857.445 623.096L858.959 681.604L894.366 682.713L892.348 621.987L857.445 623.096Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="52" fill="black"     ><tspan x="864.52" y="658.973">52</tspan></text>
+        </g>
+        <g id="lot-53">
+        <path id="53" d="M892.449 621.684L894.568 683.117L929.067 683.722L928.058 620.776L892.449 621.684Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="53" fill="black"     ><tspan x="899.135" y="659.826">53</tspan></text>
+        </g>
+        <g id="lot-54">
+        <path id="54" d="M928.058 620.675L929.168 683.419L964.474 682.31L963.062 619.162L928.058 620.675Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="54" fill="black"     ><tspan x="935.766" y="657.109">54</tspan></text>
+        </g>
+        <g id="lot-55">
+        <path id="55" d="M963.364 619.364L964.373 682.108L999.982 679.082L998.772 618.153L963.364 619.364Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="55" fill="black"     ><tspan x="970.32" y="657.109">55</tspan></text>
+        </g>
+        <g id="lot-56">
+        <path id="56" d="M998.872 618.355L999.78 678.981L1035.39 676.358L1033.37 617.447L998.872 618.355Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="56" fill="black"     ><tspan x="1004.05" y="655.285">56</tspan></text>
+        </g>
+        <g id="lot-57">
+        <path id="57" d="M1033.57 617.649L1035.59 676.257L1070.57 673.54L1068.58 616.035L1033.57 617.649Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="57" fill="black"     ><tspan x="1042.07" y="652.75">57</tspan></text>
+        </g>
+        <g id="lot-58">
+        <path id="58" d="M1068.68 615.934L1070.49 673.735L1105.09 671.314L1104.19 615.026L1068.68 615.934Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="58" fill="black"     ><tspan x="1076.39" y="652.75">58</tspan></text>
+        </g>
+        <g id="lot-59">
+        <path id="59" d="M1104.29 615.026L1105.3 670.709L1140.7 671.617L1139.39 614.017L1104.29 615.026Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="59" fill="black"     ><tspan x="1111.99" y="651.175">59</tspan></text>
+        </g>
+        <g id="lot-60">
+        <path id="60" d="M1139.59 613.715L1140.9 671.718L1175.81 674.139L1174.19 613.109L1139.59 613.715Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="60" fill="black"     ><tspan x="1146.7" y="651.175">60</tspan></text>
+        </g>
+        <g id="lot-61">
+        <path id="61" d="M1173.99 613.412L1176.01 674.34L1211.32 677.064L1209.92 612.202L1173.99 613.412Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="61" fill="black"     ><tspan x="1182.16" y="650.451">61</tspan></text>
+        </g>
+        <g id="lot-62">
+        <path id="62" d="M1210.7 645.788L1211.21 676.964L1252.27 679.889L1251.36 644.885L1210.7 645.788Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="62" fill="black"     ><tspan x="1218.66" y="671.303">62</tspan></text>
+        </g>
+        <g id="lot-63">
+        <path id="63" d="M1209.3 611.395L1210.61 645.995L1251.36 644.885L1250.46 609.982L1209.3 611.395Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="63" fill="black"     ><tspan x="1217.87" y="633.991">63</tspan></text>
+        </g>
+        <g id="lot-64">
+        <path id="64" d="M1207.89 522.096L1209.43 565.6L1248.98 564.611L1247.44 520.338L1207.89 522.096Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="64" fill="black"     ><tspan x="1215.92" y="550.942">64</tspan></text>
+        </g>
+        <g id="lot-65">
+        <path id="65" d="M1172.85 523.194L1174.28 566.369L1209.32 565.71L1207.89 521.986L1172.85 523.194Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="65" fill="black"     ><tspan x="1180.2" y="550.942">65</tspan></text>
+        </g>
+        <g id="lot-66">
+        <path id="66" d="M1138.24 524.403L1138.9 567.467L1174.17 566.588L1172.85 522.975L1138.24 524.403Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="66" fill="black"     ><tspan x="1144.48" y="550.942">66</tspan></text>
+        </g>
+        <g id="lot-67">
+        <path id="67" d="M1102.87 525.172L1103.75 568.676L1138.9 568.017L1138.02 524.403L1102.87 525.172Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="67" fill="black"     ><tspan x="1108.76" y="552.357">67</tspan></text>
+        </g>
+        <g id="lot-68">
+        <path id="68" d="M1067.05 526.161L1068.26 569.994L1103.75 569.225L1102.76 525.282L1067.05 526.161Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="68" fill="black"     ><tspan x="1073.03" y="553.456">68</tspan></text>
+        </g>
+        <g id="lot-69">
+        <path id="69" d="M1032.23 527.039L1033.22 570.763L1068.15 570.214L1066.94 526.051L1032.23 527.039Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="69" fill="black"     ><tspan x="1039.69" y="553.456">69</tspan></text>
+        </g>
+        <g id="lot-70">
+        <path id="70" d="M996.745 528.028L998.063 571.972L1033.33 570.873L1031.9 527.369L996.745 528.028Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="70" fill="black"     ><tspan x="1005.04" y="554.225">70</tspan></text>
+        </g>
+        <g id="lot-71">
+        <path id="71" d="M961.7 529.346L962.909 573.51L998.45 572.521L996.855 528.346L961.7 529.346Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="71" fill="black"     ><tspan x="971.82" y="555.488">71</tspan></text>
+        </g>
+        <g id="lot-72">
+        <path id="72" d="M926.875 530.884L927.754 573.949H962.729L961.81 529.346L926.875 530.884Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="72" fill="black"     ><tspan x="934.802" y="556.442">72</tspan></text>
+        </g>
+        <g id="lot-73">
+        <path id="73" d="M891.171 531.653L892.38 574.608H927.974L926.655 530.665L891.171 531.653Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="73" fill="black"     ><tspan x="899.135" y="557.456">73</tspan></text>
+        </g>
+        <g id="lot-74">
+        <path id="74" d="M856.126 529.127L857.115 576.036L892.38 575.267L891.171 528.346L856.126 529.127Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="74" fill="black"     ><tspan x="864.52" y="556.746">74</tspan></text>
+        </g>
+        <g id="lot-75">
+        <path id="75" d="M820.862 529.896L822.07 577.245L857.005 576.036L856.126 529.346L820.862 529.896Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="75" fill="black"     ><tspan x="828.843" y="557.456">75</tspan></text>
+        </g>
+        <g id="lot-76">
+        <path id="76" d="M785.377 531.214L787.135 578.014L822.18 577.464L820.971 529.786L785.377 531.214Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="76" fill="black"     ><tspan x="793.265" y="558.225">76</tspan></text>
+        </g>
+        <g id="lot-77">
+        <path id="77" d="M750.772 532.313L751.541 579.112L786.805 578.234L785.157 531.104L750.772 532.313Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="77" fill="black"     ><tspan x="758.138" y="559.725">77</tspan></text>
+        </g>
+        <g id="lot-78">
+        <path id="78" d="M715.397 533.521L716.606 580.431L751.541 579.552L750.662 532.313L715.397 533.521Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="78" fill="black"     ><tspan x="723.469" y="560.442">78</tspan></text>
+        </g>
+        <g id="lot-79">
+        <path id="79" d="M680.133 534.73L681.341 581.09L716.606 580.321L715.727 533.631L680.133 534.73Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="79" fill="black"     ><tspan x="687.954" y="561.456">79</tspan></text>
+        </g>
+        <g id="lot-80">
+        <path id="80" d="M646.187 535.718L633.004 582.957L681.122 581.419L680.023 534.949L646.187 535.718Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="80" fill="black"     ><tspan x="648.669" y="562.956">80</tspan></text>
+        </g>
+        <g id="lot-81">
+        <path id="81" d="M652.399 507.006L646.175 535.48L695.39 533.847L693.486 472.62C670.487 480.546 663.667 489.797 652.399 507.006Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="81" fill="black"     ><tspan x="665.954" y="519.341">81</tspan></text>
+        </g>
+        <g id="lot-82">
+        <path id="82" d="M694.224 472.386L695.39 533.731L734.459 532.914L733.055 470.17L694.224 472.386Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="82" fill="black"     ><tspan x="703.342" y="508.317">82</tspan></text>
+        </g>
+        <g id="lot-83">
+        <path id="83" d="M733.076 470.287L734.343 532.448L773.062 531.048L771.779 468.654L733.076 470.287Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="83" fill="black"     ><tspan x="742.069" y="506.817">83</tspan></text>
+        </g>
+        <g id="lot-84">
+        <path id="84" d="M772.012 468.538L772.829 531.282L812.364 529.649L810.732 467.954L772.012 468.538Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="84" fill="black"     ><tspan x="781.188" y="506.817">84</tspan></text>
+        </g>
+        <g id="lot-85">
+        <path id="85" d="M810.615 467.721L812.014 529.882L851.2 529.066L849.684 466.438L810.615 467.721Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="85" fill="black"     ><tspan x="819.908" y="504.251">85</tspan></text>
+        </g>
+        <g id="lot-86">
+        <path id="86" d="M850.034 466.322L851.433 529.182L891.086 528.016L889.103 464.689L850.034 466.322Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="86" fill="black"     ><tspan x="859.56" y="503.75">86</tspan></text>
+        </g>
+        <g id="lot-87">
+        <path id="87" d="M889.919 484.515L891.202 531.631L930.738 530.465L929.222 483.232L889.919 484.515Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="87" fill="black"     ><tspan x="899.329" y="516.317">87</tspan></text>
+        </g>
+        <g id="lot-88">
+        <path id="88" d="M929.222 483.466L930.738 530.582L970.04 528.832L969.107 482.416L929.222 483.466Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="88" fill="black"     ><tspan x="938.631" y="515.341">88</tspan></text>
+        </g>
+        <g id="lot-89">
+        <path id="89" d="M968.757 482.649L970.157 528.832L1009.69 527.899L1008.29 481.016L968.757 482.649Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="89" fill="black"     ><tspan x="976.45" y="513.25">89</tspan></text>
+        </g>
+        <g id="lot-90">
+        <path id="90" d="M1008.18 481.016L1009.69 527.899L1049.23 526.5L1048.06 479.967L1008.18 481.016Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="90" fill="black"     ><tspan x="1017.13" y="512.317">90</tspan></text>
+        </g>
+        <g id="lot-91">
+        <path id="91" d="M1047.95 479.967L1049.11 526.267L1089.23 525.45L1087.36 477.868L1047.95 479.967Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="91" fill="black"     ><tspan x="1056.05" y="510.301">91</tspan></text>
+        </g>
+        <g id="lot-92">
+        <path id="92" d="M1087.47 477.975L1089.22 525.482L1128.61 524.497L1127.1 477.52L1087.47 477.975Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="92" fill="black"     ><tspan x="1097.76" y="507.75">92</tspan></text>
+        </g>
+        <g id="lot-93">
+        <path id="93" d="M1126.95 477.293L1128.68 524.421L1168.14 523.11L1166.88 475.626L1126.95 477.293Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="93" fill="black"     ><tspan x="1135.17" y="505.841">93</tspan></text>
+        </g>
+        <g id="lot-94">
+        <path id="94" d="M1166.65 475.381L1168.62 523.057L1208.1 522.072L1206.52 474.341L1166.65 475.381Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="94" fill="black"     ><tspan x="1174.17" y="504.801">94</tspan></text>
+        </g>
+        <g id="lot-95">
+        <path id="95" d="M1206 453.02L1208.1 522.148L1247.34 520.254L1244.82 452.154L1206 453.02Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="95" fill="black"     ><tspan x="1217.84" y="495.301">95</tspan></text>
+        </g>
+        <g id="lot-96">
+        <path id="96" d="M1335.89 498.545L1334.65 448.079L1291.48 449.317L1293.81 500.058L1335.89 498.545Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="96" fill="black"     ><tspan x="1303.18" y="482.893">96</tspan></text>
+        </g>
+        <g id="lot-97">
+        <path id="97" d="M1382.19 511.57L1380.18 446.535L1334.59 448.01L1336.74 512.911L1382.19 511.57Z" fill="#CCCCCC" stroke="black" stroke-width="1.5"/>
+        <text id="97" fill="black"     ><tspan x="1347.6" y="482.893">97</tspan></text>
+        </g>
+        <g id="lot-98">
+        <path id="98" d="M1337.78 535.625L1336.15 498.568L1294.08 500.082L1295.24 536.907L1337.78 535.625Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="98" fill="black"     ><tspan x="1304.73" y="525.804">98</tspan></text>
+        </g>
+        <g id="lot-99">
+        <path id="99" d="M1339.06 572.334L1337.66 535.509L1295.36 537.14L1296.41 573.849L1339.06 572.334Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="99" fill="black"     ><tspan x="1304.98" y="560.442">99</tspan></text>
+        </g>
+        <g id="lot-100">
+        <path id="100" d="M1340.69 609.508L1338.94 572.333L1296.29 573.849L1297.46 610.207L1340.69 609.508Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="100" fill="black"     ><tspan x="1304.73" y="597.089">100</tspan></text>
+        </g>
+        <g id="lot-101">
+        <path id="101" d="M1341.86 645.634L1340.69 609.042L1297.46 610.44L1299.67 646.799L1341.86 645.634Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="101" fill="black"     ><tspan x="1307.59" y="633.739">101</tspan></text>
+        </g>
+        <g id="lot-102">
+        <path id="102" d="M1343.96 686.864L1342.09 645.983L1299.32 646.566L1301.3 684.44L1343.96 686.864Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="102" fill="black"     ><tspan x="1307.59" y="671.303">102</tspan></text>
+        </g>
+        <g id="lot-103">
+        <path id="103" d="M1383.59 547.904L1382.12 511.639L1337.02 512.672L1338.14 548.663L1383.59 547.904Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="103" fill="black"     ><tspan x="1344.72" y="537.225">103</tspan></text>
+        </g>
+        <g id="lot-104">
+        <path id="104" d="M1384.76 581.644L1383.37 547.679L1338.28 548.592L1339.32 583.021L1384.76 581.644Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="104" fill="black"     ><tspan x="1345.86" y="574.092">104</tspan></text>
+        </g>
+        <g id="lot-105">
+        <path id="105" d="M1385.8 617.22L1384.99 581.414L1339.66 583.136L1341.27 618.482L1385.8 617.22Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="105" fill="black"     ><tspan x="1348.23" y="607.646">105</tspan></text>
+        </g>
+        <g id="lot-106">
+        <path id="106" d="M1387.06 651.993L1385.8 616.876L1341.61 618.368L1342.65 653.829L1387.06 651.993Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="106" fill="black"     ><tspan x="1351.02" y="642.291">106</tspan></text>
+        </g>
+        <g id="lot-107">
+        <path id="107" d="M1388.09 690.208L1386.94 651.993L1342.76 653.714L1343.79 686.651L1388.09 690.208Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="107" fill="black"     ><tspan x="1352.31" y="677.705">107</tspan></text>
+        </g>
+        <g id="lot-108">
+        <path id="108" d="M1434.8 661.549L1436.12 695.988L1495.1 699.551L1498.14 661.549H1434.8Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="108" fill="black"     ><tspan x="1450.99" y="684.894">108</tspan></text>
+        </g>
+        <g id="lot-109">
+        <path id="109" d="M1453.16 626.451L1454.66 661.752H1498.19L1500.88 625.2L1453.16 626.451Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="109" fill="black"     ><tspan x="1462.52" y="649.295">109</tspan></text>
+        </g>
+        <g id="lot-110">
+        <path id="110" d="M1452.27 591.865L1453.16 626.875L1500.88 625.288L1503.9 590.278L1452.27 591.865Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="110" fill="black"     ><tspan x="1462.52" y="615.04">110</tspan></text>
+        </g>
+        <g id="lot-111">
+        <path id="111" d="M1451.34 556.948L1452.37 591.398L1503.81 590.371L1506.7 554.894L1451.34 556.948Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="111" fill="black"     ><tspan x="1462.52" y="580.786">111</tspan></text>
+        </g>
+        <g id="lot-112">
+        <path id="112" d="M1449.84 521.471L1451.15 557.041L1506.7 555.08L1509.69 519.51L1449.84 521.471Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="112" fill="black"     ><tspan x="1462.52" y="546.532">112</tspan></text>
+        </g>
+        <g id="lot-113">
+        <path id="113" d="M1448.54 486.834L1449.84 521.097L1509.78 519.791L1512.58 484.5L1448.54 486.834Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="113" fill="black"     ><tspan x="1462.52" y="512.277">113</tspan></text>
+        </g>
+        <g id="lot-114">
+        <path id="114" d="M1470.01 442.674L1471.13 485.713L1512.77 484.406L1516.88 440.994L1470.01 442.674Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="114" fill="black"     ><tspan x="1479.32" y="468.45">114</tspan></text>
+        </g>
+        <g id="lot-115">
+        <path id="115" d="M1427.16 444.261L1428 486.647L1471.41 486.087L1470.1 442.674L1427.16 444.261Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="115" fill="black"     ><tspan x="1437.02" y="470.479">115</tspan></text>
+        </g>
+        <g id="lot-116">
+        <path id="116" d="M1479.78 275.294L1527.62 273.453L1525.19 320.725L1481.25 322.044L1479.78 275.294Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="116" fill="black"     ><tspan x="1490.7" y="303.567">116</tspan></text>
+        </g>
+        <g id="lot-117">
+        <path id="117" d="M1440.23 276.461L1479.43 275.118L1481.19 322.033L1441.83 323.041L1440.23 276.461Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="117" fill="black"     ><tspan x="1449.03" y="304.752">117</tspan></text>
+        </g>
+        <g id="lot-118">
+        <path id="118" d="M1401.12 277.72L1439.73 276.713L1441.86 323.097L1402.72 324.467L1401.12 277.72Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="118" fill="black"     ><tspan x="1407.37" y="305.938">118</tspan></text>
+        </g>
+        <g id="lot-119">
+        <path id="119" d="M1362.26 278.979L1400.96 277.888L1402.62 324.719L1363.69 325.307L1362.26 278.979Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="119" fill="black"     ><tspan x="1365.7" y="307.124">119</tspan></text>
+        </g>
+        <g id="lot-120">
+        <path id="120" d="M1323.07 280.573L1362.26 278.727L1363.78 325.39L1324.33 326.733L1323.07 280.573Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="120" fill="black"     ><tspan x="1325.93" y="310.252">120</tspan></text>
+        </g>
+        <g id="lot-121">
+        <path id="121" d="M1283.24 282.056L1323.02 280.897L1324.58 326.733L1285.22 329L1283.24 282.056Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="121" fill="black"     ><tspan x="1290.91" y="311.438">121</tspan></text>
+        </g>
+        <g id="lot-122">
+        <path id="122" d="M1281.59 240.205L1317.95 238.813L1319.29 280.435L1283.14 281.827L1281.59 240.205Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="122" fill="black"     ><tspan x="1287.84" y="266.138">122</tspan></text>
+        </g>
+        <g id="lot-123">
+        <path id="123" d="M1317.8 238.658L1352.46 237.42L1353.83 279.062L1319.55 280.801L1317.8 238.658Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="123" fill="black"     ><tspan x="1321.95" y="266.474">123</tspan></text>
+        </g>
+        <g id="lot-124">
+        <path id="124" d="M1352.77 237.729L1387.89 236.182L1389.28 278.423H1354.16L1352.77 237.729Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="124" fill="black"     ><tspan x="1356.53" y="266.138">124</tspan></text>
+        </g>
+        <g id="lot-125">
+        <path id="125" d="M1388.05 236.492L1423.17 234.79L1424.56 276.721L1389.13 277.959L1388.05 236.492Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="125" fill="black"     ><tspan x="1394.62" y="263.283">125</tspan></text>
+        </g>
+        <g id="lot-126">
+        <path id="126" d="M1423.45 234.821L1457.59 233.336L1459.38 275.484L1424.56 276.567L1423.45 234.821Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="126" fill="black"     ><tspan x="1428.86" y="261.07">126</tspan></text>
+        </g>
+        <g id="lot-127">
+        <path id="127" d="M1457.52 233.397L1493.11 231.85L1494.82 274.44L1459.38 275.793L1457.52 233.397Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="127" fill="black"     ><tspan x="1463.17" y="260.638">127</tspan></text>
+        </g>
+        <g id="lot-128">
+        <path id="128" d="M1493.26 231.695L1530.55 229.993L1527.92 273.936H1494.96L1493.26 231.695Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="128" fill="black"     ><tspan x="1497.91" y="259.64">128</tspan></text>
+        </g>
+        <g id="lot-129">
+        <path id="129" d="M1438.21 125.19L1539.6 88.7274L1534.51 182.975L1441.25 187.244L1438.21 125.19Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="129" fill="black"     ><tspan x="1469.62" y="154.777">129</tspan></text>
+        </g>
+        <g id="lot-130">
+        <path id="130" d="M1195.26 210.377L1235.13 196.333L1236.16 244.615L1196.38 246.46L1195.26 210.377Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="130" fill="black"     ><tspan x="1201.73" y="229.552">130</tspan></text>
+        </g>
+        <g id="lot-131">
+        <path id="131" d="M1196.38 246.563L1235.85 244.717L1237.49 284.901L1198.54 286.234L1196.38 246.563Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="131" fill="black"     ><tspan x="1203.74" y="273.495">131</tspan></text>
+        </g>
+        <g id="lot-132">
+        <path id="132" d="M1198.54 285.926L1237.39 284.901L1239.13 330.928L1199.46 332.671L1198.54 285.926Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="132" fill="black"     ><tspan x="1203.74" y="314.703">132</tspan></text>
+        </g>
+        <g id="lot-133">
+        <path id="133" d="M1152 294.845L1198.13 293.82L1199.36 332.978L1153.23 334.209L1152 294.845Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="133" fill="black"     ><tspan x="1162.13" y="319.912">133</tspan></text>
+        </g>
+        <g id="lot-134">
+        <path id="134" d="M1150.05 259.581L1197 258.351L1198.43 294.127L1151.08 294.947L1150.05 259.581Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="134" fill="black"     ><tspan x="1157.49" y="281.824">134</tspan></text>
+        </g>
+        <g id="lot-135">
+        <path id="135" d="M1149.02 225.446L1195.15 210.274L1196.9 258.249L1150.36 259.684L1149.02 225.446Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="135" fill="black"     ><tspan x="1157.49" y="243.417">135</tspan></text>
+        </g>
+        <g id="lot-136">
+        <path id="136" d="M1064.87 278.643L1063.07 235.292L1089.58 238.017L1103.48 235.292L1104.48 277.708L1064.87 278.643Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="136" fill="black"     ><tspan x="1069.28" y="262.417">136</tspan></text>
+        </g>
+        <g id="lot-137">
+        <path id="137" d="M1065.06 278.805L1104.94 277.71L1106.79 335.765L1066.89 337.136L1065.06 278.805Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="137" fill="black"     ><tspan x="1070.74" y="304.835">137</tspan></text>
+        </g>
+        <g id="lot-138">
+        <path id="138" d="M1023.78 232.506L1062.77 235.552L1067.04 337.593L1027.44 338.507L1023.78 232.506Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="138" fill="black"     ><tspan x="1030.53" y="293.631">138</tspan></text>
+        </g>
+        <g id="lot-139">
+        <path id="139" d="M985.252 281.394L1025.15 281.395L1027.59 338.507L986.47 340.03L985.252 281.394Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="139" fill="black"     ><tspan x="990.887" y="313.966">139</tspan></text>
+        </g>
+        <g id="lot-140">
+        <path id="140" d="M984.49 229.46L1023.33 232.506L1025.46 281.546H986.013L984.49 229.46Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="140" fill="black"     ><tspan x="989.126" y="261.484">140</tspan></text>
+        </g>
+        <g id="lot-141">
+        <path id="141" d="M901.252 296.935L939.449 296.282L940.414 341.334L902.667 342.858L901.252 296.935Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="141" fill="black"     ><tspan x="906.213" y="325.336">141</tspan></text>
+        </g>
+        <g id="lot-142">
+        <path id="142" d="M861.51 297.312L900.945 296.762L902.771 342.77L862.697 344.414L861.51 297.312Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="142" fill="black"     ><tspan x="867.051" y="326.367">142</tspan></text>
+        </g>
+        <g id="lot-143">
+        <path id="143" d="M899.85 261.891L938.281 260.887L939.376 295.758L900.854 297.036L899.85 261.891Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="143" fill="black"     ><tspan x="904.902" y="284.558">143</tspan></text>
+        </g>
+        <g id="lot-144">
+        <path id="144" d="M860.779 262.621L899.941 261.891L900.945 297.036H861.327L860.779 262.621Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="144" fill="black"     ><tspan x="867.051" y="286.022">144</tspan></text>
+        </g>
+        <g id="lot-145">
+        <path id="145" d="M898.207 221.634L936.729 224.921L938.281 260.522L899.729 262.099L898.207 221.634Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="145" fill="black"     ><tspan x="903.213" y="246.484">145</tspan></text>
+        </g>
+        <g id="lot-146">
+        <path id="146" d="M859.684 217.344L898.024 221.452L899.758 262.165L860.78 263.261L859.684 217.344Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="146" fill="black"     ><tspan x="866.362" y="246.484">146</tspan></text>
+        </g>
+        <g id="lot-147">
+        <path id="147" d="M763.214 211.101L812.118 215.48L812.988 251.621L764.383 252.595L763.214 211.101Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="147" fill="black"     ><tspan x="773.601" y="238.185">147</tspan></text>
+        </g>
+        <g id="lot-148">
+        <path id="148" d="M764.578 252.887L813.183 251.913L814.936 286.881L765.649 288.342L764.578 252.887Z" fill="#f5eed3" stroke="black" stroke-width="1.5"/>
+        <text id="148" fill="black"     ><tspan x="775.257" y="275.946">148</tspan></text>
+        </g>
+        <g id="lot-149">
+        <path id="149" d="M775.762 287.623L814.621 286.687L816.026 347.082L777.635 347.863L775.762 287.623Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="149" fill="black"     ><tspan x="781.394" y="324.157">149</tspan></text>
+        </g>
+        <g id="lot-150">
+        <path id="150" d="M737.12 288.56L776.099 288.56L777.635 348.487L738.464 349.579L737.12 288.56Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+        <text id="150" fill="black"     ><tspan x="742.703" y="325.421">150</tspan></text>
+        </g>
+        <g id="lot-151">
+            <path id="151" d="M697.732 290.12L736.903 289.028L738.308 349.735L708.5 351.14L699.449 346.77L690.397 324.141L697.732 290.12Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+            <text id="151" fill="black"     ><tspan x="702.629" y="326.081">151</tspan></text>
+        </g>
+        <g id="lot-152">
+            <path id="152" d="M707.564 246.112L763.901 244.239L765.93 288.404L697.42 290.432L707.564 246.112Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+            <text id="152" fill="black"     ><tspan x="716.269" y="272.534">152</tspan></text>
+        </g>
+        <g id="lot-153">
+            <path id="153" d="M718.224 191.334L762.497 210.842L763.589 244.592L707.096 246.268L718.224 191.334Z" fill="#FEF2E2" stroke="black" stroke-width="1.5"/>
+            <text id="153" fill="black"     ><tspan x="723.807" y="227.816">153</tspan></text>
+        </g>
+    </g>
+    <g id="tr">
+        <path id="tr6" d="M523.122 401.858C504.172 398.627 69.9925 418.836 56.6411 418.836C43.2896 418.836 41.181 447.439 56.6411 448.344C72.1011 449.249 505.818 432.175 520.696 432.175C535.574 432.175 542.071 405.089 523.122 401.858Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 18" d="M455.586 409.011L393.4 410.516V432.08L455.586 430.074V409.011Z" stroke="#9E6E4A" stroke-width="1.5"/>
+        <g id="Vector 19">
+            <path d="M381.865 411.518L319.845 413.357V435.256L381.865 432.415V411.518Z" stroke="#9E6E4A" stroke-width="1.5"/>
+            <path d="M307.642 414.527L246.291 417.035V437.764L307.642 436.092V414.527Z" stroke="#9E6E4A" stroke-width="1.5"/>
+            <path d="M233.921 417.035L171.901 419.543V439.603L233.921 437.764V417.035Z" stroke="#9E6E4A" stroke-width="1.5"/>
+            <path d="M160.199 419.543L107.04 422.217V442.11L160.199 440.271V419.543Z" stroke="#9E6E4A" stroke-width="1.5"/>
+        </g>
+        <path id="Vector 17" d="M521.485 406.685C512.72 406.685 463.473 408.668 463.473 408.668L464.203 429.222C464.203 429.222 511.677 427.24 521.485 427.24C531.292 427.24 530.249 406.685 521.485 406.685Z" stroke="#9E6E4A" stroke-width="1.5"/>
+        <path id="Vector 36" d="M488.263 183.404L266.436 84.1979L254.42 123.018L178.938 209.283L488.263 194.187V183.404Z" fill="#BAFD90" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="tr4" d="M595.321 219.222L152.925 237.927L145.523 247.663L593.187 231.59L576.211 312.337L563.605 338.36L537.176 354.625L59.8108 371.296L48.8322 390L540.022 372.109C566.451 365.082 577.493 352.411 590.849 315.183L607.113 235.487C607.864 227.606 605.279 224.046 595.321 219.222Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="tr5" d="M411.376 474.728L416.639 616.59L429.137 621.633L422.997 481.745L512.017 478.456L529.338 487.884L534.381 505.425L502.369 640.489L518.156 643.339L547.756 499.066C547.309 478.898 541.545 470.507 522.761 460.038L421.024 463.546C414.244 465.12 412.283 467.708 411.376 474.728Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="tr3" d="M386.819 475.386L392.52 607.819L381.118 603.215L376.295 484.157L196.94 490.954L198.036 534.586L188.608 530.64V490.954L94.3262 493.365L50.2549 475.825L376.295 464.862C381.834 465.542 384.206 467.683 386.819 475.386Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <g id="tr2">
+            <path d="M483.153 176.293L267.19 80.6327L264.914 88.2937C264.914 88.2937 474.82 181.617 481.041 184.565C487.262 187.514 486.158 190.942 481.041 192.133C475.924 193.325 184.888 202.766 184.888 202.766L174.967 213.736L485.089 198.469C488.304 197.21 489.784 195.996 492.129 193.365C492.883 189.585 492.972 187.466 492.129 183.685C488.978 180.708 486.969 179.1 483.153 176.293Z" fill="white"/>
+            <path d="M266.343 80.2578L483.153 176.293C486.969 179.1 488.978 180.708 492.129 183.685C492.972 187.466 492.883 189.585 492.129 193.365C489.784 195.996 488.304 197.21 485.089 198.469L174.967 213.736L184.888 202.766C184.888 202.766 475.924 193.325 481.041 192.133C486.158 190.942 487.262 187.514 481.041 184.565C474.82 181.617 264.914 88.2937 264.914 88.2937L267.19 80.6327" stroke="#A3A3A3" stroke-width="1.5"/>
+        </g>
+        <path id="tr1" d="M627.603 149.214L613.51 143.175L603.445 183.841H587.742L277.712 45.7368L274.894 56.2053L581.702 193.907L617.537 191.491L627.603 149.214Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 37" d="M1436.52 190.393L1236.08 198.519V196.852L1433.6 126.429L1436.52 190.393Z" fill="#BAFD90" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="tr7" d="M622.443 629.855L616.147 656.565L599.549 654.848L605.463 626.23C608.659 620.579 610.919 618.586 616.147 618.026L1250.51 598.948C1258.25 599.754 1260.25 602.523 1261.58 608.487L1264.82 680.986H1252.61L1250.51 610.395L622.443 629.855Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <g id="Vector 20">
+            <path d="M702.552 453.31C661.956 460.755 650.193 472.779 633.971 497.62L615.202 581.972C614.337 589.444 614.623 592.889 622.17 592.253L1250.76 574.217C1256.45 572.408 1258.42 570.234 1259.66 564.197L1255.1 440.382L1244.52 453.807L1249.2 564.197L633.971 582.679L652.23 506.75L694.091 472.459L889.592 465.111V485.603C1013.42 481.603 1082.84 477.795 1206.67 473.795V452.864H1244.52L1254.43 438.985L1194.42 435.719L1187.52 455.759L910.967 465.111L902.729 445.962L702.552 453.31Z" fill="white"/>
+            <path d="M615.045 582.679L615.202 581.972M615.202 581.972L633.971 497.62C650.193 472.779 661.956 460.755 702.552 453.31L902.729 445.962L910.967 465.111L1187.52 455.759L1194.42 435.719L1254.43 438.985L1244.52 452.864H1206.67V473.795C1082.84 477.795 1013.42 481.603 889.592 485.603V465.111L694.091 472.459L652.23 506.75L633.971 582.679L1249.2 564.197L1244.52 453.807L1255.1 440.382L1259.66 564.197C1258.42 570.234 1256.45 572.408 1250.76 574.217L622.17 592.253C614.623 592.889 614.337 589.444 615.202 581.972Z" stroke="#A3A3A3" stroke-width="1.5" fill="white"/>
+        </g>
+        <path id="Vector 21" d="M552.576 625.236C549.825 632.644 548.131 648.307 548.131 648.307L569.72 651.058C569.72 651.058 573.53 633.703 573.53 627.141C573.53 620.58 555.328 617.828 552.576 625.236Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+         <path id="Vector 22" d="M575.647 519.619C572.684 528.086 561.042 587.985 561.042 587.985C561.042 596.027 574.377 597.932 580.515 591.159C580.515 591.159 595.543 532.53 595.543 522.371C595.543 512.211 578.61 511.153 575.647 519.619Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+         <circle id="Ellipse 2" cx="609.337" cy="412.346" r="37" fill="white" stroke="#A3A3A3"/>
+        <path id="Vector 23" d="M646.975 197.901C642.742 208.272 624.328 296.321 620.941 313.677C617.555 331.033 636.181 339.288 642.107 318.969C648.033 298.649 666.659 212.293 666.659 201.499C666.659 190.704 651.208 187.529 646.975 197.901Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 24" d="M1291.9 449.603L1300.24 684.107L1289.41 682.441L1278.16 441.272C1280.04 435.374 1281.54 432.479 1289.41 432.109L1380.21 428.36C1388.95 427.527 1390.52 430.685 1391.45 438.357L1402.7 690.772H1388.54L1380.21 446.687L1291.9 449.603Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 25" d="M1435.37 663.075L1436.37 695.497H1425.56L1428.06 650.107L1441.36 644.453L1436.87 502.794L1418.42 495.977L1415.92 435.124C1417.61 430.484 1419 428.446 1423.07 426.811L1517.68 422.321L1516.68 440.943L1427.06 443.936L1428.06 486.667H1448.68L1454.83 663.075H1435.37Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 26" d="M1224.98 375.168C1204.33 373.15 697.97 395.682 697.97 395.682C680.322 399.504 684.856 425.965 697.97 425.965C697.97 425.965 1207.71 405.451 1224.98 405.451C1242.26 405.451 1245.63 377.186 1224.98 375.168Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 27" d="M1226.76 382.823L700.499 402.166C690.313 403.702 691.405 420.458 700.499 420.458L1226.76 401.114C1235.19 401.114 1238.51 383.933 1226.76 382.823Z" stroke="#A37554" stroke-width="1.5"/>
+        <path id="Vector 28" d="M1301.16 372.95C1317.52 372.95 1522.56 365.601 1522.56 365.601L1520.42 395.231C1520.42 395.231 1308.98 402.106 1296.42 402.106C1283.86 402.106 1284.81 372.95 1301.16 372.95Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 29" d="M1408.1 375.688V394.414C1408.1 394.414 1305.45 397.989 1299.32 397.989C1293.19 397.989 1290.81 379.433 1299.32 379.433C1307.83 379.433 1408.1 375.688 1408.1 375.688Z" stroke="#9D6C49" stroke-width="1.5"/>
+        <path id="Vector 30" d="M1522.33 372.113L1419.17 375.007V393.393L1520.8 390.499L1522.33 372.113Z" stroke="#9D6C49" stroke-width="1.5"/>
+        <path id="Vector 31" d="M1281.9 240.011L1530.94 230.014V220.605L1281.9 228.544C1270.51 229.517 1269.94 233.165 1269.55 240.011L1273.37 335.275C1275.62 341.327 1277.59 344.138 1285.43 345.566L1523.59 337.04L1525.35 320.28L1285.43 329.101L1281.9 240.011Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 32" d="M1153.5 334.422L1149.39 225.049L1136.64 228.75L1141.57 336.478C1141.9 345.358 1144.36 350.521 1155.59 350.372L1239.02 347.991C1246.31 347.19 1249.52 345.757 1249.3 336.478L1245.19 217.648C1245.02 209.084 1247.14 206.615 1254.24 205.724L1533.84 197.089V183.931L1440.91 186.809L1438.44 123.488L1428.99 128.011L1431.45 186.809L1234.39 195.69L1239.02 331.133L1153.5 334.422Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 33" d="M1117.4 343.41L1113.18 232.856L1102.63 234.966L1106.43 336.237L988.492 339.823L985.327 228.848L972.668 227.16L977.099 348.262C979.097 353.69 980.695 356.156 986.382 357.124L1106.43 352.271C1112.52 351.022 1115.14 349.339 1117.4 343.41Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 35" d="M824.567 215.912H812.132L815.91 347.055L708.371 350.896L699.355 346.718L690.556 324.82L718.974 191.861L701.918 184.486L672.877 331.536C677.524 351.5 684.456 359.642 705.605 367.952L818.082 363.343C826.194 362.012 828.528 358.718 828.685 348.131L824.567 215.912Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <path id="Vector 34" d="M952.584 347.437L949.075 225.92H936.525L940.417 341.212L862.653 344.366L859.582 217.146H847.299L852.563 352.262C853.703 357.925 855.406 360.315 862.653 361.475L945.126 357.527C950.536 356.786 952.406 354.881 952.584 347.437Z" fill="white" stroke="#A3A3A3" stroke-width="1.5"/>
+        <text id="PARKING" transform="translate(1000.36 440) " fill="black"    font-weight="500" ><tspan x="0" y="15.3182">PARKING</tspan></text>
+        <path id="Vector 38" d="M188.894 490.962L94.2918 493.324L188.894 531.124V490.962Z" fill="#BAFD90" stroke="#A3A3A3" stroke-width="1.5"/>
+    </g>
+</svg>

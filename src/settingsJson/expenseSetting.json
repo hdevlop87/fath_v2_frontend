@@ -1,0 +1,90 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "name": "amount",
+      "placeholder": "payment.amountPlaceholder",
+      "label": "payment.amountLabel"
+    },
+    {
+      "type": "text",
+      "name": "beneficiary",
+      "placeholder": "expense.beneficiaryPlaceholder",
+      "label": "expense.beneficiaryLabel"
+    },
+    {
+      "type": "date",
+      "name": "date",
+      "placeholder": "payment.datePlaceholder",
+      "label": "payment.dateLabel"
+    },
+    {
+      "type": "select",
+      "name": "type",
+      "placeholder": "expense.typePlaceholder",
+      "label": "expense.typeLabel",
+      "items": [
+        {
+          "label": "expense.type.Permits_and_Authorizations",
+          "value": "Permits_and_Authorizations"
+        },
+        {
+          "label": "expense.type.Development_Work",
+          "value": "Development_Work"
+        },
+        {
+          "label": "expense.type.Marketing_and_Advertising",
+          "value": "Marketing_and_Advertising"
+        },
+        {
+          "label": "expense.type.Property_Taxes_and_Duties",
+          "value": "Property_Taxes_and_Duties"
+        },
+        {
+          "label": "expense.type.Labor",
+          "value": "Labor"
+        },
+        {
+          "label": "expense.type.Miscellaneous",
+          "value": "Miscellaneous"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "name": "paymentMethod",
+      "placeholder": "payment.methodPlaceholder",
+      "label": "payment.methodLabel",
+      "items": [
+        "CreditCard",
+        "BankTransfer",
+        "Espece",
+        "Cheque"
+      ]
+    },
+    {
+      "type": "text",
+      "name": "paymentReference",
+      "placeholder": "payment.referencePlaceholder",
+      "label": "payment.referenceLabel"
+    },
+    {
+      "type": "file",
+      "name": "paymentImage",
+      "placeholder": "payment.receiptPlaceholder",
+      "label": "payment.receiptLabel"
+    },
+    {
+      "type": "textarea",
+      "name": "notes",
+      "placeholder": "payment.notesPlaceholder",
+      "label": "payment.notesLabel"
+    }
+  ],
+  "toastMessages": {
+    "createSuccess": "payment.toast.createSuccess",
+    "updateSuccess": "payment.toast.updateSuccess",
+    "deleteSuccess": "payment.toast.deleteSuccess"
+  },
+  "queryKey": "payments"
+}

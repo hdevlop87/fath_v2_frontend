@@ -1,0 +1,213 @@
+{
+    "auth": {
+        "welcomeBack": "Salut, Bienvenue",
+        "username": {
+            "placeholder": "Entrez votre nom d'utilisateur",
+            "label": "Nom d'utilisateur"
+        },
+        "password": {
+            "placeholder": "Entrez votre mot de passe",
+            "label": "Mot de passe"
+        },
+        "image": {
+            "placeholder": "Aucun fichier sélectionné",
+            "label": "Image"
+        }
+        
+    },
+    "button": {
+        "pleaseWait": "Veuillez patienter...",
+        "loginButton": "Connexion",
+        "logoutButton": "Logout",
+        "back": "Back",
+        "submit": "Soumettre",
+        "cancel": "Annuler",
+        "continue": "Continuer",
+        "update": "Mettre à jour"
+    },
+    "sidebar": {
+        "dashboard": "Tableau de bord",
+        "sales": "Ventes",
+        "expenses": "Dépenses",
+        "map": "Carte",
+        "lots": "Lots",
+        "customers": "Clients",
+        "settings": "Paramètres",
+        "logout": "Déconnexion"
+    },
+    "customer": {
+        "firstNamePlaceholder": "Entrez le prénom",
+        "firstNameLabel": "Prénom",
+        "lastNamePlaceholder": "Entrez le nom de famille",
+        "lastNameLabel": "Nom",
+        "phonePlaceholder": "Entrez le numéro de téléphone",
+        "phoneLabel": "Téléphone",
+        "emailPlaceholder": "Entrez l'adresse e-mail",
+        "emailLabel": "E-mail",
+        "addressPlaceholder": "Entrez l'adresse",
+        "addressLabel": "Adresse",
+        "CINPlaceholder": "Entrez le CIN",
+        "CINLabel": "CIN",
+        "createNewCustomer": "Créer un nouveau client",
+        "editCustomer": "Modifier le client",
+        "toast": {
+            "createSuccess": "Client créé avec succès!",
+            "updateSuccess": "Client mis à jour avec succès!",
+            "deleteSuccess": "Client supprimé avec succès!",
+            "uploadSuccess": "Fichier téléchargées avec succès!",
+            "uploadError": "Erreur lors du téléchargement du Fichier"
+        },
+        "phoneExist": "Le numéro de téléphone existe déjà pour un autre client",
+        "emailExist": "L'adresse e-mail existe déjà pour un autre client."
+    },
+    "sale": {
+        "lotRefPlaceholder": "Sélectionner la référence du lot",
+        "lotRefLabel": "Réf. du lot",
+        "customerNamePlaceholder": "Client par nom",
+        "customerNameLabel": "Client",
+        "pricePerM2Placeholder": "Entrez le prix par m²",
+        "pricePerM2Label": "Prix par m²",
+        "datePlaceholder": "Sélectionner la date de vente",
+        "dateLabel": "Date",
+        "statusPlaceholder": "Sélectionner le statut de vente",
+        "statusLabel": "Statut",
+        "createNewSale": "Créer une nouvelle vente",
+        "editSale": "Modifier la vente",
+        "totalPriceCol": "Total à payer",
+        "venteActif": "Activer la vente",
+        "toast": {
+            "createSuccess": "Vente créée avec succès!",
+            "updateSuccess": "Vente mise à jour avec succès!",
+            "deleteSuccess": "Vente supprimée avec succès!",
+            "emailSentSuccess": "Email envoyé avec succès"
+        },
+        "lotSizeLabel": "Taille du Lot = {size} m2",
+        "totalPriceLabel": "Total à payer  = {price} dh",
+        "totalPaidLabel": "Total Echéances  = {totalPaid} dh",
+        "balanceDueLabel": "Reste à payer = {due} dh",
+        "settledPriceLabel": "Montant Payé = {percentage} %",
+        "editSaleButton": "Modifier la vente",
+        "status": {
+            "initiated": "Initié",
+            "ongoing": "En cours",
+            "completed": "Terminé",
+            "canceled": "Annulé"
+        },
+        "titleLabel": "Détails d'Achat"
+    },
+    "payment": {
+        "amountPlaceholder": "Saisissez le montant du paiement",
+        "amountLabel": "Montant",
+        "datePlaceholder": "Sélectionnez la date du paiement",
+        "dateLabel": "Date",
+        "statusPlaceholder": "Sélectionner le statut de vente",
+        "statusLabel": "Statut",
+        "methodPlaceholder": "Sélectionnez le mode de paiement",
+        "methodLabel": "Méthode de paiement",
+        "referencePlaceholder": "Saisissez la référence du paiement",
+        "referenceLabel": "Référence",
+        "receiptPlaceholder": "Saisissez les détails du reçu",
+        "receiptLabel": "Reçu",
+        "notesPlaceholder": "Saisissez des notes",
+        "notesLabel": "Notes",
+        "createNewPayment": "Créer un nouveau paiement",
+        "editPayment": "Modifier le paiement",
+        "toast": {
+            "createSuccess": "Paiement créé avec succès !",
+            "updateSuccess": "Paiement mis à jour avec succès !",
+            "deleteSuccess": "Paiement supprimé avec succès !"
+        },
+        "status": {
+            "pending": "En attente",
+            "verified": "Vérifié",
+            "failed": "Échoué"
+        },
+        "titleLabel": "Résumé des Paiements"
+    },
+    "lot": {
+        "lotRefPlaceholder": "Entrez la référence du lot",
+        "lotRefLabel": "Réf du lot",
+        "statusPlaceholder": "Sélectionnez le statut du lot",
+        "statusLabel": "Statut",
+        "sizePlaceholder": "Entrez la taille du lot",
+        "sizeLabel": "Taille",
+        "pricePlaceholder": "Entrez le prix du lot",
+        "priceLabel": "Prix",
+        "zoningCodePlaceholder": "Sélectionnez le code de zonage",
+        "zoningCodeLabel": "Code de zonage",
+        "createNewLot": "Créer un nouveau lot",
+        "editLot": "Modifier le lot",
+        "toast": {
+            "createSuccess": "Lot créé avec succès !",
+            "updateSuccess": "Lot mis à jour avec succès !",
+            "deleteSuccess": "Lot supprimé avec succès !"
+        },
+        "status": {
+            "available": "Disponible",
+            "reserved": "Vendu",
+            "ongoing": "Réservé",
+            "sold": "Clôturé",
+            "canceled": "annulé"
+        }
+    },
+    "expense": {
+        "expenseIDPlaceholder": "Entrer l'ID de la dépense",
+        "expenseIDLabel": "ID de la dépense",
+        "amountPlaceholder": "Entrer le montant",
+        "amountLabel": "Montant",
+        "datePlaceholder": "Sélectionner la date de la dépense",
+        "dateLabel": "Date",
+        "paymentMethodPlaceholder": "Sélectionner le mode de paiement",
+        "paymentMethodLabel": "Mode de paiement",
+        "typePlaceholder": "Sélectionnez le type de dépense",
+        "typeLabel": "Type de dépense",
+        "beneficiaryPlaceholder": "Entrer le nom du bénéficiaire",
+        "beneficiaryLabel": "Bénéficiaire",
+        "createNewExpense": "Créer une nouvelle dépense",
+        "editExpense": "Modifier la dépense",
+        "toast": {
+            "createSuccess": "Dépense créée avec succès !",
+            "updateSuccess": "Dépense mise à jour avec succès !",
+            "deleteSuccess": "Dépense supprimée avec succès !",
+            "exists": "La dépense existe déjà"
+        },
+        "type": {
+            "Permits_and_Authorizations": "Permis et autorisations",
+            "Development_Work": "Travaux d'aménagement",
+            "Marketing_and_Advertising": "Marketing et publicité",
+            "Property_Taxes_and_Duties": "Impôts et taxes foncières",
+            "Labor": "Main d'œuvre",
+            "Miscellaneous": "Divers"
+        }
+    },
+    "alertDialog": {
+        "title": "Êtes-vous absolument sûr ?",
+        "description": "Cette action est irréversible. Cela supprimera définitivement votre enregistrement et supprimera vos données de nos serveurs."
+    },
+    "wizard": {
+        "account": "Compte",
+        "sale": "Vente",
+        "payment": "Paiement"
+    },
+    "status": {
+        "available": "Disponible",
+        "reserved": "Réservé",
+        "sold": "Vendu",
+        "initiated": "Initié",
+        "ongoing": "En cours",
+        "completed": "Complété",
+        "canceled": "Annulé"
+    },
+    "navbar": {
+        "Expenses": "Dépenses",
+        "Lots": "Lots",
+        "Customers": "Clients",
+        "Sales": "Ventes",
+        "Map": "Map",
+        "Dashboard": "Tableau de bord",
+        "SaleView": "Vente Résumé",
+        "Setting": "Paramètre",
+        "Database": "Base de données",
+        "Account": "Compte"
+    }
+}

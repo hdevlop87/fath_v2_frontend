@@ -1,0 +1,43 @@
+{
+    "tagName": "g",
+    "props": {
+        "id": "parent",
+        "fill": "green",
+        "layer": "parts"
+    },
+    "children": [
+        {
+            "tagName": "rect",
+            "props": {
+                "x": 50,
+                "y": 50,
+                "width": 100,
+                "height": 100,
+                "fill": "blue"
+            },
+            "children": []
+        },
+        {
+            "tagName": "circle",
+            "props": {
+                "x": 200,
+                "y": 100,
+                "r": 100,
+                "fill": "green"
+            },
+            "children": []
+        },
+        {
+            "tagName": "text",
+            "props": {
+                "x": 20,
+                "y": 34,
+                "fill": "#ff0066",
+                "fontFamily": "Inconsolata",
+                "fontSize": "2em",
+                "textContent": " know that eggs do well to stay out of frying pans."
+            },
+            "children": []
+        }
+    ]
+}

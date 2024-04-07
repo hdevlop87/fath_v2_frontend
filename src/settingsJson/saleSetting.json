@@ -1,0 +1,43 @@
+{
+  "fields": [
+    {
+      "type": "select",
+      "name": "lotRef",
+      "placeholder": "sale.lotRefPlaceholder",
+      "label": "sale.lotRefLabel",
+      "items": []
+    },
+    {
+      "type": "combobox",
+      "name": "customerID",
+      "placeholder": "sale.customerNamePlaceholder",
+      "label": "sale.customerNameLabel",
+      "items": []
+    },
+    {
+      "type": "text",
+      "name": "pricePerM2",
+      "placeholder": "sale.pricePerM2Placeholder",
+      "label": "sale.pricePerM2Label"
+    },
+    {
+      "type": "date",
+      "name": "date",
+      "placeholder": "sale.datePlaceholder",
+      "label": "sale.dateLabel"
+    },
+    {
+      "type": "switch",
+      "name": "isActif",
+      "placeholder": "sale.venteActif",
+      "label": ""
+    }
+
+  ],
+  "toastMessages": {
+    "createSuccess": "sale.toast.createSuccess",
+    "updateSuccess": "sale.toast.updateSuccess",
+    "deleteSuccess": "sale.toast.deleteSuccess"
+  },
+  "queryKey": "sales"
+}

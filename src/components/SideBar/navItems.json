@@ -1,0 +1,52 @@
+[
+    {
+        "name": "dashboard",
+        "label": "Dashboard",
+        "icon": "bxs:dashboard",
+        "route": "/dashboard",
+        "allowedRoles": ["admin"]
+    },
+    {
+        "name": "map",
+        "label": "Map",
+        "icon": "simple-icons:openstreetmap",
+        "route": "/dashboard/map",
+        "allowedRoles": ["admin"]
+    },
+    {
+        "name": "sales",
+        "label": "Ventes",
+        "icon": "solar:money-bag-bold",
+        "route": "/dashboard/sales",
+        "allowedRoles": ["admin"]
+    },
+    {
+        "name": "expenses",
+        "label": "Dépenses",
+        "icon": "fluent:money-hand-16-filled",
+        "route": "/dashboard/expenses",
+        "allowedRoles": ["admin"]
+    },
+    {
+        "name": "lots",
+        "label": "Lots",
+        "icon": "mdi:land-plots-marker",
+        "route": "/dashboard/lots",
+        "allowedRoles": ["admin"]
+    },
+    {
+        "name": "customers",
+        "label": "Customers",
+        "icon": "ph:users-fill",
+        "route": "/dashboard/customers",
+        "allowedRoles": ["admin"]
+    },
+    {
+        "name": "users",
+        "label": "Users",
+        "icon": "ph:users-fill",
+        "route": "/users",
+        "allowedRoles": ["admin"]
+    }
+]
+

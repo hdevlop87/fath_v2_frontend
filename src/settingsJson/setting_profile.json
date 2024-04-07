@@ -1,0 +1,30 @@
+{
+   "fields": [
+      {
+         "type": "text",
+         "name": "name",
+         "placeholder": "customer.lastNamePlaceholder",
+         "label": "customer.lastNameLabel"
+      },
+      {
+         "type": "text",
+         "name": "email",
+         "placeholder": "customer.emailPlaceholder",
+         "label": "customer.emailLabel"
+      },
+      {
+         "type": "text",
+         "name": "username",
+         "placeholder": "auth.username.placeholder",
+         "label": "auth.username.label"
+      },
+      {
+         "type": "file",
+         "name": "image",
+         "placeholder": "auth.image.placeholder",
+         "label": "auth.image.label"
+      }
+
+
+   ]
+}

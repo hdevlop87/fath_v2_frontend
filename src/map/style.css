@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1b24;
+  overflow: hidden;
+}
+
+#app {
+  margin: 0 auto;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+

@@ -1,0 +1,8 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+    <g id="rectangleGroup">
+        <rect x="50" y="10" width="50" height="50" fill="blue" />
+        <rect x="150" y="50" width="50" height="50" fill="green" />
+        <rect x="250" y="100" width="50" height="50" fill="orange" />
+        <rect x="350" y="10" width="50" height="50" fill="purple" />
+    </g>
+</svg>

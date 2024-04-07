@@ -1,0 +1,229 @@
+{
+    "auth": {
+        "welcomeBack": "Hi, Welcome Back",
+        "username": {
+            "placeholder": "Enter your username",
+            "label": "Username"
+        },
+        "password": {
+            "placeholder": "Enter your password",
+            "label": "Password"
+        },
+        "image": {
+            "placeholder": "No file selected",
+            "label": "Picture"
+        }
+    },
+    "button": {
+        "pleaseWait": "Please Wait...",
+        "loginButton": "Login",
+        "logoutButton": "Logout",
+        "registerButton": "Create Account",
+        "installButton": "Install Application",
+        "back": "Back",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "continue": "Continue",
+        "update": "Update",
+        "next": "Next",
+        "read": "read",
+        "edit": "edit",
+        "delete": "delete"
+    },
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "sales": "Sales",
+        "expenses": "Expenses",
+        "map": "Map",
+        "lots": "Lots",
+        "customers": "Customers",
+        "settings": "Settings",
+        "logout": "Logout",
+        "users": "Users",
+        "roles": "Roles",
+        "permessions": "Permessions",
+        "downloads": "Downloads",
+        "myprofile": "Profile"
+    },
+    "customer": {
+        "firstNamePlaceholder": "Enter first name",
+        "firstNameLabel": "First Name",
+        "lastNamePlaceholder": "Enter last name",
+        "lastNameLabel": "Last Name",
+        "phonePlaceholder": "Enter phone number",
+        "phoneLabel": "Phone",
+        "emailPlaceholder": "Enter email address",
+        "emailLabel": "Email",
+        "addressPlaceholder": "Enter address",
+        "addressLabel": "Address",
+        "CINPlaceholder": "Enter CIN",
+        "CINLabel": "CIN",
+        "createNewCustomer": "Create New Customer",
+        "editCustomer": "Edit Customer",
+        "toast": {
+            "createSuccess": "Customer successfully created!",
+            "updateSuccess": "Customer successfully updated!",
+            "deleteSuccess": "Customer successfully deleted!",
+            "uploadSuccess": "Data uploaded successfully!",
+            "uploadError": "Error uploading data",
+            "exists": "customer already exists"
+        },
+        "phoneExist": "Phone already exists for another customer",
+        "emailExist": "Email already exists for another customer"
+    },
+    "sale": {
+        "lotRefPlaceholder": "Select Lot Ref",
+        "lotRefLabel": "Lot Ref",
+        "customerNamePlaceholder": "Customer by name",
+        "customerNameLabel": "Customer",
+        "pricePerM2Placeholder": "Enter m² price",
+        "pricePerM2Label": "Price per m²",
+        "datePlaceholder": "Select sale date",
+        "dateLabel": "Date",
+        "statusPlaceholder": "Select sale Status",
+        "statusLabel": "Status",
+        "createNewSale": "Create New Sale",
+        "editSale": "Edit Sale",
+        "totalPriceCol": "Total Price",
+        "venteActif": "Sale On?",
+        "toast": {
+            "createSuccess": "Sale successfully created!",
+            "updateSuccess": "Sale successfully updated!",
+            "deleteSuccess": "Sale successfully deleted!",
+            "exists": "sale already exists",
+            "emailSentSuccess": "Email sent successfully"
+        },
+        "lotSizeLabel": "Lot Size = {size} m2",
+        "totalPriceLabel": "Total Price  = {price} dh",
+        "totalPaidLabel": "total Paid  = {totalPaid} dh",
+        "balanceDueLabel": "Balance Due  = {due} dh",
+        "settledPriceLabel": "Percentage Settled  = {percentage} %",
+        "editSaleButton": "Edit Sale",
+        "status": {
+            "initiated": "Initiated",
+            "ongoing": "Ongoing",
+            "completed": "Completed",
+            "canceled": "Canceled"
+        },
+        "titleLabel": "Purchase Details"
+    },
+    "payment": {
+        "amountPlaceholder": "Enter payment amount",
+        "amountLabel": "Amount",
+        "datePlaceholder": "Select payment date",
+        "dateLabel": "Date",
+        "statusPlaceholder": "Select sale Status",
+        "statusLabel": "Status",
+        "methodPlaceholder": "Select payment method",
+        "methodLabel": "Payment Method",
+        "referencePlaceholder": "Enter payment Reference",
+        "referenceLabel": "Reference",
+        "receiptPlaceholder": "Enter receipt details",
+        "receiptLabel": "Receipt",
+        "notesPlaceholder": "Enter any notes",
+        "notesLabel": "Notes",
+        "createNewPayment": "Create New Payment",
+        "editPayment": "Edit Payment",
+        "toast": {
+            "createSuccess": "Payment successfully created!",
+            "updateSuccess": "Payment successfully updated!",
+            "deleteSuccess": "Payment successfully deleted!",
+            "exists": "payment already exists"
+        },
+        "status": {
+            "pending": "Pending",
+            "verified": "Verified",
+            "failed": "Failed"
+        },
+        "titleLabel": "Payment Details"
+    },
+    "lot": {
+        "lotRefPlaceholder": "Enter lot Ref",
+        "lotRefLabel": "Lot Ref",
+        "statusPlaceholder": "Select Lot Status",
+        "statusLabel": "Status",
+        "sizePlaceholder": "Enter lot size",
+        "sizeLabel": "Size",
+        "pricePlaceholder": "Enter lot price",
+        "priceLabel": "Price",
+        "zoningCodePlaceholder": "Select zoning code",
+        "zoningCodeLabel": "Zoning Code",
+        "createNewLot": "Create New Lot",
+        "editLot": "Edit Lot",
+        "toast": {
+            "createSuccess": "Lot successfully created!",
+            "updateSuccess": "Lot successfully updated!",
+            "deleteSuccess": "Lot successfully deleted!",
+            "exists": "lot already exists"
+        },
+        "status": {
+            "available": "Available",
+            "reserved": "Reserved",
+            "ongoing": "Ongoing",
+            "canceled": "Canceled",
+            "sold": "Sold"
+        }
+    },
+    "expense": {
+        "expenseIDPlaceholder": "Enter Expense ID",
+        "expenseIDLabel": "Expense ID",
+        "amountPlaceholder": "Enter Amount",
+        "amountLabel": "Amount",
+        "datePlaceholder": "Select Expense Date",
+        "dateLabel": "Date",
+        "paymentMethodPlaceholder": "Select Payment Method",
+        "paymentMethodLabel": "Payment Method",
+        "beneficiaryPlaceholder": "Enter beneficiary name",
+        "beneficiaryLabel": "Beneficiary",
+
+        "typePlaceholder": "Select Expense Type",
+        "typeLabel": "Expense Type",
+
+        "createNewExpense": "Create New Expense",
+        "editExpense": "Edit Expense",
+        "toast": {
+            "createSuccess": "Expense successfully created!",
+            "updateSuccess": "Expense successfully updated!",
+            "deleteSuccess": "Expense successfully deleted!",
+            "exists": "Expense already exists"
+        },
+        "type": {
+            "Permits_and_Authorizations": "Permits and Authorizations",
+            "Development_Work": "Development Work",
+            "Marketing_and_Advertising": "Marketing and Advertising",
+            "Property_Taxes_and_Duties": "Property Taxes and Duties",
+            "Labor": "Labor",
+            "Miscellaneous": "Miscellaneous"
+        }
+    },
+    "alertDialog": {
+        "title": "Are you absolutely sure?",
+        "description": "This action cannot be undone. This will permanently delete your record and remove your data from our servers."
+    },
+    "wizard": {
+        "account": "Account",
+        "sale": "Sale",
+        "payment": "Payment"
+    },
+    "status": {
+        "available": "Available",
+        "reserved": "Reserved",
+        "sold": "Sold",
+        "initiated": "Initiated",
+        "ongoing": "Ongoing",
+        "completed": "Completed",
+        "canceled": "Canceled"
+    },
+    "navbar": {
+        "Expenses": "Expenses",
+        "Lots": "Lots",
+        "Customers": "Customers",
+        "Sales": "Sales",
+        "Map": "Map",
+        "Dashboard": "Dashboard",
+        "SaleView": "Sale Details",
+        "Setting": "Setting",
+        "Database": "Database",
+        "Account": "Account"
+    }
+}

@@ -1,0 +1,40 @@
+{
+   "fields": [
+      {
+         "type": "text",
+         "name": "host",
+         "placeholder": "Connection Host",
+         "label": "Host"
+      },
+      {
+         "type": "text",
+         "name": "port",
+         "placeholder": "5432",
+         "label": "Port"
+      },
+      {
+         "type": "text",
+         "name": "userName",
+         "placeholder": "Database userName",
+         "label": "User"
+      },
+      {
+         "type": "text",
+         "name": "password",
+         "placeholder": "Database password",
+         "label": "Password"
+      },
+      {
+         "type": "text",
+         "name": "database",
+         "placeholder": "Database Name",
+         "label": "Database"
+      }
+
+
+   ],
+   "toastMessages": {
+      "updateSuccess": "customer.toast.updateSuccess"
+   },
+   "queryKey": "profile"
+}

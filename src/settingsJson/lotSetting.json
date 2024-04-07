@@ -1,0 +1,62 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "name": "lotRef",
+      "placeholder": "lot.lotRefPlaceholder",
+      "label": "lot.lotRefLabel"
+    },
+    {
+      "type": "select",
+      "name": "status",
+      "placeholder": "lot.statusPlaceholder",
+      "label": "lot.statusLabel",
+      "items": [
+        {
+          "value": "Available",
+          "label": "lot.status.available"
+        },
+        {
+          "value": "Reserved",
+          "label": "lot.status.reserved"
+        },
+        {
+          "value": "Sold",
+          "label": "lot.status.sold"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "size",
+      "placeholder": "lot.sizePlaceholder",
+      "label": "lot.sizeLabel"
+    },
+    {
+      "type": "text",
+      "name": "price",
+      "placeholder": "lot.pricePlaceholder",
+      "label": "lot.priceLabel"
+    },
+    {
+      "type": "select",
+      "name": "zoningCode",
+      "placeholder": "lot.zoningCodePlaceholder",
+      "label": "lot.zoningCodeLabel",
+      "items": [
+        "EQ 1",
+        "R+2",
+        "R+2 -C-",
+        "EQ 2",
+        "R+3",
+        "R+4"
+      ]
+    }
+  ],
+  "toastMessages": {
+    "createSuccess": "lot.toast.createSuccess",
+    "updateSuccess": "lot.toast.updateSuccess",
+    "deleteSuccess": "lot.toast.deleteSuccess"
+  },
+  "queryKey": "lots"
+}

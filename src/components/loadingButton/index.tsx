@@ -1,28 +1,58 @@
-"use client"
-
 import React from 'react';
+import { Button } from "@/components/ui/button";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import { Icon } from '@iconify/react';
-import { Button } from "@/components/ui/button";
-import { cn } from '@/lib/utils'
+import { useSpring, animated } from '@react-spring/web';
 
-const NewButton = ({ loading, title, icon = 'ic:baseline-note-add', onClick, className='',variant }) => {
-    
-    return (
-        <Button className={cn('gap-1', className)} onClick={onClick} variant={variant}>
-            {loading ? (
-                <>
-                    <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
-                    Please Wait...
-                </>
-            ) : (
-                <>
-                    <Icon icon={icon} width={22} />
-                    {title || 'submit'}
-                </>
-            )}
-        </Button>
-    );
+interface LoadingButtonProps {
+  loading: boolean;
+  className?: string;
+  onClick?: () => void;
+  submitText?: string;
+  form?: string
+  loadingText: string;
+  collapsed?: boolean;
+  variant?: any;
+  Licon?: string;
 }
 
-export default NewButton;
+const LoadingButton: React.FC<LoadingButtonProps> = ({
+  loading = false,
+  className,
+  onClick,
+  submitText,
+  loadingText,
+  form,
+  collapsed,
+  variant,
+  Licon
+}) => {
+
+
+
+  const style = useSpring({
+    opacity: collapsed ? 0 : 1,
+    config: { tension: 210, friction: 20 }
+  });
+
+  return (
+    <Button form={form} onClick={onClick} type="submit" className={`flex ${className} `} variant={variant} disabled={loading}>
+      {
+        loading ?
+          <>
+            <ReloadIcon className="mr-2 h-5 w-5 animate-spin flex-shrink-0" />
+            {!collapsed && loadingText}
+          </> :
+          <>
+            <Icon icon={Licon || 'entypo:login'} width={20} className='mr-1 flex-shrink-0' />
+
+            <animated.p style={style}>
+              {submitText}
+            </animated.p>
+          </>
+      }
+    </Button>
+  );
+};
+
+export default LoadingButton;

@@ -1,37 +1,43 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import { cn } from '@/lib/utils';
 import { useSpring, animated } from '@react-spring/web';
-import { cva} from "class-variance-authority"
-import { usePathname } from 'next/navigation';
+import { cva } from "class-variance-authority";
+import { useEffect } from 'react';
+import { useNavigationStore } from '@/store/folderNavigationStore';
+import { useTranslations } from '@/hooks/useTranslations';
+import { useAuthStore } from '@/store/authStore';
+import { useSideBarStore } from '@/store/sidebarStore';
 
 type NavigationLinkProps = {
    item: {
+      id?: string;
       name: string;
       label: string;
       icon: string;
       route: string;
       allowedRoles?: string[];
+      nestedRoutes?: string[];
    };
-
-   isCollapsed:any
+   isCollapsed: any;
+   isActive: boolean;
 };
 
-const NavigationLink: React.FC<NavigationLinkProps> = ({ item,isCollapsed }) => {
+const NavigationLink: React.FC<NavigationLinkProps> = ({ item, isCollapsed, isActive }) => {
    
-   const pathname = usePathname();
-   const strippedPathname = pathname.replace(/^\/[a-z]{2}(?=\/)|^\/[a-z]{2}$/, '');
-   const isActive = strippedPathname === item.route;
+   const t = useTranslations();
+   const setParentId = useNavigationStore.use.setParentId();
+   const setCurrentView = useSideBarStore(state => state.setCurrentView);
 
    const itemVariants = cva(
-      "flex p-2 gap-2 rounded-md items-center text-sm font-medium  hover:bg-accent hover:text-accent-foreground cursor-pointer",
+      "flex p-2 gap-2 rounded-md items-center text-sm font-medium cursor-pointer",
       {
          variants: {
             isActive: {
-               true: "bg-primary",
-               false: ""
+               true: "bg-primary active:bg-orange-800 hover:bg-primary",
+               false: "hover:bg-slate-800 hover:text-foreground active:bg-orange-800"
             }
          },
          defaultVariants: {
@@ -46,13 +52,25 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({ item,isCollapsed }) => 
       config: { tension: 210, friction: 20 }
    });
 
+   useEffect(() => {
+      if (isActive) {
+         setCurrentView(item.route);
+      }
+   }, [isActive, item.route, setCurrentView]);
+
+   const handleClick = () => {
+      setCurrentView(item.route);
+      if (item.id) {
+         setParentId(item.id)
+      }
+   };
 
    return (
-      <Link href={item.route} passHref>
-         <div className={cn(itemVariants({ isActive }))}>
+      <Link href={item.route} passHref >
+         <div className={cn(itemVariants({ isActive }))} onClick={handleClick}>
             <Icon icon={item.icon} className="w-6 h-6 flex-shrink-0" />
             <animated.p style={style}>
-               {item.label}
+               {t(`sidebar.${item.label}`)}
             </animated.p>
          </div>
       </Link>
@@ -60,5 +78,3 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({ item,isCollapsed }) => 
 };
 
 export default NavigationLink;
-
-

@@ -39,8 +39,6 @@ export function addSvgFile(svgFile) {
 
 export function addSvgHtmlString(svgFile) {
     const svgData = parse(svgFile);
-    console.log(svgData);
-    
     return addSvgObj(svgData);
 }
 

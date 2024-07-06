@@ -1,23 +1,29 @@
-import React from 'react'
+'use client';
+
+import React from 'react';
 import navItems from './navItems.json';
 import NavigationLink from './link';
-import { useSideBarStore } from '@/store/sidebarStore'
+import { useSideBarStore } from '@/store/sidebarStore';
 
-const Links = () => {
-
+const Links = ({pathname}) => {
     const sidebarState = useSideBarStore.use.sidebarState();
 
     return (
         <nav className="flex flex-col gap-3 p-3">
-            {navItems.map(item => (
-                <NavigationLink
-                    key={item.route}
-                    item={item}
-                    isCollapsed={sidebarState==='collapsed'}
-                />
-            ))}
-        </nav>
-    )
-}
+            {navItems.map(item => {
+                const isActive = pathname === item.route || (item?.nestedRoutes && item.nestedRoutes.some(route => pathname === route));
 
-export default Links
+                return (
+                    <NavigationLink
+                        key={item.route}
+                        item={item}
+                        isCollapsed={sidebarState === 'collapsed'}
+                        isActive={isActive}
+                    />
+                );
+            })}
+        </nav>
+    );
+};
+
+export default Links;

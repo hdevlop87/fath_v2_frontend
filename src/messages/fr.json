@@ -1,6 +1,6 @@
 {
     "auth": {
-        "welcomeBack": "Salut, Bienvenue",
+        "welcomeBack": "Bonjour, Bon retour",
         "username": {
             "placeholder": "Entrez votre nom d'utilisateur",
             "label": "Nom d'utilisateur"
@@ -11,35 +11,49 @@
         },
         "image": {
             "placeholder": "Aucun fichier sélectionné",
-            "label": "Image"
+            "label": "Photo"
         }
-        
     },
     "button": {
-        "pleaseWait": "Veuillez patienter...",
+        "pleaseWait": "Patienter...",
         "loginButton": "Connexion",
-        "logoutButton": "Logout",
-        "back": "Back",
+        "logoutButton": "Déconnexion",
+        "registerButton": "Créer un compte",
+        "installButton": "Installer l'application",
+        "back": "Retour",
         "submit": "Soumettre",
         "cancel": "Annuler",
         "continue": "Continuer",
-        "update": "Mettre à jour"
+        "update": "Mettre à jour",
+        "next": "Suivant",
+        "read": "lire",
+        "edit": "modifier",
+        "delete": "supprimer"
     },
     "sidebar": {
-        "dashboard": "Tableau de bord",
+        "dashboard": "Dashboard",
         "sales": "Ventes",
+        "payments": "Echéances",
         "expenses": "Dépenses",
         "map": "Carte",
         "lots": "Lots",
         "customers": "Clients",
+        "storage": "Stockage",
         "settings": "Paramètres",
-        "logout": "Déconnexion"
+        "logout": "Déconnexion",
+        "users": "Utilisateurs",
+        "roles": "Rôles",
+        "permissions": "Permissions",
+        "downloads": "Téléchargements",
+        "myprofile": "Profil"
     },
     "customer": {
-        "firstNamePlaceholder": "Entrez le prénom",
-        "firstNameLabel": "Prénom",
+        "namePlaceholder": "Entrez le nom",
+        "nameLabel": "Nom",
         "lastNamePlaceholder": "Entrez le nom de famille",
-        "lastNameLabel": "Nom",
+        "lastNameLabel": "Nom de famille",
+        "genderPlaceholder": "Entrez le sexe",
+        "genderLabel": "Sexe",
         "phonePlaceholder": "Entrez le numéro de téléphone",
         "phoneLabel": "Téléphone",
         "emailPlaceholder": "Entrez l'adresse e-mail",
@@ -50,119 +64,157 @@
         "CINLabel": "CIN",
         "createNewCustomer": "Créer un nouveau client",
         "editCustomer": "Modifier le client",
+        "filterByCustomer": "Filtrer par client.....",
         "toast": {
-            "createSuccess": "Client créé avec succès!",
-            "updateSuccess": "Client mis à jour avec succès!",
-            "deleteSuccess": "Client supprimé avec succès!",
-            "uploadSuccess": "Fichier téléchargées avec succès!",
-            "uploadError": "Erreur lors du téléchargement du Fichier"
+            "createSuccess": "Client créé avec succès !",
+            "updateSuccess": "Client mis à jour avec succès !",
+            "deleteSuccess": "Client supprimé avec succès !",
+            "uploadSuccess": "Données téléchargées avec succès !",
+            "uploadError": "Erreur de téléchargement des données",
+            "exists": "le client existe déjà"
         },
         "phoneExist": "Le numéro de téléphone existe déjà pour un autre client",
-        "emailExist": "L'adresse e-mail existe déjà pour un autre client."
+        "emailExist": "L'adresse e-mail existe déjà pour un autre client"
+    },
+    "user": {
+        "namePlaceholder": "Entrez le nom",
+        "nameLabel": "Nom",
+        "userNamePlaceholder": "Entrez le nom d'utilisateur",
+        "userNameLabel": "Nom d'utilisateur",
+        "phonePlaceholder": "Entrez le numéro de téléphone",
+        "phoneLabel": "Téléphone",
+        "emailPlaceholder": "Entrez l'adresse e-mail",
+        "emailLabel": "E-mail",
+        "passwordPlaceholder": "Entrez le mot de passe",
+        "passwordLabel": "Mot de passe",
+        "confirmPasswordPlaceholder": "Retaper le mot de passe",
+        "confirmPasswordLabel": "Confirmer le mot de passe",
+        "rolePlaceholder": "Sélectionnez le rôle",
+        "roleLabel": "Rôle",
+        "createNewCustomer": "Créer un nouveau client",
+        "editCustomer": "Modifier le client",
+        "filterByName": "Filtrer par nom.....",
+        "toast": {
+            "createSuccess": "Client créé avec succès !",
+            "updateSuccess": "Client mis à jour avec succès !",
+            "deleteSuccess": "Client supprimé avec succès !",
+            "uploadSuccess": "Données téléchargées avec succès !",
+            "uploadError": "Erreur de téléchargement des données",
+            "exists": "le client existe déjà"
+        },
+        "phoneExist": "Le numéro de téléphone existe déjà pour un autre client",
+        "emailExist": "L'adresse e-mail existe déjà pour un autre client"
     },
     "sale": {
-        "lotRefPlaceholder": "Sélectionner la référence du lot",
-        "lotRefLabel": "Réf. du lot",
+        "lotRefPlaceholder": "Sélectionnez la référence du lot",
+        "lotRefLabel": "Référence du lot",
         "customerNamePlaceholder": "Client par nom",
         "customerNameLabel": "Client",
-        "pricePerM2Placeholder": "Entrez le prix par m²",
+        "pricePerM2Placeholder": "Entrez le prix au m²",
         "pricePerM2Label": "Prix par m²",
-        "datePlaceholder": "Sélectionner la date de vente",
+        "datePlaceholder": "Sélectionnez la date de vente",
         "dateLabel": "Date",
-        "statusPlaceholder": "Sélectionner le statut de vente",
+        "statusPlaceholder": "Sélectionnez le statut de la vente",
         "statusLabel": "Statut",
         "createNewSale": "Créer une nouvelle vente",
         "editSale": "Modifier la vente",
-        "totalPriceCol": "Total à payer",
-        "venteActif": "Activer la vente",
+        "totalPriceCol": "Prix total",
+        "venteActif": "Vente en cours ?",
         "toast": {
-            "createSuccess": "Vente créée avec succès!",
-            "updateSuccess": "Vente mise à jour avec succès!",
-            "deleteSuccess": "Vente supprimée avec succès!",
-            "emailSentSuccess": "Email envoyé avec succès"
+            "createSuccess": "Vente créée avec succès !",
+            "updateSuccess": "Vente mise à jour avec succès !",
+            "deleteSuccess": "Vente supprimée avec succès !",
+            "exists": "la vente existe déjà",
+            "emailSentSuccess": "E-mail envoyé avec succès"
         },
-        "lotSizeLabel": "Taille du Lot = {size} m2",
-        "totalPriceLabel": "Total à payer  = {price} dh",
-        "totalPaidLabel": "Total Echéances  = {totalPaid} dh",
-        "balanceDueLabel": "Reste à payer = {due} dh",
-        "settledPriceLabel": "Montant Payé = {percentage} %",
+        "lotSizeLabel": "Taille du lot",
+        "totalPriceLabel": "Total à payer",
+        "totalPaidLabel": "Total Echéances",
+        "balanceDueLabel": "Reste à payer",
+        "settledPriceLabel": "Pourcentage réglé",
         "editSaleButton": "Modifier la vente",
         "status": {
-            "initiated": "Initié",
-            "ongoing": "En cours",
-            "completed": "Terminé",
-            "canceled": "Annulé"
+            "Initiated": "Initiée",
+            "Ongoing": "En cours",
+            "Completed": "Terminée",
+            "Canceled": "Annulée"
         },
-        "titleLabel": "Détails d'Achat"
+        "titleLabel": "Détails de l'Achat"
     },
     "payment": {
-        "amountPlaceholder": "Saisissez le montant du paiement",
+        "amountPlaceholder": "Entrez le montant du paiement",
         "amountLabel": "Montant",
-        "datePlaceholder": "Sélectionnez la date du paiement",
+        "datePlaceholder": "Sélectionnez la date de paiement",
         "dateLabel": "Date",
-        "statusPlaceholder": "Sélectionner le statut de vente",
+        "statusPlaceholder": "Sélectionnez le statut de la vente",
         "statusLabel": "Statut",
-        "methodPlaceholder": "Sélectionnez le mode de paiement",
-        "methodLabel": "Méthode de paiement",
-        "referencePlaceholder": "Saisissez la référence du paiement",
+        "methodPlaceholder": "Sélectionnez le moyen de paiement",
+        "methodLabel": "Moyen de paiement",
+        "referencePlaceholder": "Entrez la référence de paiement",
         "referenceLabel": "Référence",
-        "receiptPlaceholder": "Saisissez les détails du reçu",
+        "receiptPlaceholder": "Entrez les détails du reçu",
         "receiptLabel": "Reçu",
-        "notesPlaceholder": "Saisissez des notes",
+        "notesPlaceholder": "Entrez des notes",
         "notesLabel": "Notes",
         "createNewPayment": "Créer un nouveau paiement",
         "editPayment": "Modifier le paiement",
         "toast": {
             "createSuccess": "Paiement créé avec succès !",
             "updateSuccess": "Paiement mis à jour avec succès !",
-            "deleteSuccess": "Paiement supprimé avec succès !"
+            "deleteSuccess": "Paiement supprimé avec succès !",
+            "exists": "le paiement existe déjà"
         },
         "status": {
             "pending": "En attente",
             "verified": "Vérifié",
             "failed": "Échoué"
         },
-        "titleLabel": "Résumé des Paiements"
+        "titleLabel": "Détails des Paiements"
     },
     "lot": {
         "lotRefPlaceholder": "Entrez la référence du lot",
-        "lotRefLabel": "Réf du lot",
+        "lotRefLabel": "Référence du lot",
         "statusPlaceholder": "Sélectionnez le statut du lot",
         "statusLabel": "Statut",
         "sizePlaceholder": "Entrez la taille du lot",
         "sizeLabel": "Taille",
-        "pricePlaceholder": "Entrez le prix du lot",
-        "priceLabel": "Prix",
+        "pricePerM2Placeholder": "Entrez le prix du lot / m²",
+        "pricePerM2Label": "Prix / m²",
         "zoningCodePlaceholder": "Sélectionnez le code de zonage",
         "zoningCodeLabel": "Code de zonage",
         "createNewLot": "Créer un nouveau lot",
+        "descPlaceholder": "Entrez une description du lot",
+        "descLabel": "Description",
         "editLot": "Modifier le lot",
-        "toast": {
-            "createSuccess": "Lot créé avec succès !",
-            "updateSuccess": "Lot mis à jour avec succès !",
-            "deleteSuccess": "Lot supprimé avec succès !"
-        },
         "status": {
             "available": "Disponible",
-            "reserved": "Vendu",
-            "ongoing": "Réservé",
-            "sold": "Clôturé",
-            "canceled": "annulé"
+            "reserved": "Réservé",
+            "ongoing": "En cours",
+            "canceled": "Annulé",
+            "sold": "Vendu"
+        },
+        "zoningCodes": {
+            "EQ1": "EQ 1",
+            "R+2": "R+2",
+            "R+2-C-": "R+2 -C-",
+            "EQ2": "EQ 2",
+            "R+3": "R+3",
+            "R+4": "R+4"
         }
     },
     "expense": {
-        "expenseIDPlaceholder": "Entrer l'ID de la dépense",
+        "expenseIDPlaceholder": "Entrez l'ID de la dépense",
         "expenseIDLabel": "ID de la dépense",
-        "amountPlaceholder": "Entrer le montant",
+        "amountPlaceholder": "Entrez le montant",
         "amountLabel": "Montant",
-        "datePlaceholder": "Sélectionner la date de la dépense",
+        "datePlaceholder": "Sélectionnez la date de la dépense",
         "dateLabel": "Date",
-        "paymentMethodPlaceholder": "Sélectionner le mode de paiement",
-        "paymentMethodLabel": "Mode de paiement",
+        "paymentMethodPlaceholder": "Sélectionnez le moyen de paiement",
+        "paymentMethodLabel": "Moyen de paiement",
+        "beneficiaryPlaceholder": "Entrez le nom du bénéficiaire",
+        "beneficiaryLabel": "Bénéficiaire",
         "typePlaceholder": "Sélectionnez le type de dépense",
         "typeLabel": "Type de dépense",
-        "beneficiaryPlaceholder": "Entrer le nom du bénéficiaire",
-        "beneficiaryLabel": "Bénéficiaire",
         "createNewExpense": "Créer une nouvelle dépense",
         "editExpense": "Modifier la dépense",
         "toast": {
@@ -171,18 +223,24 @@
             "deleteSuccess": "Dépense supprimée avec succès !",
             "exists": "La dépense existe déjà"
         },
+        "paymentMethods": {
+            "CreditCard": "Carte de crédit",
+            "BankTransfer": "Virement bancaire",
+            "Espece": "Espèce",
+            "Cheque": "Chèque"
+        },
         "type": {
             "Permits_and_Authorizations": "Permis et autorisations",
-            "Development_Work": "Travaux d'aménagement",
+            "Development_Work": "Travaux de développement",
             "Marketing_and_Advertising": "Marketing et publicité",
-            "Property_Taxes_and_Duties": "Impôts et taxes foncières",
-            "Labor": "Main d'œuvre",
+            "Property_Taxes_and_Duties": "Taxes et droits fonciers",
+            "Labor": "Main-d'œuvre",
             "Miscellaneous": "Divers"
         }
     },
     "alertDialog": {
         "title": "Êtes-vous absolument sûr ?",
-        "description": "Cette action est irréversible. Cela supprimera définitivement votre enregistrement et supprimera vos données de nos serveurs."
+        "description": "Cette action est irréversible. Cela supprimera définitivement votre enregistrement et retirera vos données de nos serveurs."
     },
     "wizard": {
         "account": "Compte",
@@ -193,21 +251,113 @@
         "available": "Disponible",
         "reserved": "Réservé",
         "sold": "Vendu",
-        "initiated": "Initié",
+        "initiated": "Initiée",
         "ongoing": "En cours",
-        "completed": "Complété",
-        "canceled": "Annulé"
+        "completed": "Terminée",
+        "canceled": "Annulée",
+        "pending": "En attente",
+        "verified": "Vérifié",
+        "failed": "Échoué"
     },
     "navbar": {
         "Expenses": "Dépenses",
         "Lots": "Lots",
         "Customers": "Clients",
         "Sales": "Ventes",
-        "Map": "Map",
+        "Map": "Carte",
         "Dashboard": "Tableau de bord",
-        "SaleView": "Vente Résumé",
-        "Setting": "Paramètre",
+        "SaleView": "Détails de la vente",
+        "Setting": "Paramètres",
         "Database": "Base de données",
         "Account": "Compte"
+    },
+    "storage": {
+        "users": "utilisateurs",
+        "expenses": "dépenses",
+        "payments": "paiements",
+        "customers": "clients",
+        "agreements": "Compromis de vente"
+    },
+    "folder": {
+        "folderIdPlaceholder": "Entrez l'ID du dossier",
+        "folderIdLabel": "ID du dossier",
+        "folderNamePlaceholder": "Entrez le nom du dossier",
+        "folderNameLabel": "Nom du dossier",
+        "sizePlaceholder": "Entrez la taille",
+        "sizeLabel": "Taille",
+        "maxSizePlaceholder": "Entrez la taille maximale",
+        "maxSizeLabel": "Taille max (GB)",
+        "descriptionPlaceholder": "Entrez une description",
+        "descriptionLabel": "Description",
+        "passwordPlaceholder": "Entrez le mot de passe",
+        "passwordLabel": "Mot de passe",
+        "isLockedLabel": "Est verrouillé",
+        "createNewFolder": "Créer un nouveau dossier",
+        "editFolder": "Modifier le dossier",
+        "filterByFolderName": "Filtrer par nom de dossier...",
+        "sizeExceed": "La taille dépasse la limite maximale",
+        "lockedError": "Le dossier est verrouillé"
+    },
+    "file": {
+        "fileIdPlaceholder": "Entrez l'ID du fichier",
+        "fileIdLabel": "ID du fichier",
+        "fileNamePlaceholder": "Entrez le nom du fichier",
+        "fileNameLabel": "Nom du fichier",
+        "sizePlaceholder": "Entrez la taille",
+        "sizeLabel": "Taille",
+        "descriptionPlaceholder": "Entrez une description",
+        "descriptionLabel": "Description",
+        "passwordPlaceholder": "Entrez le mot de passe",
+        "passwordLabel": "Mot de passe",
+        "isLockedLabel": "Est verrouillé",
+        "createNewFile": "Créer un nouveau fichier",
+        "editFile": "Modifier le fichier",
+        "filterByName": "Filtrer par nom de fichier...",
+        "toast": {
+            "createSuccess": "Fichier créé avec succès !",
+            "updateSuccess": "Fichier mis à jour avec succès !",
+            "deleteSuccess": "Fichier supprimé avec succès !",
+            "uploadSuccess": "Données téléchargées avec succès !",
+            "uploadError": "Erreur de téléchargement des données",
+            "exists": "Le fichier existe déjà"
+        },
+        "sizeExceed": "La taille dépasse la limite maximale",
+        "lockedError": "Le fichier est verrouillé"
+    },
+    "prompts": {
+        "Create": "Créer",
+        "Update": "Mettre à jour",
+        "Rename": "Renommer",
+        "Delete": "Supprimer",
+        "Upload": "Téléverser",
+        "Read": "Lire",
+        "Move": "Déplacer",
+        "Star": "Étoiler",
+        "Share": "Partager",
+        "Download": "Télécharger",
+        "Preview": "Aperçu",
+        "Restore": "Restaurer",
+        "Crop": "Rogner"
+    },
+    "target": {
+        "folder": "un dossier",
+        "file": "un fichier",
+        "user": "un utilisateur",
+        "lot": "un lot",
+        "sale": "une vente",
+        "expense": "une dépense",
+        "payment": "un paiement",
+        "customer": "un client",
+        "wizardSale": "une vente"
+    },
+    "settings": {
+        "appNamePlaceholder": "Entrez le nom du site web",
+        "appNameLabel": "Nom du site web",
+        "appLogoPlaceholder": "Sélectionnez un logo",
+        "appLogoLabel": "Logo",
+        "timeZonePlaceholder": "Sélectionnez le fuseau horaire",
+        "timeZoneLabel": "Fuseau horaire",
+        "dateFormatPlaceholder": "Sélectionnez le format de la date",
+        "dateFormatLabel": "Format de la date"
     }
 }

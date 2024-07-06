@@ -5,22 +5,24 @@ import { devtools } from 'zustand/middleware';
 interface SideBarState {
     sidebarState: string;
     mediaQuery: string;
+    currentView: string;
+    setCurrentView: (view: string) => void;
 }
 
 const sidebarStore = create<SideBarState>()(
-    devtools(() => ({
+    devtools((set) => ({
         sidebarState: 'open',
         mediaQuery: 'largeScreen',
+        currentView: '',
+        setCurrentView: (view) => set({ currentView: view }),
     }))
 );
 
-const { setState, getState } = sidebarStore;
-
-export const setMediaQuery = (mediaQuery) => setState({ mediaQuery });
-export const setSidebarState = (sidebarState) => setState( {sidebarState})
+export const setMediaQuery = (mediaQuery) => sidebarStore.setState({ mediaQuery });
+export const setSidebarState = (sidebarState) => sidebarStore.setState({ sidebarState });
 
 export const toggleSidebar = () => {
-    const currentState = getState();
+    const currentState = sidebarStore.getState();
     let newSidebarState;
 
     if (currentState.mediaQuery === 'largeScreen') {
@@ -30,9 +32,9 @@ export const toggleSidebar = () => {
         newSidebarState = currentState.sidebarState === 'open' ? 'hidden' : 'open';
     }
 
-    setState({
+    sidebarStore.setState({
         sidebarState: newSidebarState,
     });
-}
+};
 
 export const useSideBarStore = createSelectors(sidebarStore);

@@ -1,16 +1,15 @@
 'use client'
 
-import React from 'react'
+import { setSidebarState,useSideBarStore } from '@/store/sidebarStore'
 import BadgeIcon from '@/components/ui/BadgeIcons';
 import SearchBar from '@/components/ui/SearchBar'
+import { usePathname } from 'next/navigation';
+import { ThemeToggle } from './theme-toggle';
 import Avatar from '@/components/ui/Avatars'
 import MyAvatar from '@/assets/avatar1.svg'
-import { usePathname } from 'next/navigation';
-import { Card, } from "@/components/ui/card"
-import { ThemeToggle } from './theme-toggle';
 import { Icon } from '@iconify/react';
 import { Button } from '../ui/button';
-import { setSidebarState,useSideBarStore } from '@/store/sidebarStore'
+import React from 'react'
 
 const getLastSegment = (pathname: string) => {
     const segments = pathname.split('/').filter(segment => !/^[0-9a-fA-F-]+$/.test(segment));
@@ -22,17 +21,17 @@ const Navbar = () => {
 
     const pathname = usePathname();
     const segment = getLastSegment(pathname);
-    const mediaQuery = useSideBarStore.use.mediaQuery();
+    const mediaQuery = useSideBarStore.use.mediaQuery(); 
     const isMobile = mediaQuery === 'mobile'
 
     return (
-        <Card className='flex h-[56px] justify-between items-center px-4 w-full mt-3'>
+        <div className='flex h-[56px] justify-between items-center px-4 w-full'>
 
-            {isMobile ? ( // Render button in mobile view
+            {isMobile ? ( 
                 <Button variant='ghost' onClick={() => setSidebarState('open')}>
                     <Icon icon="ri:menu-unfold-3-line-2" width={28} height={28} />
                 </Button>
-            ) : ( // Render h1 on large screens
+            ) : ( 
                 <h1 className='font-medium text-lg'>{segment}</h1>
             )}
 
@@ -41,16 +40,13 @@ const Navbar = () => {
                     <SearchBar />
                 </div>
                 <div className='flex gap-1 '>
-                    <BadgeIcon icon="tabler:minimize" />
                     <ThemeToggle />
-                    <BadgeIcon icon="ic:outline-mail" number={5} />
-                    <BadgeIcon icon="bx:bell" number={2} color='orange' />
                     <BadgeIcon icon="ic:baseline-g-translate" />
                 </div>
                 <Avatar avatarUrl={MyAvatar} status='online' />
             </div>
 
-        </Card>
+        </div>
 
     )
 }

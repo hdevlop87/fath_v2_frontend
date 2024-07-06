@@ -14,7 +14,7 @@ import useAlertStore from '@/store/alertStore';
 import { checkCustomer } from '@/services/customerApi'
 import AlertDialog from './AlertDialog'
 import { ReloadIcon } from "@radix-ui/react-icons";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const Customers = ({ submit, back }) => {
    const t = useTranslations();

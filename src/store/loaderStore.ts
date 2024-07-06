@@ -1,11 +1,21 @@
 import { create } from 'zustand';
+import createSelectors from "./selectors";
+import { devtools } from 'zustand/middleware';
 
 interface LoaderState {
-  isLoading: boolean;
-  setLoading: (loading: boolean) => void;
+   isLoading: boolean;
+   queryLoading: boolean;
+   setLoading: (loading: boolean) => void;
+   setQueryLoading: (loading: boolean) => void;
 }
 
-export const useLoaderStore = create<LoaderState>((set) => ({
-  isLoading: false,
-  setLoading: (isLoading) => set({ isLoading }),
-}));
+const loaderStore = create<LoaderState>()(
+   devtools((set, get) => ({
+      isLoading: false,
+      queryLoading: false,
+      setLoading: (isLoading) => set({ isLoading }),
+      setQueryLoading: (queryLoading) => set({ queryLoading }),
+   }))
+);
+
+export const useLoaderStore = createSelectors(loaderStore);

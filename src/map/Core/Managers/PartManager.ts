@@ -36,7 +36,7 @@ export default class PartManager {
 
     getPartsByCategory(category) {
         const partsByCategory = [];
-        this.parts.forEach((part) => {
+        this.parts.forEach((part:any) => {
             if (part.category() === category) {
                 partsByCategory.push(part);
             }

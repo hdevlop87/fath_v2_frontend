@@ -46,10 +46,12 @@
         "myprofile": "Profile"
     },
     "customer": {
-        "firstNamePlaceholder": "Enter first name",
-        "firstNameLabel": "First Name",
+        "namePlaceholder": "Enter name",
+        "nameLabel": "Name",
         "lastNamePlaceholder": "Enter last name",
         "lastNameLabel": "Last Name",
+        "genderPlaceholder": "Enter gender",
+        "genderLabel": "Gender",
         "phonePlaceholder": "Enter phone number",
         "phoneLabel": "Phone",
         "emailPlaceholder": "Enter email address",
@@ -60,6 +62,36 @@
         "CINLabel": "CIN",
         "createNewCustomer": "Create New Customer",
         "editCustomer": "Edit Customer",
+        "filterByCustomer": "Filter by Customer.....",
+        "toast": {
+            "createSuccess": "Customer successfully created!",
+            "updateSuccess": "Customer successfully updated!",
+            "deleteSuccess": "Customer successfully deleted!",
+            "uploadSuccess": "Data uploaded successfully!",
+            "uploadError": "Error uploading data",
+            "exists": "customer already exists"
+        },
+        "phoneExist": "Phone already exists for another customer",
+        "emailExist": "Email already exists for another customer"
+    },
+    "user": {
+        "namePlaceholder": "Enter name",
+        "nameLabel": "Name",
+        "userNamePlaceholder": "Enter Username",
+        "userNameLabel": "Username",
+        "phonePlaceholder": "Enter phone number",
+        "phoneLabel": "Phone",
+        "emailPlaceholder": "Enter email address",
+        "emailLabel": "Email",
+        "passwordPlaceholder": "Enter Password",
+        "passwordLabel": "Password",
+        "confirmPasswordPlaceholder": "Re-type Password",
+        "confirmPasswordLabel": "Confirm Password",
+        "rolePlaceholder": "Select Role",
+        "roleLabel": "Role",
+        "createNewCustomer": "Create New Customer",
+        "editCustomer": "Edit Customer",
+        "filterByName": "Filter by Name.....",
         "toast": {
             "createSuccess": "Customer successfully created!",
             "updateSuccess": "Customer successfully updated!",
@@ -144,24 +176,28 @@
         "statusLabel": "Status",
         "sizePlaceholder": "Enter lot size",
         "sizeLabel": "Size",
-        "pricePlaceholder": "Enter lot price",
-        "priceLabel": "Price",
+        "pricePerM2Placeholder": "Enter lot Price / m²",
+        "pricePerM2Label": "Price / m²",
         "zoningCodePlaceholder": "Select zoning code",
         "zoningCodeLabel": "Zoning Code",
         "createNewLot": "Create New Lot",
+        "descPlaceholder": "Enter Some lot Description",
+        "descLabel": "Description",
         "editLot": "Edit Lot",
-        "toast": {
-            "createSuccess": "Lot successfully created!",
-            "updateSuccess": "Lot successfully updated!",
-            "deleteSuccess": "Lot successfully deleted!",
-            "exists": "lot already exists"
-        },
         "status": {
             "available": "Available",
             "reserved": "Reserved",
             "ongoing": "Ongoing",
             "canceled": "Canceled",
             "sold": "Sold"
+        },
+        "zoningCodes": {
+            "EQ1": "EQ 1",
+            "R+2": "R+2",
+            "R+2-C-": "R+2 -C-",
+            "EQ2": "EQ 2",
+            "R+3": "R+3",
+            "R+4": "R+4"
         }
     },
     "expense": {
@@ -175,10 +211,8 @@
         "paymentMethodLabel": "Payment Method",
         "beneficiaryPlaceholder": "Enter beneficiary name",
         "beneficiaryLabel": "Beneficiary",
-
         "typePlaceholder": "Select Expense Type",
         "typeLabel": "Expense Type",
-
         "createNewExpense": "Create New Expense",
         "editExpense": "Edit Expense",
         "toast": {
@@ -186,6 +220,12 @@
             "updateSuccess": "Expense successfully updated!",
             "deleteSuccess": "Expense successfully deleted!",
             "exists": "Expense already exists"
+        },
+        "paymentMethods": {
+            "CreditCard": "CreditCard",
+            "BankTransfer": "BankTransfer",
+            "Espece": "Espece",
+            "Cheque": "Cheque"
         },
         "type": {
             "Permits_and_Authorizations": "Permits and Authorizations",
@@ -225,5 +265,93 @@
         "Setting": "Setting",
         "Database": "Database",
         "Account": "Account"
+    },
+    "storage": {
+        "users": "users",
+        "expenses": "expenses",
+        "payments": "payments",
+        "customers": "users"
+    },
+    "folder": {
+        "folderIdPlaceholder": "Enter Folder ID",
+        "folderIdLabel": "Folder ID",
+        "folderNamePlaceholder": "Enter Folder Name",
+        "folderNameLabel": "Folder Name",
+        "sizePlaceholder": "Enter Size",
+        "sizeLabel": "Size",
+        "maxSizePlaceholder": "Enter Maximum Size",
+        "maxSizeLabel": "Max Size (GB)",
+        "descriptionPlaceholder": "Enter Description",
+        "descriptionLabel": "Description",
+        "passwordPlaceholder": "Enter Password",
+        "passwordLabel": "Password",
+        "isLockedLabel": "Is Locked",
+        "createNewFolder": "Create New Folder",
+        "editFolder": "Edit Folder",
+        "filterByFolderName": "Filter by Folder Name...",
+        "toast": {
+            "createSuccess": "Folder successfully created!",
+            "updateSuccess": "Folder successfully updated!",
+            "deleteSuccess": "Folder successfully deleted!",
+            "uploadSuccess": "Data uploaded successfully!",
+            "uploadError": "Error uploading data",
+            "exists": "Folder already exists"
+        },
+        "sizeExceed": "Size exceeds maximum limit",
+        "lockedError": "Folder is locked"
+    },
+    "file": {
+        "fileIdPlaceholder": "Enter File ID",
+        "fileIdLabel": "File ID",
+        "fileNamePlaceholder": "Enter File Name",
+        "fileNameLabel": "File Name",
+        "sizePlaceholder": "Enter Size",
+        "sizeLabel": "Size",
+        "descriptionPlaceholder": "Enter Description",
+        "descriptionLabel": "Description",
+        "passwordPlaceholder": "Enter Password",
+        "passwordLabel": "Password",
+        "isLockedLabel": "Is Locked",
+        "createNewFile": "Create New File",
+        "editFile": "Edit File",
+        "filterByName": "Filter by File Name...",
+        "toast": {
+            "createSuccess": "File successfully created!",
+            "updateSuccess": "File successfully updated!",
+            "deleteSuccess": "File successfully deleted!",
+            "uploadSuccess": "Data uploaded successfully!",
+            "uploadError": "Error uploading data",
+            "exists": "File already exists"
+        },
+        "sizeExceed": "Size exceeds maximum limit",
+        "lockedError": "File is locked"
+    },
+    "form": {
+        "create": "New",
+        "edit": "Edit"
+    },
+    "prompts": {
+        "Create": "Create",
+        "Update": "Update",
+        "Rename": "Rename",
+        "Delete": "Delete",
+        "Upload": "Upload",
+        "Read": "Read",
+        "Move": "Move",
+        "Star": "Star",
+        "Share": "Share",
+        "Download": "Download",
+        "Preview": "Preview",
+        "Restore": "Restore",
+        "Crop": "Crop"
+    },
+    "target": {
+        "folder": "folder",
+        "file": "file",
+        "user": "user",
+        "expense": "expense",
+        "payment": "payment",
+        "customer": "customer",
+        "sale": "sale"
     }
 }

@@ -10,7 +10,7 @@ import saleSetting from '@/settingsJson/saleSetting.json';
 import { SaleSchema, SaleFormValues } from '@/types/sale.types';
 import useStore from '@/store/dataStore';
 import { Label } from '@/components/ui/label';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/hooks/useTranslations';
 import useFetchLots from '@/hooks/useFetchLots'; 
 
 

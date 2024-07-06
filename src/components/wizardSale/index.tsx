@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CustomerStep from './CustomerStep'
+import CustomerStep from '@/components/Forms/customerForm'
 import SaleStep from './SaleStep'
 import PaymentStep from './paymentStep'
 import useStore from '@/store/dataStore';
@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react';
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import { Label } from '@/components/ui/label';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/hooks/useTranslations';
 import { resizeImage } from '@/lib/utils';
 import { sendFile } from '@/lib/utils';
 

@@ -1,7 +1,6 @@
 import axios from "axios";
-import { useAuthStore, refreshToken } from '@/store/authStore'
+import { useAuthStore,refreshToken } from '@/store/authStore'
 import { msg } from '@/lib/constants'
-
 
 const baseURL = `${process.env.NEXT_PUBLIC_API_URL}/api`;
 
@@ -17,10 +16,6 @@ const http = axios.create({
 http.interceptors.request.use((config) => {
    const accessToken = useAuthStore.getState().accessToken;
 
-   if(config.url === '/auth/login' ){
-
-   }
-
    if (accessToken) {
       config.headers['Authorization'] = `Bearer ${accessToken}`;
    }
@@ -28,7 +23,7 @@ http.interceptors.request.use((config) => {
 },
    (error) => {
       return Promise.reject(error);
-   });
+   }); 
 
 const isRefreshTokenError = (error) =>
    error.response?.data?.message === msg.REFRESH_TOKEN_EXPIRED ||

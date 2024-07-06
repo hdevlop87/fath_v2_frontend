@@ -6,5 +6,5 @@ import MapManager from './map/MapManager'
 const map = await MapManager.init(lotsData, handleLotClick);
 
 function handleLotClick(lotInfo) {
-    console.log(lotInfo);
+
 }

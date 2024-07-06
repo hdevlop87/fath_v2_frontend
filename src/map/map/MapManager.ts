@@ -86,6 +86,7 @@ export default class MapManager {
     }
 
     private onClick({ target }) {
+        this.tooltip.hide()
         const node = this.getGroupByclass(target);
         if (!node) return;
         const lotInfo = this.getLotInfo(node.group);

@@ -1,9 +1,9 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select"
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
 import { Popover, PopoverContent, PopoverTrigger, } from "@/components/ui/popover"
 import { CalendarIcon, EyeOpenIcon, EyeClosedIcon } from "@radix-ui/react-icons"
 import { Calendar } from "@/components/ui/calendar"
@@ -13,16 +13,11 @@ import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
-import {
-   Command,
-   CommandEmpty,
-   CommandGroup,
-   CommandInput,
-   CommandItem,
-} from "@/components/ui/command"
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, } from "@/components/ui/command"
 import { Check, ChevronsUpDown } from "lucide-react"
 import { Switch } from "@/components/ui/switch"
-import delay from 'delay';
+import { getFileNameFromPath } from '@/lib/utils';
+import { truncateFilename } from '@/lib/utils';
 
 interface ItemObject {
    label: string;
@@ -33,9 +28,8 @@ interface AutoInputProps {
    placeholder?: string;
    field: any;
    label?: string;
-   type: 'text' | 'select' | 'date' | 'checkbox' | 'radio-group' | 'textarea' | 'number' | 'combobox' | 'file' | 'switch'| 'password';
-
-
+   type: 'text' | 'select' | 'date' | 'checkbox' | 'radio-group' | 'textarea' | 'number' | 'combobox' | 'file' | 'switch' | 'password';
+   note?: string;
    items?: Array<ItemObject>;
    className?: string;
 }
@@ -81,17 +75,37 @@ const SwitchInput = ({ field, placeholder, label }) => {
 }
 
 const FileInput: React.FC<FileInputProps> = ({ field, ...props }) => {
+   const fileInputRef = React.useRef<HTMLInputElement>(null);
+
+   const handleDivClick = () => {
+      fileInputRef.current?.click();
+   };
+
+   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0] || null;
+      field.onChange(file);
+   };
+
+   const displayFilename = (value: File | string | null) => {
+      if (!value) {
+         return 'No file chosen';
+      }
+
+      const filename = typeof value === 'string' ? getFileNameFromPath(value) : value.name;
+      return truncateFilename(filename,25);
+   };
 
    return (
       <div className="flex flex-col gap-1">
-         <Input
-            type="file"
-            onChange={(e) => field.onChange(e.target.files?.[0])}
-            className="border rounded"
-            {...props}
-         />
+         <input type="file" ref={fileInputRef} onChange={handleChange} className="hidden"  {...props} />
+         <div onClick={handleDivClick} className=" border cursor-pointer flex items-center h-10 rounded-md shadow-sm overflow-hidden">
+            <Label className="flex cursor-pointer bg-stone-300 h-full justify-center items-center px-3">Choose File</Label>
+            <Label className="ml-2 flex-1">
+               {displayFilename(field.value)}
+            </Label>
+         </div>
       </div>
-   )
+   );
 };
 
 const ComboboxInput: React.FC<ComboboxInputProps> = ({ placeholder, field, items }) => {
@@ -190,6 +204,13 @@ const SelectInput = ({ placeholder, field, items = [] }: {
 }) => {
    const [selectedLabel, setSelectedLabel] = useState('');
 
+   useEffect(() => {
+      const initialItem: any = items.find((item: any) => item.value == field.value);
+      if (initialItem) {
+         setSelectedLabel(initialItem.label);
+      }
+   }, [field.value, items]);
+
    const renderItems = () => {
       if (items.length === 0) return null;
       if (typeof items[0] === 'string') {
@@ -199,7 +220,7 @@ const SelectInput = ({ placeholder, field, items = [] }: {
             </SelectItem>
          ));
       } else {
-         return (items as ItemObject[]).map((item: ItemObject) => (
+         return (items).map((item) => (
             <SelectItem key={item?.value} value={item?.value}>
                {item?.label}
             </SelectItem>
@@ -208,19 +229,20 @@ const SelectInput = ({ placeholder, field, items = [] }: {
    };
 
    const handleValueChange = (newValue) => {
-      field.onChange(newValue);
+      field.onChange(newValue.toString());
 
-      const foundItem = (items as ItemObject[]).find(item => item.value === newValue);
+      const foundItem: any = items.find((item: any) => item.value === newValue);
       if (foundItem) {
          setSelectedLabel(foundItem.label);
       }
    }
 
-   return ( 
-      
+
+   return (
+
       <Select onValueChange={handleValueChange} defaultValue={field.value}>
          <SelectTrigger>
-            <Label className={`${field.value ? 'text-black' : 'text-gray-300'} font-normal`}>
+            <Label className={`font-normal`}>
                {selectedLabel || field.value || placeholder}
             </Label>
          </SelectTrigger>
@@ -259,7 +281,7 @@ const DateInput = ({ placeholder, field }) => {
                onSelect={(newDate) => {
                   field.onChange(newDate);
                   setCalendarOpen(false);
-                }}
+               }}
                fromYear={1940}
                toYear={2040}
             />
@@ -304,7 +326,7 @@ const TextareaInput = ({ placeholder, field }) => (
 );
 
 
-const AutoInput: React.FC<AutoInputProps> = ({ placeholder, field, label, type, items, className = '' }) => (
+const AutoInput: React.FC<AutoInputProps> = ({ placeholder, field, label, type, items, className = '', note }) => (
    <div className={cn('flex flex-col gap-1', className)}>
       {type !== ('checkbox' || 'switch') && label && <Label className='text-sm font-medium'>{label}</Label>}
       {{

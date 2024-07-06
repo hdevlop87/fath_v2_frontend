@@ -1,62 +1,89 @@
 import * as z from "zod";
+import { createUser, updateUser, deleteUser } from '@/services/userApi';
 
 export const userConfig = {
     schema: z.object({
         id: z.string().optional(),
         name: z.string(),
         username: z.string().trim().min(4, { message: "Username must be 4 or more characters" }),
-        password: z.string().trim().min(6, { message: "Password must be 6 or more characters" }),
-        phone: z.string(),
-        email: z.string().email(),
+        password: z.string().optional(),
+        confirmPassword: z.string().optional(),
+        email: z.string().optional(),
         image: z.string().optional(),
-        status: z.enum(['Active', 'Inactive', 'Pending']),
-        roleId: z.string(),
+        status: z.enum(['Active', 'Inactive', 'Pending']).optional(),
+        roleId: z.any().optional(),
+        createdAt: z.string().optional(),
+    }).refine((data) => {
+        if (data.password && data.confirmPassword && data.password !== data.confirmPassword) {
+            return false;
+        }
+        return true;
+    }, {
+        message: "Passwords must match",
+        path: ["confirmPassword"]
     }),
 
     fields: [
         {
             "type": "text",
-            "name": "firstName",
-            "placeholder": "customer.firstNamePlaceholder",
-            "label": "customer.firstNameLabel",
-            "width": "48%"
+            "name": "name",
+            "placeholder": "user.namePlaceholder",
+            "label": "user.nameLabel",
         },
         {
             "type": "text",
-            "name": "lastName",
-            "placeholder": "customer.lastNamePlaceholder",
-            "label": "customer.lastNameLabel",
-            "width": "48%"
-        },
-        {
-            "type": "text",
-            "name": "phone",
-            "placeholder": "customer.phonePlaceholder",
-            "label": "customer.phoneLabel"
+            "name": "username",
+            "placeholder": "user.userNamePlaceholder",
+            "label": "user.userNameLabel",
         },
         {
             "type": "text",
             "name": "email",
-            "placeholder": "customer.emailPlaceholder",
-            "label": "customer.emailLabel"
+            "placeholder": "user.emailPlaceholder",
+            "label": "user.emailLabel"
         },
         {
             "type": "text",
-            "name": "address",
-            "placeholder": "customer.addressPlaceholder",
-            "label": "customer.addressLabel"
+            "name": "password",
+            "note": " (leave empty for no changes)",
+            "placeholder": "user.passwordPlaceholder",
+            "label": "user.passwordLabel"
         },
         {
             "type": "text",
-            "name": "CIN",
-            "placeholder": "customer.CINPlaceholder",
-            "label": "customer.CINLabel"
-        }
+            "name": "confirmPassword",
+            "placeholder": "user.confirmPasswordPlaceholder",
+            "label": "user.confirmPasswordLabel"
+        },
+        {
+            "type": "select",
+            "name": "roleId",
+            "placeholder": "user.rolePlaceholder",
+            "label": "user.roleLabel",
+            "items": [
+                {
+                    "label": "Admin",
+                    "value": "1"
+                },
+                {
+                    "label": "Editor",
+                    "value": "2"
+                },
+                {
+                    "label": "Viewer",
+                    "value": "3"
+                },
+            ]
+        },
     ],
 
     defaultValues: {
-        username: 'admin',
+        name: 'hicham',
+        username: 'hicham',
         password: '123456',
+        confirmPassword: '123456',
+        email: 'test@test.com',
+        roleId: '3'
     },
 
     queryKey: "users",
@@ -64,11 +91,19 @@ export const userConfig = {
         {
             name: "name",
             type: "text",
-            placeHolder: 'Filtrer par Nom.....'
+            placeHolder: 'user.filterByName'
         }
     ],
-    
+    mutationConfig: {
+        queryKey: 'users',
+        apiMethods: {
+            delete: deleteUser,
+            create: createUser,
+            update: updateUser,
+        },
+    },
+    getPossibleActions: ['Preview', 'Delete', 'Update'],
+    target: 'user'
 };
 
 export type UserType = z.infer<typeof userConfig.schema>;
-

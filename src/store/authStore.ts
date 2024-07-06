@@ -1,5 +1,5 @@
-import { loginApi, logoutApi, refreshApi,meApi } from '@/services/authAPi';
-import { navigate } from '@/actions/navigate';
+import { loginApi, logoutApi, refreshApi, meApi } from '@/services/authAPi';
+import { navigate } from '../../actions/navigate';
 import createSelectors from "./selectors";
 import { HttpError } from '@/lib/utils';
 import { msg } from '@/lib/constants';
@@ -7,16 +7,7 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import Cookies from "js-cookie";
 import delay from 'delay';
-
-interface User {
-    id: string;
-    name: string;
-    email: string;
-    role: string;
-    image: string;
-}
-
-type Status = 'default' | 'loading' | 'error' | 'success';
+import { useLoaderStore } from './loaderStore';
 
 interface AuthState {
     user: User;
@@ -29,7 +20,18 @@ interface AuthState {
     dashboardLoading: boolean;
     isAuthenticated: boolean;
 }
- 
+
+interface User {
+    id: string;
+    name: string;
+    email: string;
+    role: string;
+    image: string;
+}
+
+type Status = 'default' | 'error' | 'success';
+
+
 const authStore = create<AuthState>()(
     devtools(() => ({
         user: null,
@@ -40,7 +42,7 @@ const authStore = create<AuthState>()(
         refreshTokenExpiresAt: null,
         userLoading: false,
         dashboardLoading: false,
-        isAuthenticated:false
+        isAuthenticated: false
     }))
 );
 
@@ -48,28 +50,20 @@ const { setState, getState } = authStore;
 
 export const setUser = (user) => setState({ user })
 export const setStatus = (status) => setState({ status })
-export const setMessage = (message) => setState({ message })
+export const setMessage = (message) => setState({ message });
 
-export const fetchUser = async () => {
-    setState({ status: 'loading', message: '' });
-    try {
-        const { message, status, data } = await meApi();
-        
-        setState({
-            user: data,
-            status,
-            message,
-            isAuthenticated:true
-        });
-    }
-    catch (error) {
-        handleError(error);
-    }
-}
+export const setTokens = ({ accessToken, accessTokenExpiresAt, refreshTokenExpiresAt }) => setState({
+    accessToken,
+    accessTokenExpiresAt,
+    refreshTokenExpiresAt,
+});
+
+const { setLoading } = useLoaderStore.getState();
+
+//=======================================================================//
 
 export const login = async (credential) => {
-    setState({ status: 'loading', message: '' });
-    await delay(1000)
+    setLoading(true);
     try {
         const { message, status, data } = await loginApi(credential);
         setState({
@@ -79,38 +73,50 @@ export const login = async (credential) => {
             status,
             message,
         });
-        await delay(1000)
         navigate('/dashboard');
-    } catch (error) {
+    }
+    catch (error) {
         handleError(error);
+    }
+    finally {
+        setLoading(false);
     }
 }
 
 export const logout = async () => {
-    setState({ status: 'loading', message: '' });
-    await delay(2000)
+    setLoading(true);
+    await delay(1000)
+    const { user } = authStore.getState();
+console.log(user);
+
     try {
         await checkUser();
         await isRefreshTokenValid();
-        const { message, status } = await logoutApi(getState().user.id);
+        const { message, status } = await logoutApi(user.id);
+
         setState({
             user: null,
             accessToken: null,
             accessTokenExpiresAt: null,
             refreshTokenExpiresAt: null,
-            isAuthenticated:false,
+            isAuthenticated: false,
             status,
             message
         });
-    } catch (error) {
+        navigate('/login')
+    }
+    catch (error) {
         handleError(error);
+    }
+    finally {
+        setLoading(false);
     }
 }
 
 export const refreshToken = async () => {
+    setLoading(true);
     try {
         await isRefreshTokenValid();
-        setState({ status: 'loading', message: '' });
         const { message, status, data } = await refreshApi();
         setState({
             accessToken: data.accessToken,
@@ -123,9 +129,14 @@ export const refreshToken = async () => {
     }
     catch (error) {
         handleError(error);
-        throw(error)
+        throw (error)
+    }
+    finally {
+        setLoading(false);
     }
 }
+
+//=======================================================================//
 
 export const handleError = async (error: any) => {
     navigate('/login');
@@ -136,7 +147,7 @@ export const handleError = async (error: any) => {
         accessTokenExpiresAt: null,
         refreshTokenExpiresAt: null,
         dashboardLoading: false,
-        isAuthenticated:false,
+        isAuthenticated: false,
         status,
         message
     });
@@ -145,15 +156,16 @@ export const handleError = async (error: any) => {
 export const checkUser = async () => {
     const { user } = authStore.getState();
     if (!user) {
-        throw new HttpError(msg.REFRESH_TOKEN_EXPIRED)
+        navigate('/login')
+        throw new HttpError(msg.REFRESH_TOKEN_EXPIRED);
     }
 }
 
-export const isRefreshTokenValid = async () => {
+export const isRefreshTokenValid = () => {
     const refreshTokenExpiresAt = Cookies.get('refreshTokenExpiresAt');
     const now = Math.floor(new Date().getTime() / 1000);
     if (!refreshTokenExpiresAt || parseInt(refreshTokenExpiresAt) <= now) {
-        throw new HttpError(msg.REFRESH_TOKEN_EXPIRED)
+        return false;
     }
     return true;
 }
@@ -165,7 +177,6 @@ export const isAccessTokenValid = async () => {
 }
 
 export const clearAllData = async () => {
-
     setState({
         user: null,
         accessToken: null,
@@ -174,20 +185,7 @@ export const clearAllData = async () => {
     });
 }
 
-export const initializeApp = async() => {
-    try {
-        setState({ dashboardLoading: true });
-        await delay(2000)
-        await refreshToken();
-        await fetchUser();
-        setState({ dashboardLoading: false });
-        
-    } catch (error) {
-        navigate('/login')
-    }
-}
-
-
-export const getAccessToken=()=> authStore.getState().accessToken
+export const getAccessToken = () => authStore.getState().accessToken
 
 export const useAuthStore = createSelectors(authStore);
+export { setState, getState };

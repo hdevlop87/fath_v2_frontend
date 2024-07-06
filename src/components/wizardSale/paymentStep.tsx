@@ -10,7 +10,7 @@ import paymentSetting from '@/settingsJson/paymentSetting.json';
 import { PaymentSchema, PaymentFormValues } from '@/types/payment.types';
 import useStore from '@/store/dataStore';
 const { fields } = paymentSetting;
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/hooks/useTranslations';
 import { ReloadIcon } from "@radix-ui/react-icons";
 
 

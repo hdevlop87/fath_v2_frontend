@@ -42,7 +42,6 @@ export default class Scene extends G {
             this.setLayers()
             this.setManagers();
             this.setupProxies();
-            console.log('recreate scene');
         }
 
         return Scene.instance;

@@ -1,52 +1,67 @@
 [
     {
         "name": "dashboard",
-        "label": "Dashboard",
+        "label": "dashboard",
         "icon": "bxs:dashboard",
         "route": "/dashboard",
         "allowedRoles": ["admin"]
     },
     {
         "name": "map",
-        "label": "Map",
+        "label": "map",
         "icon": "simple-icons:openstreetmap",
         "route": "/dashboard/map",
         "allowedRoles": ["admin"]
     },
     {
         "name": "sales",
-        "label": "Ventes",
+        "label": "sales",
         "icon": "solar:money-bag-bold",
         "route": "/dashboard/sales",
+        "allowedRoles": ["admin"],
+        "nestedRoutes": ["/dashboard/sales/saleView", "/dashboard/sales/anotherNestedRoute"] 
+    },
+    {
+        "name": "payments",
+        "label": "payments",
+        "icon": "mdi:payment-clock",
+        "route": "/dashboard/payments",
         "allowedRoles": ["admin"]
     },
     {
         "name": "expenses",
-        "label": "Dépenses",
+        "label": "expenses",
         "icon": "fluent:money-hand-16-filled",
         "route": "/dashboard/expenses",
         "allowedRoles": ["admin"]
     },
     {
         "name": "lots",
-        "label": "Lots",
+        "label": "lots",
         "icon": "mdi:land-plots-marker",
         "route": "/dashboard/lots",
         "allowedRoles": ["admin"]
     },
     {
         "name": "customers",
-        "label": "Customers",
+        "label": "customers",
         "icon": "ph:users-fill",
         "route": "/dashboard/customers",
         "allowedRoles": ["admin"]
     },
     {
         "name": "users",
-        "label": "Users",
-        "icon": "ph:users-fill",
-        "route": "/users",
+        "label": "users",
+        "icon": "gridicons:multiple-users",
+        "route": "/dashboard/users",
+        "allowedRoles": ["admin"]
+    },
+    {
+        "id":"00000000-0000-0000-0000-000000000000",
+        "name": "storage",
+        "label": "storage",
+        "icon": "ph:folder-fill",
+        "route": "/dashboard/storage",
         "allowedRoles": ["admin"]
     }
 ]
-

@@ -102,7 +102,7 @@ export const userConfig = {
             update: updateUser,
         },
     },
-    getPossibleActions: ['Preview', 'Delete', 'Update'],
+    possibleActions: ['Update','Delete'],
     target: 'user'
 };
 

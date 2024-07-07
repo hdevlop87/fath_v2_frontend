@@ -3,6 +3,10 @@ import { createPayment, updatePayment, deletePayment,bulkAddPayments } from '@/s
 
 const statusesFilter = [
   {
+    value: "All",
+    label: "status.all",
+ },
+  {
      value: "Pending",
      label: "status.pending",
   },
@@ -88,12 +92,12 @@ export const paymentConfig = {
   ],
 
   defaultValues: {
-    amount: "1200",
+    amount: "",
     date: "2024-06-25 14:45:24.995886",
     method: "CreditCard",
     paymentReference:"54678",
     receipt: "",
-    notes: "sdfsdfsdfsdfsdf"
+    notes: ""
   },
 
   filters: [

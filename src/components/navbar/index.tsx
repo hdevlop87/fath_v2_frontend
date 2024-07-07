@@ -10,6 +10,7 @@ import MyAvatar from '@/assets/avatar1.svg'
 import { Icon } from '@iconify/react';
 import { Button } from '../ui/button';
 import React from 'react'
+import { useTranslations } from '@/hooks/useTranslations';
 
 const getLastSegment = (pathname: string) => {
     const segments = pathname.split('/').filter(segment => !/^[0-9a-fA-F-]+$/.test(segment));
@@ -19,6 +20,7 @@ const getLastSegment = (pathname: string) => {
 
 const Navbar = () => {
 
+    const t = useTranslations();
     const pathname = usePathname();
     const segment = getLastSegment(pathname);
     const mediaQuery = useSideBarStore.use.mediaQuery(); 
@@ -29,10 +31,10 @@ const Navbar = () => {
 
             {isMobile ? ( 
                 <Button variant='ghost' onClick={() => setSidebarState('open')}>
-                    <Icon icon="ri:menu-unfold-3-line-2" width={28} height={28} />
+                    <Icon icon="ri:menu-unfold-3-line-2" width={28} height={28} /> 
                 </Button>
             ) : ( 
-                <h1 className='font-medium text-lg'>{segment}</h1>
+                <h1 className='font-medium text-lg'>{t(`navbar.${segment}`)}</h1>
             )}
 
             <div className='flex items-center gap-3'>

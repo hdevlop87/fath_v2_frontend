@@ -17,8 +17,12 @@ export default function WizardSale({ handleSubmit }) {
    const t = useTranslations();
    const [currentStep, setCurrentStep] = useState(0);
    const queryLoading = useLoaderStore.use.queryLoading();
-   const { setFormData ,formData} = useFormStore();
+   const { setFormData, formData, resetFormData } = useFormStore();
 
+   useEffect(() => {
+      resetFormData();
+   }, []);
+   
    const handleNext = (data) => {
       saveStepData(data);
       setCurrentStep(prevStep => prevStep + 1);
@@ -32,7 +36,7 @@ export default function WizardSale({ handleSubmit }) {
 
    const onSubmit = (payment) => {
       saveStepData(payment);
-      handleSubmit({...formData,payment})
+      handleSubmit({ ...formData, payment })
    };
 
 

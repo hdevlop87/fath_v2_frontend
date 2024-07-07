@@ -257,10 +257,15 @@
         "canceled": "Annulée",
         "pending": "En attente",
         "verified": "Vérifié",
-        "failed": "Échoué"
+        "failed": "Échoué",
+        "all": "Tous"
     },
     "navbar": {
+        "Settings": "Paramètres",
+        "Storage": "Stockage",
+        "Users": "Utilisateurs",
         "Expenses": "Dépenses",
+        "Payments": "Echéances",
         "Lots": "Lots",
         "Customers": "Clients",
         "Sales": "Ventes",

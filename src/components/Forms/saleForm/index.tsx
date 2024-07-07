@@ -9,13 +9,15 @@ import { Label } from '@/components/ui/label';
 import { usePromptStore } from '@/store/promptStore';
 import useFetchCustomers from '@/hooks/subdivision/useFetchCustomers';
 
-const SaleForm = ({ target,handleSubmit }) => {
+const SaleForm = ({ target, handleSubmit }) => {
 
    const [totalLotPrice, setTotalLotPrice] = useState(0);
 
    const { availablelotsRef, allLots } = useFetchLots();
    const initialValues = usePromptStore.use.initialValues();
    const { allCustomers } = useFetchCustomers();
+
+   initialValues.isActif = initialValues?.status !== 'Canceled'
 
    const form = useForm<SaleType>({
       resolver: zodResolver(saleConfig.schema),
@@ -28,7 +30,6 @@ const SaleForm = ({ target,handleSubmit }) => {
    }));
 
    const onSubmit = (data) => {
-
       handleSubmit(data);
    };
 

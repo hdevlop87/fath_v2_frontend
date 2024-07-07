@@ -17,8 +17,12 @@ interface ItemObject {
 
 export default function SelectFilter({ column, title, items }) {
 
-   const handleValueChange = (newValue) => {
-      column?.setFilterValue(newValue)
+   const handleValueChange = (value) => {
+      if (value === 'All') {
+         column.setFilterValue(undefined); // Clear the filter if "All" is selected
+       } else {
+         column.setFilterValue(value); // Set the filter to the selected value
+       }
    }
    return (
       <Select onValueChange={handleValueChange}>

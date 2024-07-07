@@ -3,13 +3,13 @@ import { createCustomer, updateCustomer, deleteCustomer,bulkAddCustomers } from 
 export const customerConfig = {
     schema: z.object({
         customerId: z.any().optional(),
-        name: z.string({ required_error: "Le nom est obligatoire." }),
+        name: z.string().trim().min(1, { message: "Le nom du client est obligatoire." }),
         gender: z.any().optional(),
         birthday: z.string().optional(),
-        phone: z.string({ required_error: "Le numéro de téléphone est obligatoire." }),
+        phone: z.string().trim().min(1, { message: "Le numéro de téléphone est obligatoire." }),
         email: z.any().optional(),
         address: z.any().optional(),
-        CIN: z.any({ required_error: "Le CIN est obligatoire." }),
+        CIN: z.string().trim().min(1,{ message: "Le CIN est obligatoire." }),
         image: z.any().optional(),
         createdAt: z.string().optional(),
     }),
@@ -22,10 +22,14 @@ export const customerConfig = {
             "label": "customer.nameLabel", 
         },
         {
-            "type": "text",
+            "type": "select",
             "name": "gender",
             "placeholder": "customer.genderPlaceholder",
-            "label": "customer.genderLabel"
+            "label": "customer.genderLabel",
+            "items": [
+                { "label": "Male", "value": "male" },
+                { "label": "Female", "value": "female" }
+            ]
         },
         {
             "type": "text",
@@ -54,13 +58,13 @@ export const customerConfig = {
     ],
 
     defaultValues: {
-        name: 'Alice Johnson',
+        name: '',
         birthday: "1990-10-15",
         gender: "male",
-        phone: '04567890121',
-        email: 'alicejohnson@gmail.com',
+        phone: '',
+        email: '',
         address: '456 Maple St, Shelbyville',
-        CIN: 'AJ10239Y1'
+        CIN: ''
     },
 
     queryKey: "customers",

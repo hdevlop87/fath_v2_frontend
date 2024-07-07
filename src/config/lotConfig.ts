@@ -3,6 +3,10 @@ import { createLot, updateLot, deleteLot, bulkAddLots } from '@/services/lotApi'
 
 const statusesFilter = [
     {
+        value: "All",
+        label: "status.all",
+     },
+    {
         value: "Available",
         label: "status.available",
     },
@@ -98,7 +102,7 @@ export const lotConfig = {
     ],
 
     defaultValues: {
-        lotRef: '3',
+        lotRef: "",
         status: 'Available',
         size: '10000',
         pricePerM2: '1000',

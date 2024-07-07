@@ -1,7 +1,11 @@
 import * as z from "zod";
-import { createExpense, updateExpense, deleteExpense,bulkAddExpenses } from '@/services/expenseApi'
+import { createExpense, updateExpense, deleteExpense, bulkAddExpenses } from '@/services/expenseApi'
 
 const statusesFilter = [
+  {
+    value: "All",
+    label: "status.all",
+  },
   {
     value: "Permits_and_Authorizations",
     label: "expense.type.Permits_and_Authorizations",
@@ -43,8 +47,8 @@ export const expenseConfig = {
 
   schema: z.object({
     expenseId: z.number().optional(),
-    amount:  zodInputStringPipe(z.number().positive('Le Montant doit être supérieur à 0')),
-    date: z.any({required_error: "A date of payment is required."}),
+    amount: zodInputStringPipe(z.number().positive('Le Montant doit être supérieur à 0')),
+    date: z.any({ required_error: "A date of payment is required." }),
     beneficiary: z.string().optional(),
     type: z.string(),
     method: z.string().trim().min(1, { message: "La méthode de paiement est obligatoire." }),
@@ -139,7 +143,7 @@ export const expenseConfig = {
   defaultValues: {
     amount: "1200",
     date: "2024-06-25 14:45:24.995886",
-    beneficiary:"hicham jebara",
+    beneficiary: "hicham jebara",
     method: "CreditCard",
     type: "Permits_and_Authorizations",
     reference: "54678",
@@ -167,7 +171,7 @@ export const expenseConfig = {
       delete: deleteExpense,
       create: createExpense,
       update: updateExpense,
-      upload:bulkAddExpenses
+      upload: bulkAddExpenses
     }
   },
 

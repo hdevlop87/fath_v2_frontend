@@ -80,7 +80,7 @@ export const expenseColumns = (t) => [
             const expense = row.original;
             const actionsManager = useActionsManager("expense");
             const user = useAuthStore.use.user();
-            const isAdmin = user?.role === 'Admin';
+            const isAdmin = user?.role === 'Admin'; 
 
             return (
                 <div className="text-center">

@@ -35,8 +35,8 @@ const UserCard = ({ item }) => {
                 <Avatar className='w-24 h-24 relative'>
                     <AvatarImage src={`${process.env.NEXT_PUBLIC_API_URL}/${image}`} alt="avatar" />
                     <AvatarFallback>
-                        <Image
-                            src={"/noavatar.png"}
+                        <img
+                            src={""}
                             alt=""
                             width={100}
                             height={100}

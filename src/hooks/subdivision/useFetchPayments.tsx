@@ -13,6 +13,7 @@ function useFetchPayments() {
             throw error;
          }
       },
+      staleTime: 5 * 60 * 1000,
    });
 
    return { allPayments: data, isLoading, isError, refetch };

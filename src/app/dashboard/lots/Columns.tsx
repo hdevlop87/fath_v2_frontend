@@ -104,7 +104,7 @@ export const lotColumns = (t) => [
                 <div className="text-center">
                     <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(lot)} />
                     <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(lot)} />
-                    <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Read(lot)} />
+                    <BadgeIcon icon="iconamoon:eye-light" onClick={() => console.log("preview lot")}/>
                 </div>
             )
         }

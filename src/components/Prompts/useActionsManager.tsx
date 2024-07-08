@@ -12,7 +12,7 @@ const useActionsManager = (target) => {
   }
 
   const router = useRouter();
-  const { deleteMutation, createMutation, updateMutation, downloadMutation,uploadMutation, moveMutation, RestoreMutation } = useMutations(configMapping[target].mutationConfig);
+  const { deleteMutation, createMutation, updateMutation, downloadMutation, uploadMutation, moveMutation, RestoreMutation } = useMutations(configMapping[target].mutationConfig);
   const setPrompt = usePromptStore.use.setPrompt();
 
   const actionNames = {
@@ -54,6 +54,7 @@ const useActionsManager = (target) => {
     });
   };
 
+
   const renameAction = (data) => {
     handleAction(actionNames.Rename, data, {
       onSubmit: (formData) => updateMutation.mutate(formData),
@@ -90,8 +91,8 @@ const useActionsManager = (target) => {
   };
 
   const previewAction = (data) => {
-    handleAction(actionNames.Preview, data, { 
-      showHeader: false,
+    handleAction(actionNames.Preview, data, {
+      // showHeader: false,
       showButtons: false,
       showCloseIcon: false,
     });

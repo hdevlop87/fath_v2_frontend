@@ -124,7 +124,7 @@ export const userColumns = (t) => {
                     <div className="text-center">
                         <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(user)} />
                         <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(user)} />
-                        <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Read(user)} />
+                        <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Preview(user)} />
                     </div>
                 )
             }

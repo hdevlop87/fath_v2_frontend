@@ -62,6 +62,8 @@
         "addressLabel": "Adresse",
         "CINPlaceholder": "Entrez le CIN",
         "CINLabel": "CIN",
+        "lotsReflaceholder": "Entrez le CIN",
+        "lotsRefLabel": "Lots",
         "createNewCustomer": "Créer un nouveau client",
         "editCustomer": "Modifier le client",
         "filterByCustomer": "Filtrer par client.....",
@@ -94,14 +96,6 @@
         "createNewCustomer": "Créer un nouveau client",
         "editCustomer": "Modifier le client",
         "filterByName": "Filtrer par nom.....",
-        "toast": {
-            "createSuccess": "Client créé avec succès !",
-            "updateSuccess": "Client mis à jour avec succès !",
-            "deleteSuccess": "Client supprimé avec succès !",
-            "uploadSuccess": "Données téléchargées avec succès !",
-            "uploadError": "Erreur de téléchargement des données",
-            "exists": "le client existe déjà"
-        },
         "phoneExist": "Le numéro de téléphone existe déjà pour un autre client",
         "emailExist": "L'adresse e-mail existe déjà pour un autre client"
     },
@@ -120,13 +114,6 @@
         "editSale": "Modifier la vente",
         "totalPriceCol": "Prix total",
         "venteActif": "Vente en cours ?",
-        "toast": {
-            "createSuccess": "Vente créée avec succès !",
-            "updateSuccess": "Vente mise à jour avec succès !",
-            "deleteSuccess": "Vente supprimée avec succès !",
-            "exists": "la vente existe déjà",
-            "emailSentSuccess": "E-mail envoyé avec succès"
-        },
         "lotSizeLabel": "Taille du lot",
         "totalPriceLabel": "Total à payer",
         "totalPaidLabel": "Total Echéances",
@@ -340,7 +327,7 @@
         "Star": "Étoiler",
         "Share": "Partager",
         "Download": "Télécharger",
-        "Preview": "Aperçu",
+        "Preview": "Aperçu d'",
         "Restore": "Restaurer",
         "Crop": "Rogner"
     },

@@ -9,7 +9,7 @@ export const userConfig = {
         password: z.string().optional(),
         confirmPassword: z.string().optional(),
         email: z.string().optional(),
-        image: z.string().optional(),
+        image: z.any().optional(),
         status: z.enum(['Active', 'Inactive', 'Pending']).optional(),
         roleId: z.any().optional(),
         createdAt: z.string().optional(),
@@ -102,7 +102,7 @@ export const userConfig = {
             update: updateUser,
         },
     },
-    possibleActions: ['Update','Delete'],
+    possibleActions: ['Preview','Update','Delete'],
     target: 'user'
 };
 

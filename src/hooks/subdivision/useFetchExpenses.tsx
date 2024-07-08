@@ -14,7 +14,7 @@ function useFetchExpenses() {
             throw error;
          }
       },
-
+      staleTime: 5 * 60 * 1000,
    })
 
    return { data , isLoading, isError, refetch };

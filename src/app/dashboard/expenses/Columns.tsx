@@ -86,7 +86,7 @@ export const expenseColumns = (t) => [
                 <div className="text-center">
                     <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(expense)} />
                     <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(expense)} />
-                    <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Read(expense)} />
+                    <BadgeIcon icon="iconamoon:eye-light" onClick={() => console.log("preview expenses")}/>
                 </div>
             )
         }

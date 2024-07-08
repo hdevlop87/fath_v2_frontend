@@ -66,10 +66,7 @@ const promptConfig = {
          component: React.lazy(() => import('@/components/Forms/FileUploadForm')),
       },
       Preview: {
-         component: React.lazy(() => import('@/components/Prompts/PreviewPrompt')),
-      },
-      Crop: {
-         component: React.lazy(() => import('@/components/Forms/CropImageForm')),
+         component: React.lazy(() => import('@/components/Views/UserView')),
       },
       Delete: deleteAction,
    },
@@ -82,7 +79,7 @@ const promptConfig = {
          component: React.lazy(() => import('@/components/Forms/customerForm')),
       },
       Preview: {
-         component: React.lazy(() => import('@/components/Prompts/PreviewPrompt')),
+         component: React.lazy(() => import('@/components/Views/CustomerView')),
       },
       Upload: csvUploadAction,
       Delete: deleteAction,
@@ -150,7 +147,7 @@ const promptConfig = {
          component: React.lazy(() => import('@/components/Forms/paymentForm')),
       },
       Preview: {
-         component: React.lazy(() => import('@/components/Prompts/PreviewPrompt')),
+         component: React.lazy(() => import('@/components/Views/PaymentView')),
       },
       Upload: csvUploadAction,
       Delete: deleteAction,

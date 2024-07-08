@@ -5,7 +5,6 @@ import BadgeIcon from '@/components/ui/BadgeIcons';
 import SearchBar from '@/components/ui/SearchBar'
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './theme-toggle';
-import MyAvatar from '@/assets/avatar1.svg'
 import { Icon } from '@iconify/react';
 import { Button } from '../ui/button';
 import React from 'react'

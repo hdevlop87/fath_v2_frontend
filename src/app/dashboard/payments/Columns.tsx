@@ -104,7 +104,7 @@ export const paymentColumns = (t) => [
                 <div className="text-center">
                     <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(payment)} />
                     <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(payment)} />
-                    <BadgeIcon icon="iconamoon:eye-light" onClick={handleFileClick} />
+                    <BadgeIcon icon="fluent:receipt-28-regular" onClick={() => actionsManager.Preview(payment)} />
                 </div>
             )
         }

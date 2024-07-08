@@ -118,7 +118,7 @@ export const customerColumns = (t) => [
                 <div className="text-center">
                     <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(customer)} />
                     <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(customer)} />
-                    <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Read(customer)} />
+                    <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Preview(customer)} />
                 </div>
             )
         }

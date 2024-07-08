@@ -14,7 +14,9 @@ function useFetchCustomers(enabled = true) {
             throw error;
          }
       },
-      enabled
+      enabled,
+      staleTime: 5 * 60 * 1000,
+
    })
 
    return { allCustomers: data, isLoading, isError, refetch };

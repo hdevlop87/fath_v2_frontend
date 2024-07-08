@@ -92,15 +92,12 @@ export const paymentColumns = (t) => [
             const user = useAuthStore.use.user();
             const isAdmin = user?.role === 'Admin';
 
-            const handleFileClick = async () => {
-
-            };
 
             return (
                 <div className="text-center">
                     <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(payment)} />
                     <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(payment)} />
-                    <BadgeIcon icon="iconamoon:eye-light" onClick={handleFileClick} />
+                    <BadgeIcon icon="fluent:receipt-28-regular" onClick={() => actionsManager.Preview(payment)} />
                 </div>
             )
         }

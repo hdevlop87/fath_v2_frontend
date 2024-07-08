@@ -84,7 +84,7 @@ export const customerConfig = {
            upload: bulkAddCustomers 
         }
      },
-     possibleActions: ['Update','Delete'],
+     possibleActions: ['Preview','Update','Delete'],
     target: 'Customer'
 
 };

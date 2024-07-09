@@ -102,7 +102,8 @@ export const saleConfig = {
          upload:bulkAddSales
       },
    },
-   target: 'Sale'
+   target: 'Sale',
+   mobileColumns : ["customerName", "lotRef", "status", "actions"]
 };
 
 export type SaleType = z.infer<typeof saleConfig.schema>;

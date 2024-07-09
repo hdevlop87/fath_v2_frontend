@@ -14,7 +14,7 @@ import {
 
 function Sale({ fallbackText, name, data, amount }) {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center w-full">
       <Avatar className="h-9 w-9 ">
         <AvatarFallback className=" bg-gray-200">{fallbackText}</AvatarFallback>
       </Avatar>
@@ -33,7 +33,7 @@ export default function RecentSales({dashData}) {
   const lowPercentSales = dashData?.salesLowestVerifiedPayments;
 
   return (
-    <Card className="col-span-3">
+    <Card className="col-span-6 pb-20 lg:col-span-3 ">
       <CardHeader>
         <CardTitle>Ventes à Faible Revenu</CardTitle>
         <CardDescription>
@@ -42,7 +42,7 @@ export default function RecentSales({dashData}) {
       </CardHeader>
       <CardContent>
 
-        <div className="space-y-8">
+        <div className="space-y-8 w-full">
           {lowPercentSales ? (
             lowPercentSales.map((sale, index) => (
               <Sale

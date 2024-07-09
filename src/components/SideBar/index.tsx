@@ -15,7 +15,7 @@ export default function Sidebar() {
 
     return (
         <Wrapper >
-            <div className='flex flex-col h-full gap-10'>
+            <div className='flex flex-col h-full gap-10 z-50 '>
                 <Header />
                 <Links pathname={strippedPathname} />
             </div>

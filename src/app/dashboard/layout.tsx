@@ -14,15 +14,15 @@ import useFetchCustomers from '@/hooks/subdivision/useFetchCustomers';
 import useFetchSettings from '@/hooks/subdivision/useFetchSettings';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  
+
   const { isRefreshing, isFetchingUser, userRole } = useAuth();
   const shouldFetchData = !isRefreshing && !isFetchingUser && !!userRole;
 
-  const { isLoading: isLoadingLots } = useFetchLots( shouldFetchData );
-  const { isLoading: isLoadingSales } = useFetchSales(shouldFetchData );
-  const { isLoading: isLoadingCustomers } = useFetchCustomers(shouldFetchData );
-  const { isLoading: isLoadingSettings } = useFetchSettings(shouldFetchData );
-  const { isLoading: isLoadingDash } = useFetchDashData(shouldFetchData );
+  const { isLoading: isLoadingLots } = useFetchLots(shouldFetchData);
+  const { isLoading: isLoadingSales } = useFetchSales(shouldFetchData);
+  const { isLoading: isLoadingCustomers } = useFetchCustomers(shouldFetchData);
+  const { isLoading: isLoadingSettings } = useFetchSettings(shouldFetchData);
+  const { isLoading: isLoadingDash } = useFetchDashData(shouldFetchData);
 
   const allFetchLoading = isRefreshing || isFetchingUser || isLoadingLots || isLoadingSales || isLoadingCustomers || isLoadingSettings || isLoadingDash;
 
@@ -51,7 +51,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Navbar />
         </div>
         <Separator className='h-[2px] mb-4' />
-        {children}
+        <div className='flex h-full  overflow-auto '>
+          {children}
+        </div>
       </div>
       <Prompts />
     </div>

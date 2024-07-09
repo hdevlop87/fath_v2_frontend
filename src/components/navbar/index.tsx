@@ -6,7 +6,6 @@ import SearchBar from '@/components/ui/SearchBar'
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './theme-toggle';
 import { Icon } from '@iconify/react';
-import { Button } from '../ui/button';
 import React from 'react'
 import { useTranslations } from '@/hooks/useTranslations';
 import { useAuthStore } from "@/store/authStore";
@@ -24,20 +23,17 @@ const Navbar = () => {
     const t = useTranslations();
     const pathname = usePathname();
     const segment = getLastSegment(pathname);
-    const mediaQuery = useSideBarStore.use.mediaQuery();
-    const isMobile = mediaQuery === 'mobile'
+    const isMobile = useSideBarStore.use.isMobile();
     const user = useAuthStore.use.user();
 
     return (
-        <div className='flex h-[56px] justify-between items-center px-4 w-full'>
+        <div className='flex h-[56px] justify-between items-center w-full '>
 
-            {isMobile ? (
-                <Button variant='ghost' onClick={() => setSidebarState('open')}>
-                    <Icon icon="ri:menu-unfold-3-line-2" width={28} height={28} />
-                </Button>
-            ) : (
+            {isMobile ?
+                <Icon icon="ri:menu-unfold-3-line-2" width={28} height={28} onClick={() => setSidebarState('open')}  />
+                :
                 <h1 className='font-medium text-lg'>{t(`navbar.${segment}`)}</h1>
-            )}
+            }
 
             <div className='flex items-center gap-3'>
                 <div className='hidden md:flex'>
@@ -60,8 +56,8 @@ const Navbar = () => {
                         />
                     </AvatarFallback>
                 </Avatar>
-                
-               
+
+
             </div>
 
         </div>

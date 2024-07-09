@@ -54,7 +54,6 @@ const useActionsManager = (target) => {
     });
   };
 
-
   const renameAction = (data) => {
     handleAction(actionNames.Rename, data, {
       onSubmit: (formData) => updateMutation.mutate(formData),
@@ -91,8 +90,12 @@ const useActionsManager = (target) => {
   };
 
   const previewAction = (data) => {
+    const { Preview } = data
+    if (typeof Preview === 'string') {
+      router.push(Preview)
+      return
+    }
     handleAction(actionNames.Preview, data, {
-      // showHeader: false,
       showButtons: false,
       showCloseIcon: false,
     });

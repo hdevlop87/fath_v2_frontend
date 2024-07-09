@@ -101,11 +101,11 @@
     },
     "sale": {
         "lotRefPlaceholder": "Sélectionnez la référence du lot",
-        "lotRefLabel": "Référence du lot",
+        "lotRefLabel": "lot",
         "customerNamePlaceholder": "Client par nom",
         "customerNameLabel": "Client",
         "pricePerM2Placeholder": "Entrez le prix au m²",
-        "pricePerM2Label": "Prix par m²",
+        "pricePerM2Label": "Prix m²",
         "datePlaceholder": "Sélectionnez la date de vente",
         "dateLabel": "Date",
         "statusPlaceholder": "Sélectionnez le statut de la vente",
@@ -160,7 +160,7 @@
     },
     "lot": {
         "lotRefPlaceholder": "Entrez la référence du lot",
-        "lotRefLabel": "Référence du lot",
+        "lotRefLabel": "lot",
         "statusPlaceholder": "Sélectionnez le statut du lot",
         "statusLabel": "Statut",
         "sizePlaceholder": "Entrez la taille du lot",

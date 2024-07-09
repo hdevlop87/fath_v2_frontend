@@ -5,14 +5,18 @@ import { paymentConfig } from '@/config/paymentsConfig';
 import DataTable from '@/components/DataTable';
 import { paymentColumns } from './Columns';
 import { useTranslations } from '@/hooks/useTranslations';
+import { useSideBarStore } from '@/store/sidebarStore'
 
 export default function Payments() {
 
    const t = useTranslations();
-   const columns = paymentColumns(t);
+   const isMobile = useSideBarStore.use.isMobile();
+   const columns = paymentColumns(t,isMobile);
 
    const { allPayments, isLoading } = useFetchPayments();
+
    if (isLoading) return <>loading...</>
+
 
    return (
       <DataTable
@@ -20,7 +24,7 @@ export default function Payments() {
          columns={columns}
          filters={paymentConfig.filters}
          target="payment"
-         showMode={false}
+         showMode={false} 
       />
    )
 }

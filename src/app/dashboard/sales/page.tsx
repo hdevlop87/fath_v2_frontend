@@ -5,11 +5,13 @@ import { saleConfig } from '@/config/saleConfig';
 import DataTable from '@/components/DataTable';
 import { saleColumns } from './Columns';
 import { useTranslations } from '@/hooks/useTranslations';
+import {useSideBarStore } from '@/store/sidebarStore'
 
 export default function Sales() {
 
    const t = useTranslations();
-   const columns = saleColumns(t);
+   const isMobile = useSideBarStore.use.isMobile();
+   const columns = saleColumns(t, isMobile);
 
    const { data, isLoading } = useFetchSales();
 
@@ -24,4 +26,4 @@ export default function Sales() {
          showMode={false}
       />
    )
-}
+} 

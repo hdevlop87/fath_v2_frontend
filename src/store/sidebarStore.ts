@@ -6,6 +6,7 @@ interface SideBarState {
     sidebarState: string;
     mediaQuery: string;
     currentView: string;
+    isMobile: boolean;
     setCurrentView: (view: string) => void;
 }
 
@@ -14,11 +15,12 @@ const sidebarStore = create<SideBarState>()(
         sidebarState: 'open',
         mediaQuery: 'largeScreen',
         currentView: '',
+        isMobile: false,
         setCurrentView: (view) => set({ currentView: view }),
     }))
 );
 
-export const setMediaQuery = (mediaQuery) => sidebarStore.setState({ mediaQuery });
+export const setMediaQuery = (mediaQuery) => sidebarStore.setState({ mediaQuery, isMobile: mediaQuery === 'mobile' });
 export const setSidebarState = (sidebarState) => sidebarStore.setState({ sidebarState });
 
 export const toggleSidebar = () => {
@@ -35,6 +37,11 @@ export const toggleSidebar = () => {
     sidebarStore.setState({
         sidebarState: newSidebarState,
     });
+};
+
+export const isMobile = () => {
+    const { mediaQuery } = sidebarStore.getState();
+    return mediaQuery === 'mobile';
 };
 
 export const useSideBarStore = createSelectors(sidebarStore);

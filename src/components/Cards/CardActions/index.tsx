@@ -10,14 +10,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Icon } from '@iconify/react';
 import useActionsManager from '@/components/Prompts/useActionsManager'
+import { cn } from '@/lib/utils';
 
 interface CardActionsDropdownProps {
    target: string;
    possibleActions: string[];
    data?: any;
+   className?: any
 }
 
-const CardActionsDropdown: React.FC<CardActionsDropdownProps> = ({ target, possibleActions = [], data }) => {
+const CardActionsDropdown: React.FC<CardActionsDropdownProps> = ({ target, possibleActions = [], data, className }) => {
 
    const actionsManager = useActionsManager(target);
 
@@ -39,13 +41,13 @@ const CardActionsDropdown: React.FC<CardActionsDropdownProps> = ({ target, possi
    };
 
    return (
-      <> 
+      <>
          <DropdownMenu>
             <DropdownMenuTrigger asChild>
-               <Icon icon="pepicons-pencil:dots-y" width={28} className='mr-2 cursor-pointer z-20 absolute top-2 right-0 text-slate-400' />
+               <Icon icon="pepicons-pencil:dots-y" width={28} className={cn('mr-2 cursor-pointer z-20 absolute top-2 right-0 text-slate-400', className)} />
             </DropdownMenuTrigger>
 
-            <DropdownMenuContent className="w-56">
+            <DropdownMenuContent className="w-42">
                <DropdownMenuLabel>{'Actions'}</DropdownMenuLabel>
                <DropdownMenuSeparator />
                <DropdownMenuGroup>

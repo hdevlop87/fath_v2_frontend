@@ -118,7 +118,8 @@ export const paymentConfig = {
     },
   },
 
-  target: 'Payment'
+  target: 'Payment',
+  mobileColumns : ["amount", "date","status", "actions"]
 };
 
 export type PaymentType = z.infer<typeof paymentConfig.baseSchema>;

@@ -46,7 +46,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex w-full h-full bg-[#F1EDED] dark:bg-black'>
       <Sidebar />
-      <div className='flex flex-col flex-1 px-3'>
+      <div className='flex flex-col flex-1 px-2 lg:px-6'>
         <div className='flex h-[56px] w-full'>
           <Navbar />
         </div>

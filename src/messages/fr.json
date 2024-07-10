@@ -67,14 +67,6 @@
         "createNewCustomer": "Créer un nouveau client",
         "editCustomer": "Modifier le client",
         "filterByCustomer": "Filtrer par client.....",
-        "toast": {
-            "createSuccess": "Client créé avec succès !",
-            "updateSuccess": "Client mis à jour avec succès !",
-            "deleteSuccess": "Client supprimé avec succès !",
-            "uploadSuccess": "Données téléchargées avec succès !",
-            "uploadError": "Erreur de téléchargement des données",
-            "exists": "le client existe déjà"
-        },
         "phoneExist": "Le numéro de téléphone existe déjà pour un autre client",
         "emailExist": "L'adresse e-mail existe déjà pour un autre client"
     },
@@ -145,12 +137,6 @@
         "notesLabel": "Notes",
         "createNewPayment": "Créer un nouveau paiement",
         "editPayment": "Modifier le paiement",
-        "toast": {
-            "createSuccess": "Paiement créé avec succès !",
-            "updateSuccess": "Paiement mis à jour avec succès !",
-            "deleteSuccess": "Paiement supprimé avec succès !",
-            "exists": "le paiement existe déjà"
-        },
         "status": {
             "pending": "En attente",
             "verified": "Vérifié",
@@ -173,13 +159,6 @@
         "descPlaceholder": "Entrez une description du lot",
         "descLabel": "Description",
         "editLot": "Modifier le lot",
-        "status": {
-            "available": "Disponible",
-            "reserved": "Réservé",
-            "ongoing": "En cours",
-            "canceled": "Annulé",
-            "sold": "Vendu"
-        },
         "zoningCodes": {
             "EQ1": "EQ 1",
             "R+2": "R+2",
@@ -204,12 +183,6 @@
         "typeLabel": "Type de dépense",
         "createNewExpense": "Créer une nouvelle dépense",
         "editExpense": "Modifier la dépense",
-        "toast": {
-            "createSuccess": "Dépense créée avec succès !",
-            "updateSuccess": "Dépense mise à jour avec succès !",
-            "deleteSuccess": "Dépense supprimée avec succès !",
-            "exists": "La dépense existe déjà"
-        },
         "paymentMethods": {
             "CreditCard": "Carte de crédit",
             "BankTransfer": "Virement bancaire",
@@ -261,7 +234,12 @@
         "SaleView": "Détails de la vente",
         "Setting": "Paramètres",
         "Database": "Base de données",
-        "Account": "Compte"
+        "Account": "Compte",
+        "languageSelection": "Choisir la langue",
+        "english": "Anglais",
+        "french": "Français",
+        "spanish": "Espagnol",
+        "arabic": "Arabe"
     },
     "storage": {
         "users": "utilisateurs",

@@ -32,7 +32,6 @@ const UserCard = ({ item }) => {
     return (
         <Card className='flex flex-col p-4 justify-center items-center gap-3 w-44'>
             <div className="flex items-center gap-2 ">
-                <div className='absolute h-16 w-16 bg-white z-0 rounded-full'></div>
                 <Avatar className='w-24 h-24 relative'>
                     <AvatarImage src={avatarSrc} alt="avatar" />
                     <AvatarFallback>

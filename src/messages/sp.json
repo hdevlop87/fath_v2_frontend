@@ -297,6 +297,7 @@
         "Create": "Crear",
         "Update": "Actualizar",
         "Rename": "Renombrar",
+        "Password": "Actualizar Contraseña",
         "Delete": "Eliminar",
         "Upload": "Subir",
         "Read": "Leer",
@@ -304,7 +305,7 @@
         "Star": "Destacar",
         "Share": "Compartir",
         "Download": "Descargar",
-        "Preview": "Vista previa",
+        "Preview": "Vista Previa",
         "Restore": "Restaurar",
         "Crop": "Recortar"
     },
@@ -328,5 +329,14 @@
         "timeZoneLabel": "Zona horaria",
         "dateFormatPlaceholder": "Selecciona el formato de fecha",
         "dateFormatLabel": "Formato de fecha"
-    }
+    },
+    "dashboard": {
+        "grossSales": "Ventas Brutas",
+        "totalExpenses": "Gastos Totales",
+        "netAmount": "Beneficio Neto",
+        "salesCount": "Recuento de Ventas",
+        "graphTitle": "Resumen",
+        "lowPercentSalesTitle": "Ventas de Bajos Ingresos",
+        "lowPercentSalesSubtitle": "Distribución de Ventas de Bajo Rendimiento."
+      }
 }

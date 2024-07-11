@@ -298,6 +298,7 @@
         "Create": "Créer",
         "Update": "Mettre à jour",
         "Rename": "Renommer",
+        "Password": "Mettre à jour le mot de passe d'",
         "Delete": "Supprimer",
         "Upload": "Téléverser",
         "Read": "Lire",
@@ -329,5 +330,14 @@
         "timeZoneLabel": "Fuseau horaire",
         "dateFormatPlaceholder": "Sélectionnez le format de la date",
         "dateFormatLabel": "Format de la date"
+    },
+    "dashboard":{
+        "grossSales": "Ventes Brutes",
+        "totalExpenses": "Dépenses Totales",
+        "netAmount": "Bénéfice Net",
+        "salesCount": "Ventes",
+        "graphTitle":"Aperçu",
+        "lowPercentSalesTitle":"Ventes à Faible Revenu",
+        "lowPercentSalesSubtitle":"Répartition des Ventes à Faible Rendement."
     }
 }

@@ -8,14 +8,14 @@ import FormField from '@/components/Forms/FormField';
 import { Label } from '@/components/ui/label';
 import useFormStore from './formStore';
 
-const SaleStep = ({ id, onSubmit }) => {
+const SaleStep = ({ id, onSubmit, data }) => {
   const { availableLots, availablelotsRef } = useFetchLots();
   const { getFormData } = useFormStore();
   const formData = getFormData('sale');
 
   const form = useForm<SaleType>({
     resolver: zodResolver(saleConfig.schema),
-    defaultValues: { ...saleConfig.defaultValues, ...formData },
+    defaultValues: { ...saleConfig.defaultValues, ...formData, ...data },
   });
 
   const updatedFields = saleConfig.fields

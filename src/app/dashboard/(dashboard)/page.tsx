@@ -6,7 +6,7 @@ import {
    CardHeader,
    CardTitle,
 } from "@/components/ui/card"
-
+import { useTranslations } from '@/hooks/useTranslations';
 import { Overview } from "./overview"
 import RecentSales from "./recent-sales"
 import ItemsHeader from './itemsHeader'
@@ -14,7 +14,7 @@ import useFetchDashData from '@/hooks/subdivision/useFetchDashData';
 
 export default function DashboardPage() {
 
-
+   const t = useTranslations();
    const { dashData, isLoading: isLoadingDash } = useFetchDashData();
 
    return (
@@ -24,7 +24,7 @@ export default function DashboardPage() {
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                <Card className="col-span-6 lg:col-span-4">
                   <CardHeader>
-                     <CardTitle>Aperçu</CardTitle>
+                     <CardTitle>{t("dashboard.graphTitle")}</CardTitle>
                   </CardHeader>
                   <CardContent className="pl-2">
                      <Overview dashData={dashData} />

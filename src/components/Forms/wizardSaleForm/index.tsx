@@ -11,13 +11,15 @@ import { Button } from "@/components/ui/button";
 import SubmitButton from '@/components/loadingButton';
 import { useLoaderStore } from '@/store/loaderStore';
 import useFormStore from './formStore';
+import { usePromptStore } from '@/store/promptStore';
 
 export default function WizardSale({ handleSubmit }) {
 
    const t = useTranslations();
    const [currentStep, setCurrentStep] = useState(0);
    const queryLoading = useLoaderStore.use.queryLoading();
-   const { setFormData, formData, resetFormData } = useFormStore();
+   const initialValues = usePromptStore.use.initialValues();
+   const { setFormData, formData, resetFormData } = useFormStore(); 
 
    useEffect(() => {
       resetFormData();
@@ -50,7 +52,7 @@ export default function WizardSale({ handleSubmit }) {
          id: "sale",
          label: t("wizard.sale"),
          icon: "mdi:point-of-sale",
-         component: <SaleStep id="sale" onSubmit={handleNext} />
+         component: <SaleStep id="sale" onSubmit={handleNext} data={initialValues}/>
       },
       {
          id: "customer",

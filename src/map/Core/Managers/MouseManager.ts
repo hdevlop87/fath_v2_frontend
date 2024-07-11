@@ -48,8 +48,8 @@ export default class Mouse {
 
          this._bindEvents();
 
-         this.mouseText = this.mouseLayer.text('x:0, y:0').fill('orange');
-         this.mouseText.back()
+         // this.mouseText = this.mouseLayer.text('x:0, y:0').fill('orange');
+         // this.mouseText.back()
       }
 
       return Mouse.instance;
@@ -122,7 +122,7 @@ export default class Mouse {
    _mousemove(ev) {
       ev.preventDefault();
       this.input = this._calculateXY(ev);
-      this._drawMousePos(this.input.pos);
+      // this._drawMousePos(this.input.pos);
       this._triggerEvent('mousemove', this.input);
    }
 

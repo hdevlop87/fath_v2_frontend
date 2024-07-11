@@ -5,30 +5,32 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Icon } from '@iconify/react';
 import { formatCommas } from "@/lib/utils";
+import { useTranslations } from '@/hooks/useTranslations';
 
 const itemsHeader = ({dashData}) => {
 
    const financialData = dashData?.financialData;
+   const t = useTranslations();
 
    const cardData = [
       {
          id: 'totalVerifiedPayments',
-         title: "Ventes Brutes",
+         title: "dashboard.grossSales",
          icon: "mdi:currency-usd"
       },
       {
          id: 'totalExpenses',
-         title: "Dépenses Totales",
+         title: "dashboard.totalExpenses", 
          icon: "game-icons:pay-money"
       },
       {
          id: 'netAmount',
-         title: "Bénéfice Net",
+         title: "dashboard.netAmount",
          icon: "healthicons:money-bag"
       },
       {
          id: 'totalSalesCount',
-         title: "Ventes",
+         title: "dashboard.salesCount",
          icon: "tabler:sum"
       }
    ];
@@ -41,7 +43,7 @@ const itemsHeader = ({dashData}) => {
             <Card key={index}>
                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-md font-medium">
-                     {card.title}
+                     {t(card.title)}
                   </CardTitle>
                   <Icon icon={card.icon} className="h-7 w-7 text-muted-foreground" />
                </CardHeader>

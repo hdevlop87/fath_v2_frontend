@@ -68,6 +68,9 @@ const promptConfig = {
       Preview: {
          component: React.lazy(() => import('@/components/Views/UserView')),
       },
+      Password: {
+         component: React.lazy(() => import('@/components/Forms/passwordForm')),
+      },
       Delete: deleteAction,
    },
 

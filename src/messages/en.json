@@ -297,6 +297,7 @@
         "Create": "Create",
         "Update": "Update",
         "Rename": "Rename",
+        "Password": "Update Password",
         "Delete": "Delete",
         "Upload": "Upload",
         "Read": "Read",
@@ -309,15 +310,15 @@
         "Crop": "Crop"
     },
     "target": {
-        "folder": "a folder",
-        "file": "a file",
-        "user": "a user",
-        "lot": "a lot",
-        "sale": "a sale",
-        "expense": "an expense",
-        "payment": "a payment",
-        "customer": "a customer",
-        "wizardSale": "a sale"
+        "folder": "folder",
+        "file": "file",
+        "user": "user",
+        "lot": "lot",
+        "sale": "sale",
+        "expense": "expense",
+        "payment": "payment",
+        "customer": "customer",
+        "wizardSale": "sale"
     },
     "settings": {
         "appNamePlaceholder": "Enter the website name",
@@ -328,5 +329,14 @@
         "timeZoneLabel": "Time Zone",
         "dateFormatPlaceholder": "Select the date format",
         "dateFormatLabel": "Date Format"
+    },
+    "dashboard":{
+        "grossSales": "Gross Sales",
+        "totalExpenses": "Total Expenses",
+        "netAmount": "Net Profit",
+        "salesCount": "Sales Count",
+        "graphTitle": "Overview",
+        "lowPercentSalesTitle": "Low Revenue Sales",
+        "lowPercentSalesSubtitle": "Distribution of Low-Performing Sales."
     }
 }

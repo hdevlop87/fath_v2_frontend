@@ -1,11 +1,11 @@
 import * as z from "zod";
-import { createUser, updateUser, deleteUser } from '@/services/userApi';
+import { createUser, updateUser, deleteUser,updateUserPassword } from '@/services/userApi';
 
 export const userConfig = {
     schema: z.object({
         id: z.string().optional(),
-        name: z.string(),
-        username: z.string().trim().min(4, { message: "Username must be 4 or more characters" }),
+        name: z.string({ required_error: "Le Nom est requis" }),
+        username: z.string({ required_error: "Le nom d'utilisateur est obligatoire." }),
         password: z.string().optional(),
         confirmPassword: z.string().optional(),
         email: z.string().optional(),
@@ -100,9 +100,10 @@ export const userConfig = {
             delete: deleteUser,
             create: createUser,
             update: updateUser,
+            updatePassword:updateUserPassword
         },
     },
-    possibleActions: ['Preview','Update','Delete'],
+    possibleActions: ['Preview','Update','Delete','Password'],
     target: 'user'
 };
 

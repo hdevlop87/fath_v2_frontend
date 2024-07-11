@@ -19,6 +19,7 @@ const useActionsManager = (target) => {
     Create: 'Create',
     Update: 'Update',
     Rename: 'Rename',
+    Password: 'Password',
     Delete: 'Delete',
     Upload: 'Upload',
     Read: 'Read',
@@ -42,7 +43,7 @@ const useActionsManager = (target) => {
   };
 
   const createAction = (data) => {
-    handleAction(actionNames.Create, null, {
+    handleAction(actionNames.Create, data, {
       showButtons: target != "wizardSale",
       onSubmit: (formData) => createMutation.mutate(formData),
     });
@@ -56,6 +57,12 @@ const useActionsManager = (target) => {
 
   const renameAction = (data) => {
     handleAction(actionNames.Rename, data, {
+      onSubmit: (formData) => updateMutation.mutate(formData),
+    });
+  };
+
+  const passwordAction = (data) => {
+    handleAction(actionNames.Password, data, {
       onSubmit: (formData) => updateMutation.mutate(formData),
     });
   };
@@ -137,6 +144,7 @@ const useActionsManager = (target) => {
     Create: createAction,
     Update: updateAction,
     Rename: renameAction,
+    Password: passwordAction,
     Delete: deleteAction,
     Upload: uploadAction,
     Read: readAction,

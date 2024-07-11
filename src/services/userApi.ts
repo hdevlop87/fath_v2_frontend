@@ -42,6 +42,11 @@ export const updateUser = async (userData) => {
     return response.data;
 };
 
+export const updateUserPassword = async ({id}) => {
+    const response = await http.get(`/users/changePassword/${id}`);
+    return response.data;
+};
+
 export const getUserById = async ({id}) => {
     const response = await http.get(`/users/${id}`);
     return response.data;

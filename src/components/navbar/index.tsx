@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import { setSidebarState, useSideBarStore } from '@/store/sidebarStore';
-import BadgeIcon from '@/components/ui/BadgeIcons';
 import SearchBar from '@/components/ui/SearchBar';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './theme-toggle';
 import { Icon } from '@iconify/react';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useAuthStore } from "@/store/authStore";
-import { useI18nStore } from '@/store/i18nStore'; // Import the i18n store
+import { useI18nStore } from '@/store/i18nStore'; 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Image from "next/image";
 import {
@@ -47,17 +46,17 @@ const Navbar = () => {
             {isMobile ?
                 <Icon icon="ri:menu-unfold-3-line-2" width={28} height={28} onClick={() => setSidebarState('open')} />
                 :
-                <h1 className='font-medium text-lg'>{t(`navbar.${segment}`)}</h1>
+                <h1 className='font-medium text-lg'>{t("navbar."+segment)}</h1>
             }
             <div className='flex items-center gap-3'>
-                <div className='hidden md:flex'>
+                {/* <div className='hidden md:flex'>
                     <SearchBar />
-                </div>
+                </div> */}
                 <div className='flex gap-1 '>
                     <ThemeToggle />
                     <DropdownMenu>
                         <DropdownMenuTrigger>
-                            <BadgeIcon icon="ic:baseline-g-translate" />
+                            <Icon icon="ic:baseline-g-translate" width={22} height={22}/>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent>
                             <DropdownMenuLabel>{t("navbar.languageSelection")}</DropdownMenuLabel>

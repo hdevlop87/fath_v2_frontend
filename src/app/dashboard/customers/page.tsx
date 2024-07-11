@@ -4,7 +4,6 @@ import useFetchCustomers from '@/hooks/subdivision/useFetchCustomers'
 import { customerConfig } from '@/config/customerConfig';
 import DataTable from '@/components/DataTable';
 import { customerColumns } from './Columns';
-import { Card } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/useTranslations';
 
 export default function Customers() {

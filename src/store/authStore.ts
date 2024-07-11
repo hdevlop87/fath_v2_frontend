@@ -87,8 +87,6 @@ export const logout = async () => {
     setLoading(true);
     await delay(1000)
     const { user } = authStore.getState();
-console.log(user);
-
     try {
         await checkUser();
         await isRefreshTokenValid();

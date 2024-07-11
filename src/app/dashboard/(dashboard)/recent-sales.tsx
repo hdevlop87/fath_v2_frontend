@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useTranslations } from '@/hooks/useTranslations';
 
 function Sale({ fallbackText, name, data, amount }) {
   return (
@@ -29,15 +30,15 @@ function Sale({ fallbackText, name, data, amount }) {
 
 export default function RecentSales({dashData}) {
 
-
+  const t = useTranslations();
   const lowPercentSales = dashData?.salesLowestVerifiedPayments;
 
   return (
     <Card className="col-span-6 pb-20 lg:col-span-3 ">
       <CardHeader>
-        <CardTitle>Ventes à Faible Revenu</CardTitle>
+        <CardTitle>{t("dashboard.lowPercentSalesTitle")}</CardTitle>
         <CardDescription>
-          Répartition des Ventes à Faible Rendement.
+        {t("dashboard.lowPercentSalesSubtitle")}
         </CardDescription>
       </CardHeader>
       <CardContent>

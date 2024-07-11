@@ -297,6 +297,7 @@
         "Create": "إنشاء",
         "Update": "تحديث",
         "Rename": "إعادة تسمية",
+        "Password": "تحديث كلمة المرور",
         "Delete": "حذف",
         "Upload": "تحميل",
         "Read": "قراءة",
@@ -328,5 +329,14 @@
         "timeZoneLabel": "المنطقة الزمنية",
         "dateFormatPlaceholder": "حدد تنسيق التاريخ",
         "dateFormatLabel": "تنسيق التاريخ"
-    }
+    },
+    "dashboard": {
+        "grossSales": "المبيعات الإجمالية",
+        "totalExpenses": "إجمالي المصروفات",
+        "netAmount": "صافي الربح",
+        "salesCount": "عدد المبيعات",
+        "graphTitle": "نظرة عامة",
+        "lowPercentSalesTitle": "المبيعات ذات الإيرادات المنخفضة",
+        "lowPercentSalesSubtitle": "توزيع المبيعات ذات الأداء المنخفض."
+      }
 }

@@ -48,8 +48,8 @@
         "myprofile": "Profile"
     },
     "customer": {
-        "namePlaceholder": "Enter the name",
-        "nameLabel": "Name",
+        "firstNamePlaceholder": "Enter the first name",
+        "firstNameLabel": "First Name",
         "lastNamePlaceholder": "Enter the last name",
         "lastNameLabel": "Last Name",
         "genderPlaceholder": "Enter the gender",
@@ -62,7 +62,7 @@
         "addressLabel": "Address",
         "CINPlaceholder": "Enter the CIN",
         "CINLabel": "CIN",
-        "lotsReflaceholder": "Enter the CIN",
+        "lotsRefPlaceholder": "Enter the lot reference",
         "lotsRefLabel": "Lots",
         "createNewCustomer": "Create a new customer",
         "editCustomer": "Edit customer",

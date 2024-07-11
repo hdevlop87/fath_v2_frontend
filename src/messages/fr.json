@@ -48,10 +48,10 @@
         "myprofile": "Profil"
     },
     "customer": {
-        "namePlaceholder": "Entrez le nom",
-        "nameLabel": "Nom",
-        "lastNamePlaceholder": "Entrez le nom de famille",
-        "lastNameLabel": "Nom de famille",
+        "firstNamePlaceholder": "Entrez le nom de famille",
+        "firstNameLabel": "Nom de famille",
+        "lastNamePlaceholder": "Entrez le prénom",
+        "lastNameLabel": "Prénom",
         "genderPlaceholder": "Entrez le sexe",
         "genderLabel": "Sexe",
         "phonePlaceholder": "Entrez le numéro de téléphone",
@@ -62,7 +62,7 @@
         "addressLabel": "Adresse",
         "CINPlaceholder": "Entrez le CIN",
         "CINLabel": "CIN",
-        "lotsReflaceholder": "Entrez le CIN",
+        "lotsRefPlaceholder": "Entrez la référence du lot",
         "lotsRefLabel": "Lots",
         "createNewCustomer": "Créer un nouveau client",
         "editCustomer": "Modifier le client",

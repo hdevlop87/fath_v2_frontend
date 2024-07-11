@@ -93,9 +93,9 @@ export const paymentConfig = {
 
   defaultValues: {
     amount: "",
-    date: "2024-06-25 14:45:24.995886",
-    method: "CreditCard",
-    paymentReference:"54678",
+    date: "",
+    method: "",
+    paymentReference:"",
     receipt: "",
     notes: ""
   },

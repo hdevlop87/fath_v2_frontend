@@ -4,21 +4,21 @@
         "label": "dashboard",
         "icon": "bxs:dashboard",
         "route": "/dashboard",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["All"]
     },
     {
         "name": "map",
         "label": "map",
         "icon": "simple-icons:openstreetmap",
         "route": "/dashboard/map",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["All"]
     },
     {
         "name": "sales",
         "label": "sales",
         "icon": "solar:money-bag-bold",
         "route": "/dashboard/sales",
-        "allowedRoles": ["admin"],
+        "allowedRoles": ["All"],
         "nestedRoutes": ["/dashboard/sales/saleView", "/dashboard/sales/anotherNestedRoute"] 
     },
     {
@@ -26,35 +26,35 @@
         "label": "payments",
         "icon": "mdi:payment-clock",
         "route": "/dashboard/payments",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["All"]
     },
     {
         "name": "expenses",
         "label": "expenses",
         "icon": "fluent:money-hand-16-filled",
         "route": "/dashboard/expenses",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["All"]
     },
     {
         "name": "lots",
         "label": "lots",
         "icon": "mdi:land-plots-marker",
         "route": "/dashboard/lots",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["All"]
     },
     {
         "name": "customers",
         "label": "customers",
         "icon": "ph:users-fill",
         "route": "/dashboard/customers",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["Admin"]
     },
     {
         "name": "users",
         "label": "users",
         "icon": "gridicons:multiple-users",
         "route": "/dashboard/users",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["Admin"]
     },
     {
         "id":"00000000-0000-0000-0000-000000000000",
@@ -62,6 +62,6 @@
         "label": "storage",
         "icon": "ph:folder-fill",
         "route": "/dashboard/storage",
-        "allowedRoles": ["admin"]
+        "allowedRoles": ["Admin"]
     }
 ]

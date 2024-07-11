@@ -48,8 +48,8 @@
         "myprofile": "Perfil"
     },
     "customer": {
-        "namePlaceholder": "Introduce el nombre",
-        "nameLabel": "Nombre",
+        "firstNamePlaceholder": "Introduce el nombre",
+        "firstNameLabel": "Nombre",
         "lastNamePlaceholder": "Introduce el apellido",
         "lastNameLabel": "Apellido",
         "genderPlaceholder": "Introduce el género",

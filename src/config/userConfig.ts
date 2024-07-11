@@ -78,12 +78,12 @@ export const userConfig = {
     ],
 
     defaultValues: {
-        name: 'hicham',
-        username: 'hicham',
-        password: '123456',
-        confirmPassword: '123456',
-        email: 'test@test.com',
-        roleId: '3'
+        name: '',
+        username: '',
+        password: '',
+        confirmPassword: '',
+        email: '',
+        roleId: ''
     },
 
     queryKey: "users",

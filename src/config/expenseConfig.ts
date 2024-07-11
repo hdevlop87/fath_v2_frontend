@@ -141,14 +141,14 @@ export const expenseConfig = {
   ],
 
   defaultValues: {
-    amount: "1200",
-    date: "2024-06-25 14:45:24.995886",
-    beneficiary: "hicham jebara",
-    method: "CreditCard",
-    type: "Permits_and_Authorizations",
-    reference: "54678",
+    amount: "",
+    date: "",
+    beneficiary: "",
+    method: "",
+    type: "",
+    reference: "",
     receipt: "",
-    notes: "sdfsdfsdfsdfsdf"
+    notes: ""
   },
 
   filters: [

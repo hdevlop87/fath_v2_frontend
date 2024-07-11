@@ -30,7 +30,7 @@ const Customers = ({  id, onSubmit }) => {
               <FormField
                 control={form.control}
                 name={fieldData.name}
-                render={({ field }) => (
+                render={({ field }) => ( 
                   <FormItem>
                     <AutoInput
                       type={fieldData.type}

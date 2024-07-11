@@ -57,10 +57,6 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontSize: {
-        '12px': '12px',
-        '14px': '14px',
-      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -77,19 +73,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    function({ addUtilities }) {
-      const newUtilities = {
-        '.form-text-responsive': {
-          fontSize: '12px',
-          '@screen md': {
-            fontSize: '14px',
-          },
-        },
-      };
 
-      addUtilities(newUtilities, ['responsive']);
-    },
-  ],
 };

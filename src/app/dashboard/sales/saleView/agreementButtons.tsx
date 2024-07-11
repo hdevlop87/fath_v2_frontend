@@ -6,13 +6,15 @@ import { prepareAgreement, sendEmail } from '@/services/saleApi';
 import { Label } from '@/components/ui/label';
 import toast from 'react-hot-toast';
 import { useTranslations } from '@/hooks/useTranslations';
-import {downloadFile} from '@/services/fileApi'
+import { downloadFile } from '@/services/fileApi';
+import { useAuthStore } from '@/store/authStore';
 
-const agreementButtons = ({ sale }) => {
-
+const AgreementButtons = ({ sale }) => {
     const t = useTranslations();
     const [loadingAgreement, setLoadingAgreement] = useState(false);
     const [loadingEmail, setLoadingEmail] = useState(false);
+    const user = useAuthStore.use.user();
+    const isAdmin = user?.role === 'Admin';
 
     const getAgreement = async () => {
         try {
@@ -31,7 +33,6 @@ const agreementButtons = ({ sale }) => {
             setLoadingEmail(true);
             let resp = await sendEmail(sale);
             toast.success(t(resp.message));
-
         } catch (error) {
             console.error('An error occurred:', error);
         } finally {
@@ -51,8 +52,8 @@ const agreementButtons = ({ sale }) => {
                     submitText="Download"
                     loadingText="Download..."
                     collapsed={false}
+                    disabled={!isAdmin}
                 />
-
                 <LoadingButton
                     variant="default"
                     loading={loadingEmail}
@@ -61,11 +62,11 @@ const agreementButtons = ({ sale }) => {
                     submitText="Email"
                     loadingText="Sending..."
                     collapsed={false}
+                    disabled={!isAdmin}
                 />
-
             </div>
         </div>
     )
 }
 
-export default agreementButtons
+export default AgreementButtons;

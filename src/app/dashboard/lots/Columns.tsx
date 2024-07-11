@@ -84,7 +84,7 @@ export const lotColumns = (t) => [
 
             return (
                 <div className="">
-                    <Badge variant={variantValue}>{t(`lot.status.${lot.status.toLowerCase()}`)}</Badge>
+                    <Badge variant={variantValue}>{t(`status.${lot.status.toLowerCase()}`)}</Badge>
                 </div>
             )
         },

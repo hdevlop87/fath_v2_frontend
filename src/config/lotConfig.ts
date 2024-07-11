@@ -103,7 +103,7 @@ export const lotConfig = {
 
     defaultValues: {
         lotRef: "",
-        status: 'Available',
+        status: '',
         size: '10000',
         pricePerM2: '1000',
         zoningCode: 'EQ1',

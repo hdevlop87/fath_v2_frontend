@@ -20,8 +20,8 @@ export const config = {
         },
     ],
     defaultValues: {
-        username: 'admin',
-        password: '123456',
+        username: '',
+        password: '',
     },
 };
 

@@ -3,13 +3,14 @@ import { createCustomer, updateCustomer, deleteCustomer,bulkAddCustomers } from 
 export const customerConfig = {
     schema: z.object({
         customerId: z.any().optional(),
-        name: z.string().trim().min(1, { message: "Le nom du client est obligatoire." }),
+        firstName: z.string().trim().min(1, { message: "Le prénom du client est obligatoire." }),
+        lastName: z.string().trim().min(1, { message: "Le nom de famille du client est obligatoire." }),
         gender: z.any().optional(),
         birthday: z.string().optional(),
         phone: z.string().trim().min(1, { message: "Le numéro de téléphone est obligatoire." }),
         email: z.any().optional(),
         address: z.any().optional(),
-        CIN: z.string().trim().min(1,{ message: "Le CIN est obligatoire." }),
+        CIN: z.string().trim().min(1, { message: "Le CIN est obligatoire." }),
         image: z.any().optional(),
         createdAt: z.string().optional(),
     }),
@@ -17,9 +18,15 @@ export const customerConfig = {
     fields: [
         {
             "type": "text",
-            "name": "name",
-            "placeholder": "customer.namePlaceholder",
-            "label": "customer.nameLabel", 
+            "name": "firstName",
+            "placeholder": "customer.firstNamePlaceholder",
+            "label": "customer.firstNameLabel", 
+        },
+        {
+            "type": "text",
+            "name": "lastName",
+            "placeholder": "customer.lastNamePlaceholder",
+            "label": "customer.lastNameLabel", 
         },
         {
             "type": "select",
@@ -63,7 +70,7 @@ export const customerConfig = {
         gender: "male",
         phone: '',
         email: '',
-        address: '456 Maple St, Shelbyville',
+        address: '',
         CIN: ''
     },
 

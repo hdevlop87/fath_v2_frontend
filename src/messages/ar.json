@@ -48,8 +48,8 @@
         "myprofile": "الملف الشخصي"
     },
     "customer": {
-        "namePlaceholder": "أدخل الاسم",
-        "nameLabel": "الاسم",
+        "firstNamePlaceholder": "أدخل الاسم الأول",
+        "firstNameLabel": "الاسم الأول",
         "lastNamePlaceholder": "أدخل الاسم الأخير",
         "lastNameLabel": "الاسم الأخير",
         "genderPlaceholder": "أدخل الجنس",

@@ -21,7 +21,7 @@ interface CardActionsContextMenuProps {
 const CardActionsContextMenu: React.FC<CardActionsContextMenuProps> = ({ target, possibleActions = [], data, children }) => {
     const actionsManager = useActionsManager(target);
     const user = useAuthStore.use.user(); 
-    const isAdmin = user?.role === 'Admin';
+   const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
     const actionConfig = {
         Star: { icon: "eva:star-outline" },
@@ -43,7 +43,7 @@ const CardActionsContextMenu: React.FC<CardActionsContextMenuProps> = ({ target,
 
     const filteredActions = possibleActions.filter(action => {
         const adminOnlyActions = ['Delete', 'Update', 'Rename', 'Move'];
-        if (!isAdmin && adminOnlyActions.includes(action)) {
+        if (!isAuthorized && adminOnlyActions.includes(action)) {
             return false;
         }
         return true;

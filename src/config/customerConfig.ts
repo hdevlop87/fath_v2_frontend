@@ -65,13 +65,14 @@ export const customerConfig = {
     ],
 
     defaultValues: {
-        name: '',
+        firstName: 'hicham',
+        lastName: 'jebara',
         birthday: "1990-10-15",
         gender: "male",
-        phone: '',
-        email: '',
-        address: '',
-        CIN: ''
+        phone: '123456',
+        email: 'hicham@gmail.com',
+        address: '5775',
+        CIN: '123456'
     },
 
     queryKey: "customers",

@@ -19,12 +19,12 @@ export default function WizardSale({ handleSubmit }) {
    const [currentStep, setCurrentStep] = useState(0);
    const queryLoading = useLoaderStore.use.queryLoading();
    const initialValues = usePromptStore.use.initialValues();
-   const { setFormData, formData, resetFormData } = useFormStore(); 
+   const { setFormData, formData, resetFormData } = useFormStore();
 
    useEffect(() => {
       resetFormData();
    }, []);
-   
+
    const handleNext = (data) => {
       saveStepData(data);
       setCurrentStep(prevStep => prevStep + 1);
@@ -38,21 +38,21 @@ export default function WizardSale({ handleSubmit }) {
 
    const onSubmit = (payment) => {
       saveStepData(payment);
-      handleSubmit({ ...formData, payment })
+      handleSubmit({ ...formData, payment });
    };
-
 
    const saveStepData = (data) => {
       const stepKey: any = steps[currentStep].id;
       setFormData(stepKey, data);
    };
 
+
    const steps = [
       {
          id: "sale",
          label: t("wizard.sale"),
          icon: "mdi:point-of-sale",
-         component: <SaleStep id="sale" onSubmit={handleNext} data={initialValues}/>
+         component: <SaleStep id="sale" onSubmit={handleNext} data={initialValues} />
       },
       {
          id: "customer",

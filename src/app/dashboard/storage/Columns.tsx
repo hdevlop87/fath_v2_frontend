@@ -121,20 +121,20 @@ export const fileColumns = (t) => {
                 const item = row.original;
                 const actionsManager = useActionsManager(item.type === "folder" ? "Folder" : "File");
                 const user = useAuthStore.use.user();
-                const isAdmin = user?.role === 'Admin';
+               const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
             
                 return (
                     <div className="text-center">
                         {item.type !== "folder" ? (
                             <>
-                                <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(item)} />
-                                <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Rename(item)} />
+                                <BadgeIcon disabled={!isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(item)} />
+                                <BadgeIcon disabled={!isAuthorized} icon="circum:edit" onClick={() => actionsManager.Rename(item)} />
                                 <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Preview(item)} />
                             </>
                         ) : (
                             <>
-                                <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(item)} />
-                                <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(item)} />
+                                <BadgeIcon disabled={!isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(item)} />
+                                <BadgeIcon disabled={!isAuthorized} icon="circum:edit" onClick={() => actionsManager.Update(item)} />
                                 <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Read(item)} />
                             </>
                         )}

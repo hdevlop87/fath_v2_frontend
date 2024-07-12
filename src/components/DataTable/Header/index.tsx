@@ -12,7 +12,7 @@ const Header = ({ table, filters, setRenderMode, showFilters, title, target, hea
 
     const actionsManager = useActionsManager(target);
     const user = useAuthStore.use.user();
-    const isAdmin = user?.role === 'Admin';
+   const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
     return (
         <div className="flex justify-between items-center mb-4">
@@ -29,11 +29,11 @@ const Header = ({ table, filters, setRenderMode, showFilters, title, target, hea
                         </Button>
                     </>
                 }
-                <Button disabled={!isAdmin} variant="outline" size='sm' onClick={() => actionsManager.Upload({ actionName: "Upload", target })} >
+                <Button disabled={!isAuthorized} variant="outline" size='sm' onClick={() => actionsManager.Upload({ actionName: "Upload", target })} >
                     <Icon icon='icon-park-outline:download-two' width={18} />
                 </Button>
                 {headerAddButton &&
-                    <Button disabled={!isAdmin} variant="default" size='sm' className='px-2 py-2 hover:bg-primary-hover' onClick={() => actionsManager.Create({ actionName: "Create", target })}>
+                    <Button disabled={!isAuthorized} variant="default" size='sm' className='px-2 py-2 hover:bg-primary-hover' onClick={() => actionsManager.Create({ actionName: "Create", target })}>
                         <Icon icon='mdi:add-bold' width={20} />
                     </Button>
                 }

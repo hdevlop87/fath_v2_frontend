@@ -26,12 +26,10 @@ type NavigationLinkProps = {
 };
 
 const NavigationLink: React.FC<NavigationLinkProps> = ({ item, isCollapsed, isActive }) => {
-
    const t = useTranslations();
    const setParentId = useNavigationStore.use.setParentId();
    const setCurrentView = useSideBarStore(state => state.setCurrentView);
    const user = useAuthStore.use.user();
-   const isAdmin = user?.role === 'Admin';
 
    const itemVariants = cva(
       "flex p-2 gap-2 rounded-md items-center text-sm font-medium cursor-pointer",
@@ -63,16 +61,18 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({ item, isCollapsed, isAc
    const handleClick = () => {
       setCurrentView(item.route);
       if (item.id) {
-         setParentId(item.id)
+         setParentId(item.id);
       }
    };
 
-   if (item.allowedRoles && !item.allowedRoles.includes('All') && !isAdmin) {
+   const isAuthorized = item.allowedRoles?.includes('All') || item.allowedRoles?.includes(user?.role);
+
+   if (!isAuthorized) {
       return null;
-  }
+   }
 
    return (
-      <Link href={item.route} passHref >
+      <Link href={item.route} passHref>
          <div className={cn(itemVariants({ isActive }))} onClick={handleClick}>
             <Icon icon={item.icon} className="w-6 h-6 flex-shrink-0" />
             <animated.p style={style}>

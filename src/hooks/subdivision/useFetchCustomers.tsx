@@ -15,7 +15,7 @@ function useFetchCustomers(enabled = true) {
          }
       },
       enabled,
-      staleTime: 5 * 60 * 1000,
+
 
    })
 

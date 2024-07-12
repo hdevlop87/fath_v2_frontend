@@ -9,7 +9,7 @@ import TransformerManager from './Managers/transformer/TransformerManager';
 import GroupManager from './Managers/GroupManager'
 import DrawingManager from './Managers/ShapeToolManager/DrawingManager';
 import DragManager from './Managers/DragManager';
-import KeyboardManager from './Managers/keyboardManager';
+// import KeyboardManager from './Managers/keyboardManager';
 import PanZoom from './Managers/PanZoom';
 import Invoker from './Commands/_Invoker';
 import MoveShapeCommand from './Commands/MoveShape'
@@ -128,7 +128,7 @@ export default class Scene extends G {
         this.drawingManager = new DrawingManager(this);
         this.transformer = new TransformerManager(this);
         this.selectionManager = new SelectionManager(this);
-        this.keyboardManager = new KeyboardManager(this);
+        // this.keyboardManager = new KeyboardManager(this);
 
     }
 

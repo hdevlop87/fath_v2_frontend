@@ -14,7 +14,7 @@ const AgreementButtons = ({ sale }) => {
     const [loadingAgreement, setLoadingAgreement] = useState(false);
     const [loadingEmail, setLoadingEmail] = useState(false);
     const user = useAuthStore.use.user();
-    const isAdmin = user?.role === 'Admin';
+   const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
     const getAgreement = async () => {
         try {
@@ -52,7 +52,7 @@ const AgreementButtons = ({ sale }) => {
                     submitText="Download"
                     loadingText="Download..."
                     collapsed={false}
-                    disabled={!isAdmin}
+                    disabled={!isAuthorized}
                 />
                 <LoadingButton
                     variant="default"
@@ -62,7 +62,7 @@ const AgreementButtons = ({ sale }) => {
                     submitText="Email"
                     loadingText="Sending..."
                     collapsed={false}
-                    disabled={!isAdmin}
+                    disabled={!isAuthorized}
                 />
             </div>
         </div>

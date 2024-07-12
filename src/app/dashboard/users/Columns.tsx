@@ -118,12 +118,12 @@ export const userColumns = (t) => {
                 const user = row.original;
                 const actionsManager = useActionsManager("user");
                 const muser = useAuthStore.use.user();
-                const isAdmin = muser?.role === 'Admin';
+                const isAuthorized = muser?.role === 'Admin';
 
                 return (
                     <div className="text-center">
-                        <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(user)} />
-                        <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(user)} />
+                        <BadgeIcon disabled={!isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(user)} />
+                        <BadgeIcon disabled={!isAuthorized} icon="circum:edit" onClick={() => actionsManager.Update(user)} />
                         <BadgeIcon icon="iconamoon:eye-light" onClick={() => actionsManager.Preview(user)} />
                     </div>
                 )

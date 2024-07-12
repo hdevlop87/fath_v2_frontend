@@ -122,7 +122,7 @@ export const saleColumns = (t, isMobile) => {
                 const actionsManager = useActionsManager("sale");
                 const router = useRouter();
                 const user = useAuthStore.use.user();
-                const isAdmin = user?.role === 'Admin';
+               const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
                 const handleViewUrl = `/dashboard/sales/saleView?saleID=${sale.saleId}`;
 
                 const possibleActions = ["Preview", "Update", "Delete"];
@@ -139,8 +139,8 @@ export const saleColumns = (t, isMobile) => {
                 } else {
                     return (
                         <div className="text-center">
-                            <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(sale)} />
-                            <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(sale)} />
+                            <BadgeIcon disabled={!isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(sale)} />
+                            <BadgeIcon disabled={!isAuthorized} icon="circum:edit" onClick={() => actionsManager.Update(sale)} />
                             <BadgeIcon icon="iconamoon:eye-light" onClick={() => router.push(handleViewUrl)} />
                         </div>
                     );

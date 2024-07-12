@@ -19,11 +19,13 @@ const Map = () => {
 
     const submitNewSale = async (lotInfo) => {
         const { saleId } = lotInfo;
-        if(saleId){
+        if (saleId) {
             router.push(`/dashboard/sales/saleView?saleID=${saleId}`);
-            return
+            return;
         }
-        actionsManager.Create(lotInfo)
+        const { lotId, pricePerM2, lotRef } = lotInfo;
+        router.push(`/dashboard/sales`);
+        actionsManager.Create({ lotId, pricePerM2, lotRef });
     };
 
     const initMap = async (lotsData) => {

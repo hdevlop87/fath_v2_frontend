@@ -90,13 +90,13 @@ export const paymentColumns = (t) => [
             const payment = row.original;
             const actionsManager = useActionsManager("payment");
             const user = useAuthStore.use.user();
-            const isAdmin = user?.role === 'Admin';
+           const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
 
             return (
                 <div className="text-center">
-                    <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(payment)} />
-                    <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(payment)} />
+                    <BadgeIcon disabled={!isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(payment)} />
+                    <BadgeIcon disabled={!isAuthorized} icon="circum:edit" onClick={() => actionsManager.Update(payment)} />
                     <BadgeIcon icon="fluent:receipt-28-regular" onClick={() => actionsManager.Preview(payment)} />
                 </div>
             )

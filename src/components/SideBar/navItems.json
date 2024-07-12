@@ -47,7 +47,7 @@
         "label": "customers",
         "icon": "ph:users-fill",
         "route": "/dashboard/customers",
-        "allowedRoles": ["Admin"]
+        "allowedRoles": ["Admin","Editor"]
     },
     {
         "name": "users",

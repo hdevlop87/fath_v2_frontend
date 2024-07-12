@@ -20,7 +20,7 @@ const CustomerForm = ({ target, handleSubmit }) => {
 
    const form = useForm<CustomerType>({
       resolver: zodResolver(customerConfig.schema),
-      defaultValues: initialValues || customerConfig.defaultValues
+      defaultValues: customerConfig.defaultValues || initialValues
    });
 
    const onSubmit = async (data) => {

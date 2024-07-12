@@ -9,7 +9,7 @@ import { logout, useAuthStore } from '@/store/authStore'
 import { useLoaderStore } from '@/store/loaderStore'
 
 
-const Footer = ({pathname}) => {
+const Footer = ({ pathname }) => {
 
     const t = useTranslations();
     const sidebarState = useSideBarStore.use.sidebarState();
@@ -29,24 +29,24 @@ const Footer = ({pathname}) => {
                 item={{
                     name: "settings",
                     label: 'settings',
-                    icon: "ant-design:setting-filled", 
+                    icon: "ant-design:setting-filled",
                     route: "/dashboard/settings",
+                    allowedRoles: ["Admin"]
                 }}
-                isCollapsed={sidebarState==='collapsed'}
+                isCollapsed={sidebarState === 'collapsed'}
                 isActive={pathname === "/dashboard/settings"}
             />
-            
             <SubmitButton
                 submitText={t('button.logoutButton')}
                 loadingText={t('button.pleaseWait')}
                 className='flex w-full gap-1 justify-start p-2'
                 loading={isLoading}
                 onClick={handleLogout}
-                collapsed={sidebarState==='collapsed'}
+                collapsed={sidebarState === 'collapsed'}
                 variant='ghost'
             />
         </div>
     )
 }
- 
+
 export default Footer

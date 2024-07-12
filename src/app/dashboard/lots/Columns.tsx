@@ -97,13 +97,13 @@ export const lotColumns = (t) => [
             const lot = row.original;
             const actionsManager = useActionsManager("lot");
             const user = useAuthStore.use.user();
-            const isAdmin = user?.role === 'Admin';
+           const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
 
             return (
                 <div className="text-center">
-                    <BadgeIcon disabled={!isAdmin} icon="heroicons:trash" onClick={() => actionsManager.Delete(lot)} />
-                    <BadgeIcon disabled={!isAdmin} icon="circum:edit" onClick={() => actionsManager.Update(lot)} />
+                    <BadgeIcon disabled={!isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(lot)} />
+                    <BadgeIcon disabled={!isAuthorized} icon="circum:edit" onClick={() => actionsManager.Update(lot)} />
                     <BadgeIcon icon="iconamoon:eye-light" onClick={() => console.log("preview lot")}/>
                 </div>
             )

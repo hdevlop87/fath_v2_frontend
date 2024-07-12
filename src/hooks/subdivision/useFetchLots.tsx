@@ -14,7 +14,7 @@ function useFetchLots(enabled = true) {
       }
     },
     enabled,
-    staleTime: 5 * 60 * 1000,
+
   });
 
   const availableLots = data?.filter(lot => lot.status === 'Available') || [];

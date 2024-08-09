@@ -3,12 +3,12 @@ import { MagnifyingGlass } from 'react-loader-spinner';
 import { useLoaderStore } from '@/store/loaderStore';
 
 const Loading = () => {
-  const isLoading = useLoaderStore.use.isLoading();
+  const isLoading = useLoaderStore.use.isLoading()
 
   if (!isLoading) return null;
 
   return (
-    <div className='flex h-full w-full justify-center items-center z-50'>
+    <div className='absolute top-0 bg-white flex h-full w-full justify-center items-center z-50'>
       <MagnifyingGlass
         visible={true}
         height="140"

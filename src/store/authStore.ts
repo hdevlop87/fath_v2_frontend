@@ -59,12 +59,12 @@ export const setTokens = ({ accessToken, accessTokenExpiresAt, refreshTokenExpir
     refreshTokenExpiresAt,
 });
 
-const { setLoading } = useLoaderStore.getState();
+const { setLoading,setQueryLoading } = useLoaderStore.getState();
 
 //=======================================================================//
 
 export const login = async (credential) => {
-    setLoading(true);
+    setQueryLoading(true);
     try {
         const { message, status, data } = await loginApi(credential);
         setState({
@@ -80,12 +80,12 @@ export const login = async (credential) => {
         handleError(error);
     }
     finally {
-        setLoading(false);
+        setQueryLoading(false);
     }
 }
 
 export const logout = async () => {
-    setLoading(true);
+    setQueryLoading(true);
     await delay(1000)
     const { user } = authStore.getState();
     try {
@@ -108,12 +108,12 @@ export const logout = async () => {
         handleError(error);
     }
     finally {
-        setLoading(false);
+        setQueryLoading(false);
     }
 }
 
 export const refreshToken = async () => {
-    setLoading(true);
+    setQueryLoading(true);
     try {
         await isRefreshTokenValid();
         const { message, status, data } = await refreshApi();
@@ -131,7 +131,7 @@ export const refreshToken = async () => {
         throw (error)
     }
     finally {
-        setLoading(false);
+        setQueryLoading(false);
     }
 }
 

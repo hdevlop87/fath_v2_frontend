@@ -5,16 +5,14 @@ import Sidebar from '@/components/SideBar';
 import Navbar from '@/components/navbar';
 import Prompts from '@/components/Prompts/PromptLayout';
 import { Separator } from '@/components/ui/separator';
-import { MagnifyingGlass } from 'react-loader-spinner';
 import { useAuth } from '@/hooks/auth/useAuth';
 import useFetchSettings from '@/hooks/subdivision/useFetchSettings';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
 
-  const { isRefreshing, isFetchingUser, userRole } = useAuth();
-  const shouldFetchData = !isRefreshing && !isFetchingUser && !!userRole;
-
-  const { isLoading: isLoadingSettings } = useFetchSettings(shouldFetchData);
+  const { userRole } = useAuth();
+  const { isLoading: isLoadingSettings } = useFetchSettings();
+  if(!userRole) return null
 
   return (
     <div className='flex w-full h-full bg-[#F1EDED] dark:bg-black'>

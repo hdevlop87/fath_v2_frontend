@@ -118,7 +118,8 @@
             "Completed": "Terminée",
             "Canceled": "Annulée"
         },
-        "titleLabel": "Détails de l'Achat"
+        "titleLabel": "Détails de l'Achat",
+        "remainingTo80Percent":"Reste à payer pour 80%"
     },
     "payment": {
         "amountPlaceholder": "Entrez le montant du paiement",
@@ -221,6 +222,8 @@
         "all": "Tous"
     },
     "navbar": {
+        "Roles": "Rôles",
+        "Permissions": "Permissions",
         "Settings": "Paramètres",
         "Storage": "Stockage",
         "Users": "Utilisateurs",
@@ -319,7 +322,8 @@
         "expense": "une dépense",
         "payment": "un paiement",
         "customer": "un client",
-        "wizardSale": "une vente"
+        "wizardSale": "une vente",
+        "role":"un rôle"
     },
     "settings": {
         "appNamePlaceholder": "Entrez le nom du site web",
@@ -339,5 +343,20 @@
         "graphTitle":"Aperçu",
         "lowPercentSalesTitle":"Ventes à Faible Revenu",
         "lowPercentSalesSubtitle":"Répartition des Ventes à Faible Rendement."
-    }
+    },
+    "role": {
+        "roleNamePlaceholder": "Entrez le nom du rôle",
+        "roleNameLabel": "Nom du rôle",
+        "descriptionPlaceholder": "Entrez la description du rôle",
+        "descriptionLabel": "Description du rôle"
+    },
+    "permission": {
+        "permissionNamePlaceholder": "Entrez le nom de la permission",
+        "permissionNameLabel": "Nom de la permission",
+        "descriptionPlaceholder": "Entrez la description de la permission",
+        "descriptionLabel": "Description de la permission"
+      },    
+      "errors":{
+          "noPermission": "Vous n'avez pas la permission d'accéder à ce contenu"
+      }
 }

@@ -16,7 +16,7 @@ export default class MapManager {
     mouse: any;
     tooltip: Tooltip;
     lotsData: any;
-    private onClickCallback: (lotInfo: any) => void;
+    private onClickCallback?: (lotInfo: any) => void;
 
     constructor(scene, lotsData, onClickCallback) {
         this.scene = scene;

@@ -24,7 +24,7 @@ const statusesFilter = [
    },
 ]
 
-export const saleConfig = {
+export const saleConfig = { 
 
    schema: z.object({
       saleId: z.any().optional(),

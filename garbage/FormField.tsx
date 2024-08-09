@@ -44,3 +44,15 @@ const FormFieldRender = ({ control, fieldData }:any) => {
 };
 
 export default FormFieldRender;
+
+
+
+{
+   title: "User Permissions",
+   permissions: [
+       { name: "read_user", description: "Permission to read a single user's information" },
+       { name: "create_user", description: "Permission to create a new user" },
+       { name: "update_user", description: "Permission to update a single user's information" },
+       { name: "delete_user", description: "Permission to delete a single user" },
+   ],
+},

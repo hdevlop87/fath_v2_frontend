@@ -6,6 +6,7 @@ import DataTable from '@/components/DataTable';
 import { paymentColumns } from './Columns';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useSideBarStore } from '@/store/sidebarStore'
+import Can from '@/components/Can';
 
 export default function Payments() {
 
@@ -19,12 +20,15 @@ export default function Payments() {
 
 
    return (
-      <DataTable
-         data={allPayments || []}
-         columns={columns}
-         filters={paymentConfig.filters}
-         target="payment"
-         showMode={false} 
-      />
+      <Can permission='read_payment'>
+
+         <DataTable
+            data={allPayments || []}
+            columns={columns}
+            filters={paymentConfig.filters}
+            target="payment"
+            showMode={false} 
+         />
+      </Can>
    )
 }

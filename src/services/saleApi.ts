@@ -6,8 +6,15 @@ export const getAllSales = async () => {
   return response.data;
 };
 
+export const bulkAddSales = async (data) => {
+  const response = await http.post('/sales', data);
+  return response.data;
+};
+
+//===========================================================//
+
 export const getSaleById = async (saleId) => {
-  const response = await http.get(`/sales/${saleId}`);
+  const response = await http.get(`/sale/${saleId}`);
   return response.data;
 };
 
@@ -21,7 +28,7 @@ export const createSale = async (saleData) => {
       uploadedImagePath = data.path;
       saleData.payment.receipt = uploadedImagePath;
     }
-    const response = await http.post('/sales/wizard', saleData);
+    const response = await http.post('/sale', saleData);
     return response.data;
 
   } catch (error) {
@@ -30,30 +37,24 @@ export const createSale = async (saleData) => {
     }
     throw error;
   }
-
 };
  
 export const updateSale = async (data) => {
-  const response = await http.patch(`/sales/${data.saleId}`, data);
+  const response = await http.patch(`/sale/${data.saleId}`, data);
   return response.data;
 };
 
 export const deleteSale = async (data) => {
-  const response = await http.delete(`/sales/${data.saleId}`);
-  return response.data;
-};
-
-export const sendEmail = async (data) => {
-  const response = await http.post(`sales/agreement/email/${data.saleId}`);
+  const response = await http.delete(`/sale/${data.saleId}`);
   return response.data;
 };
 
 export const uploadPaymentImage = async (receiptImage) => {
   const formData = new FormData();
   formData.append('file', receiptImage);
-  formData.append('parentId', '55555555-5555-5555-5555-555555555555');
+  formData.append('parentId', process.env.NEXT_PUBLIC_PAYMENTS_FOLDER_ID);
 
-  const response = await http.post('/files', formData, {
+  const response = await http.post('/file', formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     },
@@ -61,12 +62,12 @@ export const uploadPaymentImage = async (receiptImage) => {
   return response.data;
 };
 
-export const bulkAddSales = async (data) => {
-  const response = await http.post('/sales/bulk-add-csv', data);
+export const prepareAgreement = async (data) => {
+  const response = await http.get(`agreement/${data.saleId}`);
   return response.data;
 };
 
-export const prepareAgreement = async (data) => {
-  const response = await http.get(`sales/agreement/${data.saleId}`);
+export const sendEmail = async (data) => {
+  const response = await http.post(`agreement/email/${data.saleId}`);
   return response.data;
 };

@@ -228,6 +228,8 @@
         "all": "الكل"
     },
     "navbar": {
+        "Roles": "الأدوار",
+        "Permissions": "الصلاحيات",
         "Settings": "الإعدادات",
         "Storage": "التخزين",
         "Users": "المستخدمين",
@@ -318,7 +320,8 @@
         "expense": "مصروف",
         "payment": "دفع",
         "customer": "عميل",
-        "wizardSale": "عملية بيع"
+        "wizardSale": "عملية بيع",
+        "role":"الدور"
     },
     "settings": {
         "appNamePlaceholder": "أدخل اسم الموقع الإلكتروني",
@@ -338,5 +341,20 @@
         "graphTitle": "نظرة عامة",
         "lowPercentSalesTitle": "المبيعات ذات الإيرادات المنخفضة",
         "lowPercentSalesSubtitle": "توزيع المبيعات ذات الأداء المنخفض."
-      }
+    },
+    "role": {
+        "roleNamePlaceholder": "أدخل اسم الدور",
+        "roleNameLabel": "اسم الدور",
+        "descriptionPlaceholder": "أدخل وصف الدور",
+        "descriptionLabel": "وصف الدور"
+    },
+    "permission": {
+        "permissionNamePlaceholder": "أدخل اسم الإذن",
+        "permissionNameLabel": "اسم الإذن",
+        "descriptionPlaceholder": "أدخل وصف الإذن",
+        "descriptionLabel": "وصف الإذن"
+    },    
+    "errors":{
+        "noPermission": "ليس لديك إذن للوصول إلى هذا المحتوى"
+    }
 }

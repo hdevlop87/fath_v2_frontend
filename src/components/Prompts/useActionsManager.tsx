@@ -44,7 +44,7 @@ const useActionsManager = (target) => {
 
   const createAction = (data) => {
     handleAction(actionNames.Create, data, {
-      showButtons: target != "wizardSale",
+      showButtons: target != "sale",
       onSubmit: (formData) => createMutation.mutate(formData),
     });
   };

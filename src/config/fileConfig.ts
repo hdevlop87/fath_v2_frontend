@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { createFile, updateFile, deleteFile, downloadFile,moveFile } from '@/services/fileApi';
+import { createFile, updateFile, deleteFile, downloadFile } from '@/services/fileApi';
 
 export const fileConfig = {
     schema: z.object({
@@ -48,7 +48,6 @@ export const fileConfig = {
             create: createFile,
             update: updateFile,
             download: downloadFile,
-            move:moveFile,
         },
     },
 

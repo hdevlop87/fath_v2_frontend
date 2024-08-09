@@ -10,6 +10,7 @@ import { useNavigationStore } from '@/store/folderNavigationStore';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useAuthStore } from '@/store/authStore';
 import { useSideBarStore } from '@/store/sidebarStore';
+import { usePermissions } from '@/hooks/auth/usePermissions';
 
 type NavigationLinkProps = {
    item: {
@@ -18,6 +19,7 @@ type NavigationLinkProps = {
       label: string;
       icon: string;
       route: string;
+      permission:string;
       allowedRoles?: string[];
       nestedRoutes?: string[];
    };
@@ -26,10 +28,11 @@ type NavigationLinkProps = {
 };
 
 const NavigationLink: React.FC<NavigationLinkProps> = ({ item, isCollapsed, isActive }) => {
+   
    const t = useTranslations();
+   const { can } = usePermissions();
    const setParentId = useNavigationStore.use.setParentId();
    const setCurrentView = useSideBarStore(state => state.setCurrentView);
-   const user = useAuthStore.use.user();
 
    const itemVariants = cva(
       "flex p-2 gap-2 rounded-md items-center text-sm font-medium cursor-pointer",
@@ -65,10 +68,8 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({ item, isCollapsed, isAc
       }
    };
 
-   const isAuthorized = item.allowedRoles?.includes('All') || item.allowedRoles?.includes(user?.role);
-
-   if (!isAuthorized) {
-      return null;
+   if (item.permission && !can(item.permission)) {
+      return null; 
    }
 
    return (

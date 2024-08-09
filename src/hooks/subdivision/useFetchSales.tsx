@@ -1,8 +1,10 @@
 'use client'
 import { useQuery } from '@tanstack/react-query';
 import { getAllSales } from '@/services/saleApi';
+import { usePermissions } from '../auth/usePermissions';
 
-function useFetchSales(enabled= true) {
+function useFetchSales() {
+  const { can } = usePermissions();
   const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ['sales'],
     queryFn: async () => {
@@ -13,8 +15,7 @@ function useFetchSales(enabled= true) {
         throw error;
       }
     },
-    enabled,
-    staleTime: 5 * 60 * 1000,
+    enabled: can('read_sale'),
   });
 
   const getSaleById = (id) => {

@@ -1,8 +1,10 @@
 "use client";
 import { useQuery } from '@tanstack/react-query';
 import { getLotsMap } from '@/services/lotApi';
+import { usePermissions } from '../auth/usePermissions';
 
 function useFetchLotsMap() {
+  const { can } = usePermissions();
   const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ['lotsMap'],
     queryFn: async () => {
@@ -13,6 +15,7 @@ function useFetchLotsMap() {
         throw error;
       }
     },
+    enabled: can('read_lot'),
   });
 
 

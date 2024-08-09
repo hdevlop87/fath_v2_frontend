@@ -22,7 +22,7 @@ const statusesFilter = [
 
 export const zodInputStringPipe = (zodPipe) =>
   z
-    .string()
+    .any()
     .transform((value) => (value === '' ? null : value))
     .nullable()
     .refine((value) => value === null || !isNaN(Number(value)), {

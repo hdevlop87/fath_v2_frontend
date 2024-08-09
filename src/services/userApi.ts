@@ -17,7 +17,7 @@ export const createUser = async (userData) => {
             userDetails.image = uploadedImagePath;
         }
 
-        const userResp = await http.post('/users', userDetails);
+        const userResp = await http.post('/user', userDetails);
         return userResp.data;
     } catch (error) {
         if (uploadedImagePath) {
@@ -38,17 +38,12 @@ export const updateUser = async (userData) => {
         const {data} = await uploadUserImage(avatarImage); 
         userDetails.image = data.path;
     }
-    const response = await http.patch(`/users/${userDetails.id}`, userDetails);
-    return response.data;
-};
-
-export const updateUserPassword = async ({id}) => {
-    const response = await http.get(`/users/changePassword/${id}`);
+    const response = await http.patch(`/user/${userDetails.id}`, userDetails);
     return response.data;
 };
 
 export const getUserById = async ({id}) => {
-    const response = await http.get(`/users/${id}`);
+    const response = await http.get(`/user/${id}`);
     return response.data;
 };
 
@@ -58,21 +53,16 @@ export const deleteUser = async (data) => {
         await deleteFileByPath(data.image);
     }
     
-    const response = await http.delete(`/users/${data.id}`);
-    return response.data;
-};
-
-export const getUserRoleById = async ({id}) => {
-    const response = await http.get(`/users/${id}/role`);
+    const response = await http.delete(`/user/${data.id}`);
     return response.data;
 };
 
 export const uploadUserImage = async (avatarImage) => {
     const formData = new FormData();
     formData.append('file', avatarImage);
-    formData.append('parentId', '33333333-3333-3333-3333-333333333333');
+    formData.append('parentId', process.env.NEXT_PUBLIC_USER_FOLDER_ID);
 
-    const response = await http.post('/files', formData, {
+    const response = await http.post('/file', formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         },

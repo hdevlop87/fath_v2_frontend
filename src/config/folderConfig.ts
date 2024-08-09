@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { createFolder, updateFolder, deleteFolder,restoreFolder } from '@/services/folderApi';
+import { createFolder, updateFolder, deleteFolder } from '@/services/folderApi';
 
 export const folderConfig = {
 
@@ -53,7 +53,6 @@ export const folderConfig = {
             delete: deleteFolder,
             create: createFolder,
             update: updateFolder,
-            restore:restoreFolder
         },
     }, 
 

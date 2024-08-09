@@ -6,6 +6,13 @@ export const getAllCustomers = async () => {
     return response.data;
 };
 
+export const bulkAddCustomers = async (data) => {
+    const response = await http.post('/customers', data);
+    return response.data;
+};
+
+//===================== Customer CRUD methods ===============================//
+
 export const createCustomer = async (customerData) => {
     const { avatarImage, ...customerDetails } = customerData;
     let uploadedImagePath;
@@ -17,7 +24,7 @@ export const createCustomer = async (customerData) => {
             customerDetails.image = uploadedImagePath;
         }
 
-        const customerResp = await http.post('/customers', customerDetails);
+        const customerResp = await http.post('/customer', customerDetails);
         return customerResp.data;
     } catch (error) {
         if (uploadedImagePath) {
@@ -25,6 +32,11 @@ export const createCustomer = async (customerData) => {
         }
         throw error;
     }
+};
+
+export const getCustomerById = async ({ customerId }) => {
+    const response = await http.get(`/customer/${customerId}`);
+    return response.data;
 };
 
 export const updateCustomer = async (customerData) => {
@@ -38,12 +50,7 @@ export const updateCustomer = async (customerData) => {
         const { data } = await uploadCustomerImage(avatarImage);
         customerDetails.image = data.path;
     }
-    const response = await http.patch(`/customers/${customerDetails.customerId}`, customerDetails);
-    return response.data;
-};
-
-export const getCustomerById = async ({ customerId }) => {
-    const response = await http.get(`/customers/${customerId}`);
+    const response = await http.patch(`/customer/${customerDetails.customerId}`, customerDetails);
     return response.data;
 };
 
@@ -53,21 +60,18 @@ export const deleteCustomer = async (data) => {
         await deleteFileByPath(data.image);
     }
 
-    const response = await http.delete(`/customers/${data.customerId}`);
+    const response = await http.delete(`/customer/${data.customerId}`);
     return response.data;
 };
 
-export const getCustomerRoleById = async ({ customerId }) => {
-    const response = await http.get(`/customers/${customerId}/role`);
-    return response.data;
-};
+//===========================================================================//
 
 export const uploadCustomerImage = async (avatarImage) => {
     const formData = new FormData();
     formData.append('file', avatarImage);
-    formData.append('parentId', '66666666-6666-6666-6666-666666666666');
+    formData.append('parentId', process.env.NEXT_PUBLIC_CUSTOMERS_FOLDER_ID);
 
-    const response = await http.post('/files', formData, {
+    const response = await http.post('/file', formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         },
@@ -75,12 +79,4 @@ export const uploadCustomerImage = async (avatarImage) => {
     return response.data;
 };
 
-export const checkCustomer = async (data) => {
-    const response = await http.post(`/customers/check`, data);
-    return response.data;
-};
 
-export const bulkAddCustomers = async (data) => {
-    const response = await http.post('/customers/bulk-add-csv', data);
-    return response.data;
-};

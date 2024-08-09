@@ -21,6 +21,19 @@ const csvUploadAction = {
 };
 
 const promptConfig = {
+   role: {
+      Create: {
+         component: React.lazy(() => import('@/components/Forms/roleForm')),
+      },
+      Update: {
+         component: React.lazy(() => import('@/components/Forms/roleForm')),
+      },
+      Preview: {
+         component: React.lazy(() => import('@/components/Prompts/PreviewPrompt')),
+      },
+      Upload: csvUploadAction,
+      Delete: deleteAction,
+   },
    
    folder: {
       Create: {
@@ -133,6 +146,9 @@ const promptConfig = {
    },
 
    sale: {
+      Create: {
+         component: React.lazy(() => import('@/components/Forms/wizardSaleForm')),
+      },
       Update: {
          component: React.lazy(() => import('@/components/Forms/saleForm')),
       },
@@ -140,6 +156,7 @@ const promptConfig = {
          component: React.lazy(() => import('@/components/Prompts/PreviewPrompt')),
       },
       Upload: csvUploadAction,
+      Delete: deleteAction,
    },
 
    payment: {

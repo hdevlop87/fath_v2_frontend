@@ -6,39 +6,8 @@ export const getAllFiles = async () => {
     return response.data;
 };
 
-export const createFile = async (formData) => {
-    const fileResp = await http.post('/files', formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        },
-    });
-    return fileResp.data;
-};
-
-export const updateFile = async (fileData) => {
-    const response = await http.patch(`/files/${fileData.id}`, fileData);
-    return response.data;
-};
-
-export const getFileById = async ({ id }) => {
-    const response = await http.get(`/files/${id}`);
-    return response.data;
-};
-
-export const deleteFile = async ({ id }) => {
-    const response = await http.delete(`/files/${id}`);
-    return response.data;
-};
-
-export const deleteFileByPath = async (filePath) => {
-    const response = await http.delete(`/files/byPath`, {
-        data: { filePath }
-    });
-    return response.data;
-};
-
 export const deleteMultiFiles = async (ids) => {
-    const response = await http.post('/files/deleteMulti', { ids });
+    const response = await http.post('/files', { ids });
     return response.data;
 };
 
@@ -47,9 +16,44 @@ export const getFilesByParentId = async (parentId) => {
     return response.data;
 };
 
+//===================== File CRUD methods ===============================//
+
+export const createFile = async (formData) => {
+    const fileResp = await http.post('/file', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        },
+    });
+    return fileResp.data;
+};
+
+export const getFileById = async ({ id }) => {
+    const response = await http.get(`/file/${id}`);
+    return response.data;
+};
+
+export const updateFile = async (fileData) => {
+    const response = await http.patch(`/file/${fileData.id}`, fileData);
+    return response.data;
+};
+
+export const deleteFile = async ({ id }) => {
+    const response = await http.delete(`/file/${id}`);
+    return response.data;
+};
+
+export const deleteFileByPath = async (filePath) => {
+    const response = await http.delete(`/file/byPath`, {
+        data: { filePath }
+    });
+    return response.data;
+};
+
+//======================================================================//
+
 export const downloadFile = async ({ name, type, id }) => {
     try {
-        const response = await http.get(`/files/download/${id}`, {
+        const response = await http.get(`/file/download/${id}`, {
             responseType: 'blob',
         });
         
@@ -74,7 +78,7 @@ export const uploadFile = async (file, parentId, onUploadProgress) => {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('parentId', parentId || '');
-    const response = await http.post('/files', formData, {
+    const response = await http.post('/file', formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         },
@@ -86,9 +90,5 @@ export const uploadFile = async (file, parentId, onUploadProgress) => {
     return response.data;
 };
 
-export const moveFile = async (data) => {
-    const response = await http.post('/files/moveTo', data);
-    return response.data;
-};
 
 

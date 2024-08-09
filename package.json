@@ -11,6 +11,8 @@
     "db_push": "drizzle-kit push:pg"
   },
   "dependencies": {
+    "@casl/ability": "^6.7.1",
+    "@casl/react": "^4.0.0",
     "@hookform/resolvers": "^3.3.4",
     "@iconify-icon/react": "^2.0.1",
     "@iconify/react": "^4.1.1",
@@ -35,6 +37,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-google-maps/api": "^2.19.3",
     "@react-spring/web": "^9.7.3",
     "@svgdotjs/svg.js": "^3.2.0",
     "@tanstack/react-query": "^5.29.2",

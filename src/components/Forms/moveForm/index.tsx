@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import useFetchParsedPath from '@/hooks/fileManager/useFetchParsedPath';
 import useFetchFoldersInFolder from '@/hooks/fileManager/useFetchFoldersInFolder';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { usePromptStore } from '@/store/promptStore';
@@ -15,7 +14,7 @@ const MoveForm = ({target, handleSubmit}) => {
   const initialParentId = initialValues.parentId || 'root';
   const [currentParentId, setCurrentParentId] = useState(initialParentId);
 
-  const { data: breadcrumbsData, isLoading: isBreadcrumbsLoading } = useFetchParsedPath(currentParentId);
+  // const { data: breadcrumbsData, isLoading: isBreadcrumbsLoading } = useFetchParsedPath(currentParentId);
   const { data: folders, isLoading: isFoldersLoading } = useFetchFoldersInFolder(currentParentId);
 
   const form = useForm({
@@ -28,7 +27,7 @@ const MoveForm = ({target, handleSubmit}) => {
     handleSubmit({fileId,folderId});
   };
 
-  if (isBreadcrumbsLoading || isFoldersLoading) return <>loading...</>;
+  if ( isFoldersLoading) return <>loading...</>;
 
   const onFolderClick = (folder) => {
     setCurrentParentId(folder.id);
@@ -36,7 +35,7 @@ const MoveForm = ({target, handleSubmit}) => {
 
   return (
     <div className="flex w-[400px] flex-col gap-4 items-start justify-start">
-      <Breadcrumbs breadcrumbsData={breadcrumbsData || []} onBreadcrumbClick={setCurrentParentId} />
+      <Breadcrumbs breadcrumbsData={[]} onBreadcrumbClick={setCurrentParentId} />
       <form id={`form-${target}`} onSubmit={form.handleSubmit(onSubmit)} className="w-full h-full">
           <div className='border rounded-xl h-[300px] w-full overflow-y-scroll pb-6'>
             {folders.map((folder) => (

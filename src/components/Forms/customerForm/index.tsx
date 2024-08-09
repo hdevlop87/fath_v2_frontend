@@ -18,9 +18,11 @@ const CustomerForm = ({ target, handleSubmit }) => {
    const initialValues = usePromptStore.use.initialValues();
    const [avatarImage, setAvatarImage] = useState(null);
 
+   const isCreate = !initialValues || !initialValues.customerId;
+
    const form = useForm<CustomerType>({
       resolver: zodResolver(customerConfig.schema),
-      defaultValues: customerConfig.defaultValues || initialValues
+      defaultValues: isCreate ? customerConfig.defaultValues : initialValues
    });
 
    const onSubmit = async (data) => {

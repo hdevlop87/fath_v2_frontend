@@ -23,7 +23,7 @@ function Sale({ fallbackText, name, data, amount }) {
         <p className="text-sm font-medium leading-none">{name}</p>
         <p className="text-sm text-muted-foreground">{data}</p>
       </div>
-      <div className="ml-auto font-medium">{formatCommas(formatNumber(amount))}</div>
+      <div className="ml-auto font-medium">{formatCommas((amount))}</div>
     </div>
   );
 }

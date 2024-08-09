@@ -118,7 +118,8 @@
             "Completed": "Completed",
             "Canceled": "Canceled"
         },
-        "titleLabel": "Sale Details"
+        "titleLabel": "Sale Details",
+        "remainingTo80Percent":"remaining To 80%"
     },
     "payment": {
         "amountPlaceholder": "Enter the payment amount",
@@ -228,6 +229,8 @@
         "all": "All"
     },
     "navbar": {
+        "Roles": "Roles",
+        "Permissions": "Permissions",
         "Settings": "Settings",
         "Storage": "Storage",
         "Users": "Users",
@@ -318,7 +321,8 @@
         "expense": "expense",
         "payment": "payment",
         "customer": "customer",
-        "wizardSale": "sale"
+        "wizardSale": "sale",
+        "role":"role"
     },
     "settings": {
         "appNamePlaceholder": "Enter the website name",
@@ -330,7 +334,7 @@
         "dateFormatPlaceholder": "Select the date format",
         "dateFormatLabel": "Date Format"
     },
-    "dashboard":{
+    "dashboard": {
         "grossSales": "Gross Sales",
         "totalExpenses": "Total Expenses",
         "netAmount": "Net Profit",
@@ -338,5 +342,20 @@
         "graphTitle": "Overview",
         "lowPercentSalesTitle": "Low Revenue Sales",
         "lowPercentSalesSubtitle": "Distribution of Low-Performing Sales."
+    },
+    "role": {
+        "roleNamePlaceholder": "Enter the role name",
+        "roleNameLabel": "Role Name",
+        "descriptionPlaceholder": "Enter the role description", 
+        "descriptionLabel": "Role Description"
+    },
+    "permission": {
+        "permissionNamePlaceholder": "Enter the permission name",
+        "permissionNameLabel": "Permission Name",
+        "descriptionPlaceholder": "Enter the permission description",
+        "descriptionLabel": "Permission Description"
+    },
+    "errors":{
+        "noPermission": "You do not have permission to access this content"
     }
 }

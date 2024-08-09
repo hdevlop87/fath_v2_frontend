@@ -7,7 +7,7 @@ import useActionsManager from '@/components/Prompts/useActionsManager';
 import { useAuthStore } from '@/store/authStore';
 
 export const customerColumns = (t) => [
-    
+
     {
         id: "select",
         header: ({ table }) => (
@@ -42,7 +42,7 @@ export const customerColumns = (t) => [
         enableHiding: false,
     },
     {
-        accessorKey: "name",
+        accessorKey: "firstName",
         header: 'Name',
         cell: ({ row, table }) => {
             const user = row.original;
@@ -98,7 +98,7 @@ export const customerColumns = (t) => [
                         </div>
                     ) : (
                         <div className="text-md text-gray-600">
-                            <Icon icon="ph:empty-bold" className="w-5 h-5"/>
+                            <Icon icon="ph:empty-bold" className="w-5 h-5" />
                         </div>
                     )}
                 </>
@@ -112,7 +112,7 @@ export const customerColumns = (t) => [
             const customer = row.original;
             const actionsManager = useActionsManager("customer");
             const user = useAuthStore.use.user();
-           const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
+            const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
             return (
                 <div className="text-center">

@@ -12,6 +12,7 @@ const itemsHeader = ({dashData}) => {
    const financialData = dashData?.financialData;
    const t = useTranslations();
 
+
    const cardData = [
       {
          id: 'totalVerifiedPayments',

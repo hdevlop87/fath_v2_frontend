@@ -162,14 +162,14 @@ const ComboboxInput: React.FC<ComboboxInputProps> = ({ placeholder, field, items
 
 const NumberInput: React.FC<TextInputProps> = ({ placeholder, field, ...props }) => {
    return (
-      <div className="relative">
+
          <Input
             type="number"
             placeholder={placeholder}
             {...field}
             {...props}
          />
-      </div>
+
    );
 };
 

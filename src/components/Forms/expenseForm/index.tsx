@@ -11,10 +11,11 @@ import { useForm } from "react-hook-form";
 const ExpenseForm = ({ target, handleSubmit }) => {
 
    const initialValues = usePromptStore.use.initialValues();
+   const isCreate = !initialValues || !initialValues.expenseId;
 
    const form = useForm<ExpenseType>({
       resolver: zodResolver(expenseConfig.schema),
-      defaultValues: initialValues || expenseConfig.defaultValues
+      defaultValues: isCreate ? expenseConfig.defaultValues : initialValues
    });
 
    const onSubmit = (data) => {

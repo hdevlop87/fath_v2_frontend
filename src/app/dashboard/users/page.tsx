@@ -7,6 +7,7 @@ import DataTable from '@/components/DataTable';
 import { useTranslations } from '@/hooks/useTranslations';
 import { userColumns } from './Columns';
 import React from "react";
+import Can from '@/components/Can';
 
 export default function Users() {
 
@@ -17,12 +18,14 @@ export default function Users() {
    const columns = userColumns(t);
 
    return (
-      <DataTable
-         data={data || []}
-         columns={columns}
-         filters={userConfig.filters}
-         target="user"
-         mode = 'cards'
-      />
+      <Can permission='read_user'>
+         <DataTable
+            data={data || []}
+            columns={columns}
+            filters={userConfig.filters}
+            target="user"
+            mode = 'cards'
+         />
+      </Can>
    )
 }

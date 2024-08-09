@@ -4,57 +4,64 @@
         "label": "dashboard",
         "icon": "bxs:dashboard",
         "route": "/dashboard",
-        "allowedRoles": ["All"]
+        "permission": "read_dashData"
     },
     {
         "name": "map",
         "label": "map",
         "icon": "simple-icons:openstreetmap",
         "route": "/dashboard/map",
-        "allowedRoles": ["All"]
+        "permission": "read_lot"
     },
     {
         "name": "sales",
         "label": "sales",
         "icon": "solar:money-bag-bold",
         "route": "/dashboard/sales",
-        "allowedRoles": ["All"],
-        "nestedRoutes": ["/dashboard/sales/saleView", "/dashboard/sales/anotherNestedRoute"] 
+        "nestedRoutes": ["/dashboard/sales/saleView", "/dashboard/sales/anotherNestedRoute"],
+        "permission": "read_sale" 
     },
     {
         "name": "payments",
         "label": "payments",
         "icon": "mdi:payment-clock",
         "route": "/dashboard/payments",
-        "allowedRoles": ["All"]
+        "permission": "read_payment"
     },
     {
         "name": "expenses",
         "label": "expenses",
         "icon": "fluent:money-hand-16-filled",
         "route": "/dashboard/expenses",
-        "allowedRoles": ["All"]
+        "permission": "read_expense"
     },
     {
         "name": "lots",
         "label": "lots",
         "icon": "mdi:land-plots-marker",
         "route": "/dashboard/lots",
-        "allowedRoles": ["All"]
+        "permission": "read_lot"
     },
     {
         "name": "customers",
         "label": "customers",
         "icon": "ph:users-fill",
         "route": "/dashboard/customers",
-        "allowedRoles": ["Admin","Editor"]
+        "permission": "read_customer"
     },
     {
         "name": "users",
         "label": "users",
         "icon": "gridicons:multiple-users",
         "route": "/dashboard/users",
-        "allowedRoles": ["Admin"]
+        "permission": "read_user"
+    },
+    {
+        "name": "roles",
+        "label": "roles",
+        "icon": "ion:finger-print-outline",
+        "route": "/dashboard/roles",
+        "permission": "read_role"
     },
     {
         "id":"00000000-0000-0000-0000-000000000000",
@@ -62,6 +69,6 @@
         "label": "storage",
         "icon": "ph:folder-fill",
         "route": "/dashboard/storage",
-        "allowedRoles": ["Admin"]
+        "permission": "read_folder"
     }
 ]

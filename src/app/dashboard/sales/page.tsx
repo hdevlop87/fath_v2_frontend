@@ -5,7 +5,8 @@ import { saleConfig } from '@/config/saleConfig';
 import DataTable from '@/components/DataTable';
 import { saleColumns } from './Columns';
 import { useTranslations } from '@/hooks/useTranslations';
-import {useSideBarStore } from '@/store/sidebarStore'
+import { useSideBarStore } from '@/store/sidebarStore'
+import Can from '@/components/Can';
 
 export default function Sales() {
 
@@ -18,12 +19,14 @@ export default function Sales() {
    if (isLoading) return <>loading...</>
 
    return (
-      <DataTable
-         data={data || []}
-         columns={columns}
-         filters={saleConfig.filters}
-         target="wizardSale"
-         showMode={false}
-      />
+      <Can permission='read_sale'>
+         <DataTable
+            data={data || []}
+            columns={columns}
+            filters={saleConfig.filters}
+            target="sale"
+            showMode={false}
+         />
+      </Can>
    )
 } 

@@ -5,6 +5,7 @@ import useActionsManager from '@/components/Prompts/useActionsManager';
 import { useAuthStore } from "@/store/authStore";
 import { paymentConfig } from '@/config/paymentsConfig';
 import CardActions from "@/components/Cards/CardActions";
+import { formatCommas } from "@/lib/utils";
 
 export const paymentColumns = (t, isMobile) => {
 
@@ -42,10 +43,13 @@ export const paymentColumns = (t, isMobile) => {
             enableSorting: false,
             enableHiding: false,
         },
-
         {
             accessorKey: "amount",
             header: t('payment.amountLabel'),
+            cell: ({ row }) => {
+                const amount = row.original.amount;
+                return <div>{formatCommas(amount)}</div>;
+            },
         },
         {
             accessorKey: "method",

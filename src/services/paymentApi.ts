@@ -7,13 +7,20 @@ export const getAllPayments = async () => {
    return response.data;
 };
 
+export const bulkAddPayments = async (data) => {
+   const response = await http.post('/payments', data);
+   return response.data;
+ };
+
 export const getPaymentsBySaleId = async (saleId) => {
-   const response = await http.get(`/payments/sale/${saleId}`);
+   const response = await http.get(`/payments/${saleId}`);
    return response.data;
 };
 
+//===================== Payment CRUD methods ===============================//
+
 export const getPaymentByID = async (data) => {
-   const response = await http.get(`/payments/${data.paymentId}`);
+   const response = await http.get(`/payment/${data.paymentId}`);
    return response.data;
 };
 
@@ -28,7 +35,7 @@ export const createPayment = async (paymentData) => {
          paymentData.receipt = data.path;
       }
 
-      const response = await http.post('/payments/', paymentData);
+      const response = await http.post('/payment/', paymentData);
       queryClient.invalidateQueries({ queryKey: ["sales"] });
       return response.data;
 
@@ -50,24 +57,26 @@ export const updatePayment = async (paymentData) => {
       paymentData.receipt = data.path;
    }
 
-   const response = await http.patch(`/payments/${paymentData.paymentId}`, paymentData);
+   const response = await http.patch(`/payment/${paymentData.paymentId}`, paymentData);
    queryClient.invalidateQueries({ queryKey: ["sales"] });
    return response.data;
 
 };
 
 export const deletePayment = async (data) => {
-   const response = await http.delete(`/payments/${data.paymentId}`);
+   const response = await http.delete(`/payment/${data.paymentId}`);
    queryClient.invalidateQueries({ queryKey: ["sales"] });
    return response.data;
 };
 
+//======================================================================//
+
 export const uploadPaymentImage = async (receiptImage) => {
    const formData = new FormData();
    formData.append('file', receiptImage);
-   formData.append('parentId', '55555555-5555-5555-5555-555555555555');
+   formData.append('parentId', process.env.NEXT_PUBLIC_PAYMENTS_FOLDER_ID);
 
-   const response = await http.post('/files', formData, {
+   const response = await http.post('/file', formData, {
       headers: {
          'Content-Type': 'multipart/form-data'
       },
@@ -75,7 +84,3 @@ export const uploadPaymentImage = async (receiptImage) => {
    return response.data;
 };
 
-export const bulkAddPayments = async (data) => {
-   const response = await http.post('/payments/bulk-add-csv', data);
-   return response.data;
- };

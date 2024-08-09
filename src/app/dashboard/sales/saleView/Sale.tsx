@@ -5,7 +5,7 @@ import FieldRenderer from './FieldRenderer';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator'
-import {formatDate} from '@/lib/utils'
+import {formatCommas, formatDate} from '@/lib/utils'
 
 const Sales = ({sale}) => {
 
@@ -48,6 +48,8 @@ const Sales = ({sale}) => {
         }
     ]
 
+    const remainingTo80Percent = (0.80 * sale?.totalPrice) - sale?.totalVerifiedPayments;
+
 
     return (
         <div className='flex flex-col gap-4 w-full  '>
@@ -62,12 +64,15 @@ const Sales = ({sale}) => {
                 ))}
             </div>
 
+            
+
             <div className='w-full flex flex-col gap-5 mt-4 text-md'>
                 <Label >{t('sale.lotSizeLabel')} : {sale?.size} m2</Label>
-                <Label >{t('sale.totalPriceLabel')}: {sale?.totalPrice} Dh</Label>
+                <Label >{t('sale.totalPriceLabel')}: {formatCommas(sale?.totalPrice)} Dh</Label>
 
                 <Separator className='w-52 h-1' />
-                <Label >{t('sale.balanceDueLabel')} : {sale?.balanceDue} Dh</Label>
+                <Label >{t('sale.balanceDueLabel')} : {formatCommas(sale?.balanceDue)} Dh</Label>
+                <Label >{t('sale.remainingTo80Percent')} : {formatCommas(remainingTo80Percent)} Dh</Label>
                 <Label >{t('sale.settledPriceLabel')}: {sale?.paidPercentage} %</Label>
             </div>
 

@@ -5,6 +5,7 @@ import BadgeIcon from '@/components/ui/BadgeIcons';
 import { Badge } from "@/components/ui/badge"
 import useActionsManager from '@/components/Prompts/useActionsManager';
 import { useAuthStore } from "@/store/authStore";
+import { formatCommas } from "@/lib/utils";
 
 export const lotColumns = (t) => [
     
@@ -56,6 +57,10 @@ export const lotColumns = (t) => [
     {
         accessorKey: "pricePerM2",
         header: t('lot.pricePerM2Label'),
+        cell: ({ row }) => {
+            const pricePerM2 = row.original.pricePerM2;
+            return <div>{formatCommas(pricePerM2)}</div>;
+        },
     },
     {
         accessorKey: "status",

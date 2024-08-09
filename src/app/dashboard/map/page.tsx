@@ -13,7 +13,7 @@ const Map = () => {
 
     const t = useTranslations();
     const { lotsMap, isLoading } = useFetchLotsMap();
-    const actionsManager = useActionsManager("wizardSale");
+    const actionsManager = useActionsManager("sale");
     const mapManagerRef = useRef(null);
     const router = useRouter();
 

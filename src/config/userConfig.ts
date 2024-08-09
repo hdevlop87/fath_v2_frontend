@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { createUser, updateUser, deleteUser,updateUserPassword } from '@/services/userApi';
+import { createUser, updateUser, deleteUser } from '@/services/userApi';
 
 export const userConfig = {
     schema: z.object({
@@ -100,7 +100,6 @@ export const userConfig = {
             delete: deleteUser,
             create: createUser,
             update: updateUser,
-            updatePassword:updateUserPassword
         },
     },
     possibleActions: ['Preview','Update','Delete','Password'],

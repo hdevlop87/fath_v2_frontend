@@ -1,9 +1,11 @@
 "use client"
 import { useQuery } from '@tanstack/react-query';
 import { getAllCustomers } from '@/services/customersApi';
+import { usePermissions } from '../auth/usePermissions';
 
-function useFetchCustomers(enabled = true) {
-
+function useFetchCustomers() {
+   
+   const { can } = usePermissions();
    const { data, isLoading, isError, refetch } = useQuery({
       queryKey: ['customers'],
       queryFn: async () => {
@@ -14,7 +16,7 @@ function useFetchCustomers(enabled = true) {
             throw error;
          }
       },
-      enabled,
+      enabled: can('read_customer'),
 
 
    })

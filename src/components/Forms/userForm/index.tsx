@@ -21,7 +21,7 @@ const UserForm = ({ target, handleSubmit }) => {
 
    const form = useForm<UserType>({
       resolver: zodResolver(userConfig.schema),
-      defaultValues: initialValues || userConfig.defaultValues
+      defaultValues: isCreate ? userConfig.defaultValues : initialValues
    });
 
    const onSubmit = async (data) => {

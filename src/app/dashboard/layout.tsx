@@ -7,10 +7,6 @@ import Prompts from '@/components/Prompts/PromptLayout';
 import { Separator } from '@/components/ui/separator';
 import { MagnifyingGlass } from 'react-loader-spinner';
 import { useAuth } from '@/hooks/auth/useAuth';
-import useFetchDashData from '@/hooks/subdivision/useFetchDashData';
-import useFetchLots from '@/hooks/subdivision/useFetchLots';
-import useFetchSales from '@/hooks/subdivision/useFetchSales';
-import useFetchCustomers from '@/hooks/subdivision/useFetchCustomers';
 import useFetchSettings from '@/hooks/subdivision/useFetchSettings';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -18,30 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const { isRefreshing, isFetchingUser, userRole } = useAuth();
   const shouldFetchData = !isRefreshing && !isFetchingUser && !!userRole;
 
-  const { isLoading: isLoadingLots } = useFetchLots(shouldFetchData);
-  const { isLoading: isLoadingSales } = useFetchSales(shouldFetchData);
-  const { isLoading: isLoadingCustomers } = useFetchCustomers(shouldFetchData);
   const { isLoading: isLoadingSettings } = useFetchSettings(shouldFetchData);
-  const { isLoading: isLoadingDash } = useFetchDashData(shouldFetchData);
-
-  const allFetchLoading = isRefreshing || isFetchingUser || isLoadingLots || isLoadingSales || isLoadingCustomers || isLoadingSettings || isLoadingDash;
-
-  if (allFetchLoading) {
-    return (
-      <div className='flex h-full w-full justify-center items-center'>
-        <MagnifyingGlass
-          visible={true}
-          height="140"
-          width="140"
-          ariaLabel="MagnifyingGlass-loading"
-          wrapperStyle={{}}
-          wrapperClass="MagnifyingGlass-wrapper"
-          glassColor='#c0efff'
-          color='orange'
-        />
-      </div>
-    );
-  }
 
   return (
     <div className='flex w-full h-full bg-[#F1EDED] dark:bg-black'>

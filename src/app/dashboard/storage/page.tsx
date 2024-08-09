@@ -8,6 +8,7 @@ import DataTable from '@/components/DataTable';
 import { useTranslations } from '@/hooks/useTranslations';
 import { fileColumns } from './Columns';
 import React from 'react';
+import Can from '@/components/Can';
 
 
 export default function Storage() {
@@ -23,14 +24,16 @@ export default function Storage() {
   const columns = fileColumns(t);
 
   return (
-    <div className='flex flex-col h-full w-full gap-4'>
-      <DataTable
-        data={items}
-        columns={columns}
-        filters={folderConfig.filters}
-        mode='card'
-        target="folder"
-      />
-    </div>
+    <Can permission='read_folder'>
+      <div className='flex flex-col h-full w-full gap-4'>
+        <DataTable
+          data={items}
+          columns={columns}
+          filters={folderConfig.filters}
+          mode='card'
+          target="folder"
+        />
+      </div>
+    </Can>
   );
 }

@@ -3,6 +3,7 @@ import BadgeIcon from '@/components/ui/BadgeIcons';
 import { Badge } from "@/components/ui/badge"
 import useActionsManager from '@/components/Prompts/useActionsManager';
 import { useAuthStore } from "@/store/authStore";
+import { formatCommas } from "@/lib/utils";
 
 
 export const paymentColumns = (t) => [
@@ -39,10 +40,13 @@ export const paymentColumns = (t) => [
         enableSorting: false,
         enableHiding: false,
     },
-
     {
         accessorKey: "amount",
         header: t('payment.amountLabel'),
+        cell: ({ row }) => {
+            const amount = row.original.amount;
+            return <div>{formatCommas(amount)}</div>;
+        },
     },
     {
         accessorKey: "date",

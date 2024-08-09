@@ -14,7 +14,7 @@ export const formatNumber = (value) => {
 
 
 export function formatCommas(x) {
-  return x?.toString().replace(/(\d)(?=(\d{4})+(?!\d))/g, '$1,');
+  return x?.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
 
 export const resizeImage = (file, maxWidth, maxHeight) => {
@@ -164,6 +164,10 @@ export class HttpError extends Error {
 }
 
 export const getNestedTranslation = (translations: { [key: string]: any }, key: string): string => {
+  if (!key || typeof key !== 'string') {
+    return key; // Return the key as is if it's undefined or not a string
+  }
+  
   return key.split('.').reduce((obj, k) => (obj ? obj[k] : key), translations) || key;
 };
 

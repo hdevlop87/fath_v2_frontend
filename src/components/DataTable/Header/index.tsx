@@ -11,11 +11,13 @@ import { useAuthStore } from '@/store/authStore';
 const Header = ({ table, filters, setRenderMode, showFilters, title, target, headerAddButton = true, showMode = true }) => {
 
     const actionsManager = useActionsManager(target);
+    console.log(target);
+    
     const user = useAuthStore.use.user();
    const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
     return (
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center p-1 mb-4">
             {title && <Label className='text-lg'>{title}</Label>}
             {showFilters && <FilterBy table={table} filters={filters} />}
             <div className="flex gap-2">

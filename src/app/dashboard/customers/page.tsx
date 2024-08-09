@@ -5,6 +5,7 @@ import { customerConfig } from '@/config/customerConfig';
 import DataTable from '@/components/DataTable';
 import { customerColumns } from './Columns';
 import { useTranslations } from '@/hooks/useTranslations';
+import Can from '@/components/Can';
 
 export default function Customers() {
 
@@ -15,12 +16,14 @@ export default function Customers() {
    if (isLoading) return <>loading...</>
 
    return (
-      <DataTable
-         data={allCustomers || []}
-         columns={columns}
-         filters={customerConfig.filters}
-         target="customer"
-         mode='cards'
-      />
+      <Can permission='read_customer'>
+         <DataTable
+            data={allCustomers || []}
+            columns={columns}
+            filters={customerConfig.filters}
+            target="customer"
+            mode='cards'
+         />
+      </Can>
    )
 }

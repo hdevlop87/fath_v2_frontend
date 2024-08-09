@@ -1,25 +1,22 @@
 "use client"
 import { useQuery } from '@tanstack/react-query';
-import { getFoldersInTrash } from '@/services/folderApi';
+import { getAllPermissions } from '@/services/permissionApi';
 
-function useFetchFoldersInTrash() {
+function useFetchPermissions() {
 
    const { data, isLoading, isError, refetch } = useQuery({
-      queryKey: ['folders'],
+      queryKey: ['permissions'],
       queryFn: async () => {
          try {
-            const { message, status, data } = await getFoldersInTrash();
+            const { message, status, data } = await getAllPermissions();
             return data;
          } catch (error) {
             throw error;
          }
       },
-      retry: true,
-      staleTime: 0
-
    })
 
    return { data , isLoading, isError, refetch };
 }
 
-export default useFetchFoldersInTrash;
+export default useFetchPermissions;

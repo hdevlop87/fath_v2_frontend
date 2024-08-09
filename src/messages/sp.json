@@ -228,6 +228,8 @@
         "all": "Todos"
     },
     "navbar": {
+        "Roles": "Roles",
+        "Permissions": "Permisos",
         "Settings": "Configuraciones",
         "Storage": "Almacenamiento",
         "Users": "Usuarios",
@@ -318,7 +320,8 @@
         "expense": "un gasto",
         "payment": "un pago",
         "customer": "un cliente",
-        "wizardSale": "una venta"
+        "wizardSale": "una venta",
+        "role":"un rol"
     },
     "settings": {
         "appNamePlaceholder": "Introduce el nombre del sitio web",
@@ -338,5 +341,20 @@
         "graphTitle": "Resumen",
         "lowPercentSalesTitle": "Ventas de Bajos Ingresos",
         "lowPercentSalesSubtitle": "Distribución de Ventas de Bajo Rendimiento."
-      }
+    },
+    "role": {
+        "roleNamePlaceholder": "Ingrese el nombre del rol",
+        "roleNameLabel": "Nombre del rol",
+        "descriptionPlaceholder": "Ingrese la descripción del rol",
+        "descriptionLabel": "Descripción del rol"
+    },
+    "permission": {
+        "permissionNamePlaceholder": "Ingrese el nombre del permiso",
+        "permissionNameLabel": "Nombre del permiso",
+        "descriptionPlaceholder": "Ingrese la descripción del permiso",
+        "descriptionLabel": "Descripción del permiso"
+    },    
+    "errors":{
+        "noPermission": "No tienes permiso para acceder a este contenido"
+    }
 }

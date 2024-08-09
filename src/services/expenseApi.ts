@@ -7,10 +7,12 @@ export const getAllExpenses = async () => {
    return response.data;
 };
 
-export const getExpenseByID = async (data) => {
-   const response = await http.get(`/expenses/${data.expenseID}`);
+export const bulkAddExpenses = async (data) => {
+   const response = await http.post('/expenses', data);
    return response.data;
 };
+
+//===================== Expense CRUD methods ===============================//
 
 export const createExpense = async (expenseData) => {
    const receipt = expenseData.receipt;
@@ -22,7 +24,7 @@ export const createExpense = async (expenseData) => {
          expenseData.receipt = data.path;
       }
 
-      const response = await http.post('/expenses/', expenseData);
+      const response = await http.post('/expense', expenseData);
       queryClient.invalidateQueries({ queryKey: ["sales"] });
       return response.data;
 
@@ -35,6 +37,11 @@ export const createExpense = async (expenseData) => {
    }
 };
 
+export const getExpenseByID = async (data) => {
+   const response = await http.get(`/expense/${data.expenseID}`);
+   return response.data;
+};
+
 export const updateExpense = async (expenseData) => {
 
    const receipt = expenseData.receipt;
@@ -44,23 +51,25 @@ export const updateExpense = async (expenseData) => {
       expenseData.receipt = data.path;
    }
 
-   const response = await http.patch(`/expenses/${expenseData.expenseId}`, expenseData);
+   const response = await http.patch(`/expense/${expenseData.expenseId}`, expenseData);
    queryClient.invalidateQueries({ queryKey: ["sales"] });
    return response.data;
 
 };
 
 export const deleteExpense = async (data) => {
-   const response = await http.delete(`/expenses/${data.expenseId}`);
+   const response = await http.delete(`/expense/${data.expenseId}`);
    return response.data;
 };
+
+//=======================================================================//
 
 export const uploadExpenseImage = async (receiptImage) => {
    const formData = new FormData();
    formData.append('file', receiptImage);
-   formData.append('parentId', '44444444-4444-4444-4444-444444444444');
+   formData.append('parentId', process.env.NEXT_PUBLIC_EXPENSES_FOLDER_ID);
 
-   const response = await http.post('/files', formData, {
+   const response = await http.post('/file', formData, {
       headers: {
          'Content-Type': 'multipart/form-data'
       },
@@ -68,7 +77,3 @@ export const uploadExpenseImage = async (receiptImage) => {
    return response.data;
 };
 
-export const bulkAddExpenses = async (data) => {
-   const response = await http.post('/expenses/bulk-add-csv', data);
-   return response.data;
-};

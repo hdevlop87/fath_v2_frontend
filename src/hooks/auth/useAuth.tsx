@@ -69,6 +69,7 @@ export function useAuth() {
         refetchRefreshToken: refreshTokenQuery.refetch,
         userData: fetchUserQuery.data,
         userRole:fetchUserQuery.data?.role,
+        userPermissions:fetchUserQuery.data?.permissions,
         isFetchingUser: fetchUserQuery.isLoading,
         isFetchUserError: fetchUserQuery.isError,
         refetchFetchUser: fetchUserQuery.refetch,

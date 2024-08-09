@@ -65,20 +65,20 @@ export const customerConfig = {
     ],
 
     defaultValues: {
-        firstName: 'hicham',
-        lastName: 'jebara',
+        firstName: '',
+        lastName: '',
         birthday: "1990-10-15",
         gender: "male",
-        phone: '123456',
-        email: 'hicham@gmail.com',
-        address: '5775',
-        CIN: '123456'
+        phone: '',
+        email: '',
+        address: '',
+        CIN: ''
     },
 
     queryKey: "customers",
     filters: [
         {
-            name: "name",
+            name: "firstName",
             type: "text",
             placeHolder: 'customer.filterByCustomer'
         }

@@ -4,6 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import BadgeIcon from '@/components/ui/BadgeIcons';
 import useActionsManager from '@/components/Prompts/useActionsManager';
 import { useAuthStore } from "@/store/authStore";
+import { formatCommas } from "@/lib/utils";
 
 export const expenseColumns = (t) => [
     
@@ -42,6 +43,10 @@ export const expenseColumns = (t) => [
     {
         accessorKey: "amount",
         header: t('expense.amountLabel'),
+        cell: ({ row }) => {
+            const amount = row.original.amount;
+            return <div>{formatCommas(amount)}</div>;
+        },
     },
     {
         accessorKey: "beneficiary",
@@ -84,8 +89,8 @@ export const expenseColumns = (t) => [
 
             return (
                 <div className="text-center">
-                    <BadgeIcon disabled={isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(expense)} />
-                    <BadgeIcon disabled={isAuthorized} icon="circum:edit" onClick={() => actionsManager.Update(expense)} />
+                    <BadgeIcon disabled={!isAuthorized} icon="heroicons:trash" onClick={() => actionsManager.Delete(expense)} />
+                    <BadgeIcon disabled={!isAuthorized} icon="circum:edit" onClick={() => actionsManager.Update(expense)} />
                     <BadgeIcon icon="iconamoon:eye-light" onClick={() => console.log("preview expenses")}/>
                 </div>
             )

@@ -8,11 +8,13 @@ import toast from 'react-hot-toast';
 import { useTranslations } from '@/hooks/useTranslations';
 import { downloadFile } from '@/services/fileApi';
 import { useAuthStore } from '@/store/authStore';
+import { usePermissions } from '@/hooks/auth/usePermissions';
 
 const AgreementButtons = ({ sale }) => {
     const t = useTranslations();
     const [loadingAgreement, setLoadingAgreement] = useState(false);
     const [loadingEmail, setLoadingEmail] = useState(false);
+    const { can } = usePermissions();
     const user = useAuthStore.use.user();
    const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
@@ -52,7 +54,7 @@ const AgreementButtons = ({ sale }) => {
                     submitText="Download"
                     loadingText="Download..."
                     collapsed={false}
-                    disabled={!isAuthorized}
+                    disabled={!can("download_agreement")}
                 />
                 <LoadingButton
                     variant="default"
@@ -62,7 +64,7 @@ const AgreementButtons = ({ sale }) => {
                     submitText="Email"
                     loadingText="Sending..."
                     collapsed={false}
-                    disabled={!isAuthorized}
+                    disabled={!can("send_agreement")}
                 />
             </div>
         </div>

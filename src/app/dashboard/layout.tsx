@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { Suspense, useLayoutEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '@/components/SideBar';
 import { Navbar } from '@/components/navbar';
 import Prompts from '@/components/Prompts/PromptLayout';
@@ -10,11 +10,20 @@ import { useAuth } from '@/hooks/auth/useAuth';
 import { useAuthStore } from '@/store/authStore';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-
   const { isRefreshing, isFetchingUser } = useAuth();
-  const user = useAuthStore.use.user()
+  const user = useAuthStore.use.user();
+  
+  const [showLoader, setShowLoader] = useState(true);
 
-  if (isRefreshing || isFetchingUser || !user) {
+  useEffect(() => {
+    const minLoadingTime = 3000;
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, minLoadingTime);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isRefreshing || isFetchingUser || !user || showLoader) {
     return <Loading />;
   }
 
@@ -29,7 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <Separator className='h-[2px] mb-4' />
 
-          <div className='flex h-full  overflow-auto '>
+          <div className='flex h-full overflow-auto'>
             {children}
           </div>
         </div>
@@ -38,5 +47,3 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </>
   );
 }
-
-

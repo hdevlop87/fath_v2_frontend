@@ -7,16 +7,14 @@ import { Label } from '@/components/ui/label';
 import toast from 'react-hot-toast';
 import { useTranslations } from '@/hooks/useTranslations';
 import { downloadFile } from '@/services/fileApi';
-import { useAuthStore } from '@/store/authStore';
 import { usePermissions } from '@/hooks/auth/usePermissions';
 
 const AgreementButtons = ({ sale }) => {
+
     const t = useTranslations();
     const [loadingAgreement, setLoadingAgreement] = useState(false);
     const [loadingEmail, setLoadingEmail] = useState(false);
     const { can } = usePermissions();
-    const user = useAuthStore.use.user();
-   const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 
     const getAgreement = async () => {
         try {

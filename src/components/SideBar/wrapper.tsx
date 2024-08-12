@@ -12,7 +12,7 @@ const Wrapper = ({ children }: { children: any }) => {
     const { sidebarState, mediaQuery } = useSidebar();
     const ref = useRef(null)
     const sidebarVariants = cva(
-        "flex flex-col  bg-card dark text-foreground left-0 h-full z-50  transition-width duration-200 justify-between py-2 ",
+        "flex flex-col  bg-card dark text-foreground left-0 h-full z-40  transition-width duration-200 justify-between py-2 ",
         {
             variants: {
                 variant: {

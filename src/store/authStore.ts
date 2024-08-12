@@ -86,13 +86,11 @@ export const login = async (credential) => {
 
 export const logout = async () => {
     setQueryLoading(true);
+    setLoading(true);
     await delay(1000)
     const { user } = authStore.getState();
     try {
-        await checkUser();
-        await isRefreshTokenValid();
         const { message, status } = await logoutApi(user.id);
-
         setState({
             user: null,
             accessToken: null,
@@ -102,13 +100,13 @@ export const logout = async () => {
             status,
             message
         });
-        navigate('/login')
     }
     catch (error) {
         handleError(error);
     }
     finally {
         setQueryLoading(false);
+        setLoading(false);
     }
 }
 

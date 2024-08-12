@@ -11,8 +11,6 @@ import { useAuthStore } from '@/store/authStore';
 const Header = ({ table, filters, setRenderMode, showFilters, title, target, headerAddButton = true, showMode = true }) => {
 
     const actionsManager = useActionsManager(target);
-    console.log(target);
-    
     const user = useAuthStore.use.user();
    const isAuthorized = user?.role === 'Admin' || user?.role === 'Editor';
 

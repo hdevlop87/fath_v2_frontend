@@ -11,7 +11,7 @@ interface LoaderState {
 
 const loaderStore = create<LoaderState>()(
    devtools((set, get) => ({
-      isLoading: false,
+      isLoading: true,
       queryLoading: false,
       setLoading: (isLoading) => set({ isLoading }),
       setQueryLoading: (queryLoading) => set({ queryLoading }),

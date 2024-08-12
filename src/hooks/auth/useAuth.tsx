@@ -1,19 +1,21 @@
+"use client"
+
 import { useQuery } from '@tanstack/react-query';
 import { meApi, refreshApi } from '@/services/authAPi';
 import { useRouter } from 'next/navigation';
 import { queryClient } from '@/providers/QueryClientProvider';
-import { setState , getState} from '@/store/authStore';
-import { useLoaderStore } from '@/store/loaderStore'; // Import your loaderStore
+import { setState } from '@/store/authStore';
+import { useLoaderStore } from '@/store/loaderStore';
 
 export function useAuth() {
-    const router = useRouter();
-    const { setLoading, setQueryLoading } = useLoaderStore();
 
+    const router = useRouter();
+    const { setLoading } = useLoaderStore(); 
 
     const refreshTokenQuery = useQuery({
         queryKey: ['refreshToken'],
         queryFn: async () => {
-            setLoading(true);
+            setLoading(true)
             try {
                 const { message, status, data } = await refreshApi();
                 setState({
@@ -26,6 +28,7 @@ export function useAuth() {
                 return data;
             } catch (error) {
                 const { message, status } = error?.response?.data || error;
+                setLoading(false)
                 setState({
                     user: null,
                     accessToken: null,
@@ -38,7 +41,6 @@ export function useAuth() {
                 });
                 router.push('/login');
                 queryClient.removeQueries();
-                setLoading(false);
                 throw error;
             }    
         },
@@ -56,12 +58,10 @@ export function useAuth() {
                     message,
                     isAuthenticated: true,
                 });
-                setLoading(false);
                 return data;
             } catch (error) {
                 router.push('/login');
                 queryClient.removeQueries();
-                setLoading(false);
                 throw error;
             }
         },

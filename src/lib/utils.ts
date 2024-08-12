@@ -174,3 +174,9 @@ export const getNestedTranslation = (translations: { [key: string]: any }, key: 
 export const getFileNameFromPath = (path) => {
   return path ? path.split('\\').pop().split('/').pop() : '';
 };
+
+export const getLastSegment = (pathname: string) => {
+  const segments = pathname.split('/').filter(segment => !/^[0-9a-fA-F-]+$/.test(segment));
+  const segment = segments[segments.length - 1] || segments[segments.length - 2];
+  return segment.charAt(0).toUpperCase() + segment.slice(1);
+};

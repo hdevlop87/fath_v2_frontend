@@ -1,96 +1,21 @@
-import React, { useEffect } from 'react';
-import { setSidebarState, useSideBarStore } from '@/store/sidebarStore';
-import SearchBar from '@/components/ui/SearchBar';
-import { usePathname } from 'next/navigation';
+'use client'
+import React from 'react';
 import { ThemeToggle } from './theme-toggle';
-import { Icon } from '@iconify/react';
-import { useTranslations } from '@/hooks/useTranslations';
-import { useAuthStore } from "@/store/authStore";
-import { useI18nStore } from '@/store/i18nStore'; 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import Image from "next/image";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import LangToggle from './Lang-toggle'
+import UserAvatar from './UserAvatar';
+import Segment from './segment'
 
-const getLastSegment = (pathname: string) => {
-    const segments = pathname.split('/').filter(segment => !/^[0-9a-fA-F-]+$/.test(segment));
-    const segment = segments[segments.length - 1] || segments[segments.length - 2];
-    return segment.charAt(0).toUpperCase() + segment.slice(1);
-};
-
-const Navbar = () => {
-    const t = useTranslations();
-    const pathname = usePathname();
-    const segment = getLastSegment(pathname);
-    const isMobile = useSideBarStore.use.isMobile();
-    const user = useAuthStore.use.user();
-    const { language, setLanguage } = useI18nStore();
-
-    const getMenuItemClass = (lang: string) => lang === language ? 'bg-blue-500 text-white' : '';
-
-    useEffect(() => {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-            setLanguage(savedLanguage);
-        }
-    }, [setLanguage]);
+export  function Navbar() {
 
     return (
         <div className='flex h-[56px] justify-between items-center w-full '>
-            {isMobile ?
-                <Icon icon="ri:menu-unfold-3-line-2" width={28} height={28} onClick={() => setSidebarState('open')} />
-                :
-                <h1 className='font-medium text-lg'>{t("navbar."+segment)}</h1>
-            }
+            <Segment />
             <div className='flex items-center gap-3'>
-                {/* <div className='hidden md:flex'>
-                    <SearchBar />
-                </div> */}
-                <div className='flex gap-1 '>
-                    <ThemeToggle />
-                    <DropdownMenu>
-                        <DropdownMenuTrigger>
-                            <Icon icon="ic:baseline-g-translate" width={22} height={22}/>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuLabel>{t("navbar.languageSelection")}</DropdownMenuLabel>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem onClick={() => setLanguage('ar')} className={getMenuItemClass('ar')}>
-                                <Icon icon="circle-flags:sa" className='w-5 h-5 mr-2' /> {t("navbar.arabic")}
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => setLanguage('en')} className={getMenuItemClass('en')}>
-                                <Icon icon="circle-flags:gb-eng" className='w-5 h-5 mr-2' /> {t("navbar.english")}
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => setLanguage('fr')} className={getMenuItemClass('fr')}>
-                                <Icon icon="circle-flags:fr" className='w-5 h-5 mr-2' /> {t("navbar.french")}
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => setLanguage('es')} className={getMenuItemClass('es')}>
-                                <Icon icon="emojione:flag-for-spain" className='w-5 h-5 mr-2' /> {t("navbar.spanish")}
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-                </div>
-                <Avatar className='w-10 h-10 relative'>
-                    <AvatarImage src={`${process.env.NEXT_PUBLIC_API_URL}/${user?.image}`} alt="avatar" />
-                    <AvatarFallback>
-                        <Image
-                            src={"/noavatar.png"}
-                            alt="no avatar"
-                            width={40}
-                            height={40}
-                            className="z-10"
-                        />
-                    </AvatarFallback>
-                </Avatar>
+                <ThemeToggle />
+                <LangToggle />
+                <UserAvatar />
             </div>
         </div>
     );
 };
 
-export default Navbar;

@@ -15,11 +15,11 @@ export default function Sidebar() {
 
     return (
         <Wrapper >
-            <div className='flex flex-col h-full gap-10 z-50 '>
+            <div className='flex flex-col h-full gap-10 z-10 '>
                 <Header />
                 <Links pathname={strippedPathname} />
             </div>
-            <Footer pathname={strippedPathname}/>
+            <Footer pathname={strippedPathname} />
         </Wrapper>
     );
 }

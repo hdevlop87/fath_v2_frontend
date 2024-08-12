@@ -26,7 +26,7 @@ const Login = () => {
     const t = useTranslations();
     const message = useAuthStore.use.message();
     const status = useAuthStore.use.status();
-    const isLoading = useLoaderStore.use.isLoading();
+    const isLoading = useLoaderStore.use.queryLoading();
 
     const form = useForm<loginType>({
         resolver: zodResolver(config.schema),

@@ -1,11 +1,6 @@
 'use client'
 
-import {
-   Card,
-   CardContent,
-   CardHeader,
-   CardTitle,
-} from "@/components/ui/card"
+import {Card,CardContent,CardHeader,CardTitle,} from "@/components/ui/card"
 import { useTranslations } from '@/hooks/useTranslations';
 import { Overview } from "./overview"
 import RecentSales from "./recent-sales"
@@ -17,7 +12,6 @@ export default function DashboardPage() {
 
    const t = useTranslations();
    const { dashData, isLoading: isLoadingDash } = useFetchDashData();
-
    return (
       <Can permission='read_dashData'>
          <div className="flex-1 space-y-4 ">

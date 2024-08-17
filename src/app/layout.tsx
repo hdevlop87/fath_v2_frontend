@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/providers/theme-provider"
 import { ReactNode } from 'react';
 import { Toaster } from 'react-hot-toast';
 import QueryProvider from '@/providers/QueryClientProvider'
-import 'react-image-crop/dist/ReactCrop.css';
+
 
 const inter = Inter({ subsets: ['latin'] })
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
